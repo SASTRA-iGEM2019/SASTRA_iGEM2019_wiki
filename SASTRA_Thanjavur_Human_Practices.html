@@ -52,6 +52,11 @@ Path: https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  transition: box-shadow 0.5s;
+}
+.timeline > li > .timeline-panel:hover {
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
 .timeline > li.timeline-inverted + li:not(.timeline-inverted),
 .timeline > li:not(.timeline-inverted) + li.timeline-inverted {
@@ -146,14 +151,30 @@ padding-left:90px;
 .timeline-body > p + p {
   margin-top: 5px;
 }
+li:hover{
+    cursor: pointer;
+}
 </style>
+
+<script type="text/javascript">
+    function clicked(string){
+        switch(string){
+            case "dav":
+                window.open('https://medium.com/@igemsastra.2019/report-on-human-practices-session-01-held-at-d-a-v-public-school-velachery-on-22nd-april-2-ce6ac8d56b60');
+                break;
+            case "sn":
+                window.open('https://medium.com/@igemsastra.2019/human-practices-numero-due-b1e63121f81e');
+                break;
+        }
+    }
+</script>
 
 <div class="container">
     <div class="page-header">
         <h1 id="timeline">Human Practices Events</h1>
     </div>
     <ul class="timeline">
-        <li>
+        <li onclick="clicked('dav')">
           <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -165,7 +186,7 @@ padding-left:90px;
             </div>
           </div>
         </li>
-        <li class="timeline-inverted">
+        <li class="timeline-inverted" onclick="clicked('sn')">
           <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
