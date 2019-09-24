@@ -1,60 +1,18 @@
-<!--
-Path: https://2019.igem.org/Team:SASTRA_Thanjavur/Team
--->
-<!--
-{{SASTRA_Thanjavur}}
-{{SASTRA_Thanjavur/Bootstrap}}
-<html>
-
-<div class="column two_thirds_size" >
-
-<h1>Team</h1>
-<p>In this page you can introduce your team members, instructors, and advisors. </p>
-
-<div class = "alert alert-success role="alert">
-<h3>What should this page contain?</h3>
-<ul>
-<li> Include pictures of your teammates, don’t forget instructors and advisors! </li>
-<li>You can add a small biography or a few words from each team member, to tell us what you like, and what motivated you to participate in iGEM.</li>
-<li>Take team pictures! Show us your school, your lab and little bit of your city.</li>
-<li>Remember that image galleries can help you showcase many pictures while saving space.</li>
-</ul>
-</div>
-</div>
-
-
-
-<div class="column third_size" >
-<div class="highlight decoration_A_full">
-<h3>Inspiration</h3>
-<p>You can look at what other teams did to get some inspiration! <br />
-Here are a few examples:</p>
-<ul>
-<li><a href="http://2014.igem.org/Team:METU_Turkey_team">2014 METU Turkey </a></li>
-<li><a href="http://2014.igem.org/Team:Colombia/Members">2014 Colombia</a></li>
-<li><a href="http://2014.igem.org/Team:Stony_Brook/Team">2014 Stony Brook</a></li>
-<li><a href="http://2014.igem.org/Team:OUC-China/Team">2014 OUC-China</a></li>
-</ul>
-</div>
-</div>
-</html>
-
--->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 {{SASTRA_Thanjavur/Bootstrap}}
 <html>
-    <style>
-      .mw-body{
-        width: 100% !important;
-      }
-      #top_title{
-        display: none;
-      }
-    .card-container{
+<style>
+  #top_title{
+    display: none;
+  }
+  .mw-body{
+      width: 100% !important;
+     }
+  .card-container{
         display: flex;
-    }
-    .card{
+  }
+  .card{
       border: 5px solid #ccc;
       float: left;
       margin: 15px;
@@ -62,147 +20,176 @@ Here are a few examples:</p>
       -moz-transition: margin 0.5s ease-out;
       -o-transition: margin 0.5s ease-out;
     }
-    .card:hover {
+  .card:hover {
         margin-top: 2px;
+        border-color: coral;
     }
-    </style>
-    <body>
-    <h1>Our Diverse Team:</h1>
-    <div class = "card-container">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/4/43/T--SASTRA_Thanjavur--MemberShiva.jpg" alt="Shiva">
-          <h5 class="card-title">Shivaramakrishna</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Student Team Leader, Software Team</h6>
-          <div class="card-body">
-            <p class="card-text">"At the wonderful intersection of CS and biology. Star Wars aficionado, with a weird skill set that includes horseback riding. I dabble a bit and read quirky things on minimalist design."</p>
+  .card-title ,card-subtitle{
+      text-align: center;
+    }
+  .leader{
+      background: #FFD700;
+    }
+  .sw{
+      background: #DB7070;
+    }
+  .wet{
+      background: #6884C4;
+    }
+  .model{
+      background: #75DE6A;
+    }
+  .hp{
+      background: #F3AAD3;
+    }
+  .inst{
+      background: #FFB149;
+    }
+  .container{
+    width: auto;
+    align: center;
+    text-align: center;
+  }
+</style>
+<body>
+    <div class="container">
+      <h1>Our Diverse Team</h1>
+      <div class = "card-container">
+          <div class="card leader" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/4/43/T--SASTRA_Thanjavur--MemberShiva.jpg" alt="Shiva">
+            <h5 class="card-title">Shivaramakrishna</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Student Team Leader, Software Team</h6>
+            <div class="card-body">
+              <p class="card-text">"At the wonderful intersection of CS and biology. Star Wars aficionado, with a weird skill set that includes horseback riding. I dabble a bit and read quirky things on minimalist design."</p>
+            </div>
           </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://2019.igem.org/wiki/images/3/34/T--SASTRA_Thanjavur--MemberPooja.jpg" alt="Pooja">
-            <h5 class="card-title">Pooja Murali</h5>
+          <div class="card wet" style="width: 18rem;">
+              <img class="card-img-top" src="https://2019.igem.org/wiki/images/3/34/T--SASTRA_Thanjavur--MemberPooja.jpg" alt="Pooja">
+              <h5 class="card-title">Pooja Murali</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
+              <div class="card-body">
+                <p class="card-text">Enthusiastic about memes and music, this watermelon connoisseur also plays basketball while not playing scientist in the Biotech lab. I tend to be aesthetic about M.A.D. (Music, Art and Dance)</p>
+              </div>
+          </div>
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/8/87/T--SASTRA_Thanjavur--MemberBavithra.jpg" alt="Bavithra">
+            <h5 class="card-title">Bavithra I</h5>
             <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
             <div class="card-body">
-              <p class="card-text">Enthusiastic about memes and music, this watermelon connoisseur also plays basketball while not playing scientist in the Biotech lab. I tend to be aesthetic about M.A.D. (Music, Art and Dance)</p>
+              <p class="card-text">I am Bavithra from Sastra University and I believe in the sayings of Albert Einstein that "If we knew what we were doing, it wouldn’t be called research".So let's do some magic and bring out the best possible answer for the nature's queries.</p>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/8/87/T--SASTRA_Thanjavur--MemberBavithra.jpg" alt="Bavithra">
-          <h5 class="card-title">Bavithra I</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
-          <div class="card-body">
-            <p class="card-text">I am Bavithra from Sastra University and I believe in the sayings of Albert Einstein that "If we knew what we were doing, it wouldn’t be called research" 😉😉 So let's do some magic and bring out the best possible answer for the nature's queries.</p>
           </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/9/94/T--SASTRA_Thanjavur--MemberDeeptha.jpg" alt="Deeptha">
-          <h5 class="card-title">Deeptha G</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
-          <div class="card-body">
-            <p class="card-text">Hey, I am Deeptha. I am a chronically early person and I spend half my lifetime waiting for other people to show up. On Saturday nights you can find me bingeing on Game of Thrones or Star Wars for the billionth time.That's all there is to know about me. Oh also, May the Force be with you!</p>
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/9/94/T--SASTRA_Thanjavur--MemberDeeptha.jpg" alt="Deeptha">
+            <h5 class="card-title">Deeptha G</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
+            <div class="card-body">
+              <p class="card-text">Hey, I am Deeptha. I am a chronically early person and I spend half my lifetime waiting for other people to show up. On Saturday nights you can find me bingeing on Game of Thrones or Star Wars for the billionth time.That's all there is to know about me. Oh also, May the Force be with you!</p>
+            </div>
           </div>
-        </div>
+      </div>
+      <div class = "card-container">
+          <div class="card sw" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/b/bd/T--SASTRA_Thanjavur--MemberVathsan.jpg" alt="Memes">
+            <h5 class="card-title">Sri Vathsan</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Design and Web Dev Head</h6>
+            <div class="card-body">
+              <p class="card-text">A polymath with a particular proclivity towards Moazart, Mathematics and Memes. I believe I embody the quintessence of a geek and a nerd through my frequent existential crisises due to astronomy and quantum mechanics.</p>
+            </div>
+          </div>
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/7/7e/T--SASTRA_Thanjavur--MemberHP.jpg" alt="HP">
+            <h5 class="card-title">Hariprasad</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
+            <div class="card-body">
+              <p class="card-text">Tech enthusiast, love traveling, photography, anything and everything related to neuroscience, otherwise, just a city kid with above average excitement levels to do something new and interesting everyday...</p>
+            </div>
+          </div>
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/b/bc/T--SASTRA_Thanjavur--MemberKarunya.jpg" alt="Karunya">
+            <h5 class="card-title">Karunya V</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
+            <div class="card-body">
+              <p class="card-text">Pursuing my degree in medical nanotechnology. I'll be involving wet lab studies with my teammates. Following one policy in life "Never regret", so basically living my life by just doing what I want and love. In true love with mitochondria. Always wondering about endosymbiotic theory and interesed in history as well.</p>
+            </div>
+          </div>
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/9/94/T--SASTRA_Thanjavur--MemberNavneeth.jpg" alt="Navneeth">
+            <h5 class="card-title">Navneeth S</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
+            <div class="card-body">
+              <p class="card-text">I am Navaneeth Srinivasan, the shortest guy in any room. I believe that innovation is the door that is  opened with the key of science. When I’m not cuddling puppies or performing in a rock concert in my mind palace, I think about strategies that could address global epidemics and the purpose of human existence.</p>
+            </div>
+          </div>
+      </div>
+      <div class = "card-container">
+          <div class="card leader" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/8/85/T--SASTRA_Thanjavur--MemberPriyanth.jpg" alt="Priyanth">
+            <h5 class="card-title">Priyannth</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Student Team Leader, Modeling Team</h6>
+            <div class="card-body">
+              <p class="card-text">I belong to the Department of Bioengineering, here at SASTRA and have been involved in Biosensors design and fabrication since 2016. Atoms, molecules, Quantum Mechanics, Cosmology and Molecular Biology excite me! As how uncertainty is key to Quantum Mechanics, I would like to be one "uncertain"ly interesting Team Leader for my team.</p>
+            </div>
+          </div>
+          <div class="card model" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/3/3a/T--SASTRA_Thanjavur--MemberRaghav.jpg" alt="Raghav">
+            <h5 class="card-title">Raghav R.S</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Modelling Team Head</h6>
+            <div class="card-body">
+              <p class="card-text">I'm Raghav pursuing my 4th year in Medical Nanotech. I can't cloister conformation only to chemistry since their tendency to embrace changes in response to the surroundings is a sublime suggestions in my life.</p>
+            </div>
+          </div>
+          <div class="card hp" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/f/f0/T--SASTRA_Thanjavur--MemberSmriti.jpg" alt="Smriti">
+            <h5 class="card-title">Smriti Suresh</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Human Practices and Public Engagement Head</h6>
+            <div class="card-body">
+              <p class="card-text">Hey! I'm Smriti. Everyone knows me as the really tall girl who's very easy to spot in a crowd. I'm a very observant person and I notice the tiniest details everywhere. I like it when everything around me is clean and organized. I love talking to people. Science has always fascinated me and I can't wait to contribute to the field.</p>
+            </div>
+          </div>
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/4/47/T--SASTRA_Thanjavur--MemberUttara.jpg" alt="Uttara">
+            <h5 class="card-title">Uttara J</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Wet Lab Head</h6>
+            <div class="card-body">
+              <p class="card-text">If you see a tiny, excited person with a book in her hand, jamming to 90's music, then you've found me- Uttara - an ambitious third year Biotechnology student. Knowing that the future is currently in the hands of my generation, I believe that it is our prerogative to open up doors in the field of science to create a positive change in the society. It's these kinds of things that help me get up every morning. And coffee, of course.</p>
+            </div>
+          </div>
+      </div>
+      <div class = "card-container">
+          <div class="card wet" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/6/68/T--SASTRA_Thanjavur--MemberVishal.jpg" alt="Vishal">
+            <h5 class="card-title">Vishal Kannan</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Wet Lab (Sensor Team Head)</h6>
+            <div class="card-body">
+              <p class="card-text">It is what it is?!</p>
+            </div>
+          </div>
+          <div class="card sw" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/9/91/T--SASTRA_Thanjavur--MemberTS.jpg" alt="TS">
+            <h5 class="card-title">Thamarai Selvi</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Software Team</h6>
+            <div class="card-body">
+              <p class="card-text">Hi, I am Thamarai Selvi, a budding bioinformaticist. I find the amalgamation of biology and computer science intriguing. Books are my haven and food is my happy place. The surroundings fascinate me and I end up spending long hours basking in it. But, I ain't antisocial, I am just genome friendly!</p>
+            </div>
+          </div>
+          <div class="card model" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/a/a4/T--SASTRA_Thanjavur--MemberSwetha.jpg" alt="Swetha">
+            <h5 class="card-title">Swetha N</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Modelling Team</h6>
+            <div class="card-body">
+              <p class="card-text">I am Swetha, mostly the quietest girl in the room until you get to know me! I am fascinated the most by Evolutionary biology, where I love reading and debating new hypotheses and theories. I hope on answering questions in this field through Systems Biology.</p>
+            </div>
+          </div>
+          <div class="card inst" style="width: 18rem;">
+            <img class="card-img-top" src="https://2019.igem.org/wiki/images/d/d1/T--SASTRA_Thanjavur--MemberHema.jpg" alt="Anonymous">
+            <h5 class="card-title">Hema</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Instructor</h6>
+            <div class="card-body">
+              <p class="card-text">Love exploring Microbes and Music. Rest is all ukiyo!</p>
+            </div>
+          </div>
+      </div>
     </div>
-    <div class = "card-container">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/b/bd/T--SASTRA_Thanjavur--MemberVathsan.jpg" alt="Memes">
-          <h5 class="card-title">Sri Vathsan</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Design and Web Dev Head</h6>
-          <div class="card-body">
-            <p class="card-text">A polymath with a particular proclivity towards Moazart, Mathematics and Memes. I believe I embody the quintessence of a geek and a nerd through my frequent existential crisises due to astronomy and quantum mechanics.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/7/7e/T--SASTRA_Thanjavur--MemberHP.jpg" alt="HP">
-          <h5 class="card-title">Hariprasad</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
-          <div class="card-body">
-            <p class="card-text">Tech enthusiast, love traveling, photography, anything and everything related to neuroscience, otherwise, just a city kid with above average excitement levels to do something new and interesting everyday...</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/b/bc/T--SASTRA_Thanjavur--MemberKarunya.jpg" alt="Karunya">
-          <h5 class="card-title">Karunya V</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
-          <div class="card-body">
-            <p class="card-text">Pursuing my degree in medical nanotechnology. I'll be involving wet lab studies with my teammates. Following one policy in life "Never regret", so basically living my life by just doing what I want and love. In true love with mitochondria. Always wondering about endosymbiotic theory and interesed in history as well.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/9/94/T--SASTRA_Thanjavur--MemberNavneeth.jpg" alt="Navneeth">
-          <h5 class="card-title">Navneeth S</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab Team</h6>
-          <div class="card-body">
-            <p class="card-text">I am Navaneeth Srinivasan, the shortest guy in any room. I believe that innovation is the door that is  opened with the key of science. When I’m not cuddling puppies or performing in a rock concert in my mind palace, I think about strategies that could address global epidemics and the purpose of human existence.</p>
-          </div>
-        </div>
-    </div>
-    <div class = "card-container">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/8/85/T--SASTRA_Thanjavur--MemberPriyanth.jpg" alt="Priyanth">
-          <h5 class="card-title">Priyannth</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Student Team Leader, Modeling Team</h6>
-          <div class="card-body">
-            <p class="card-text">I belong to the Department of Bioengineering, here at SASTRA and have been involved in Biosensors design and fabrication since 2016. Atoms, molecules, Quantum Mechanics, Cosmology and Molecular Biology excite me! As how uncertainty is key to Quantum Mechanics, I would like to be one "uncertain"ly interesting Team Leader for my team.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/3/3a/T--SASTRA_Thanjavur--MemberRaghav.jpg" alt="Raghav">
-          <h5 class="card-title">Raghav R.S</h5>
-          <h6 class="card-subtitle mb-2 text-muted">MOdelling Team Head</h6>
-          <div class="card-body">
-            <p class="card-text">I'm Raghav pursuing my 4th year in Medical Nanotech. I can't cloister conformation only to chemistry since their tendency to embrace changes in response to the surroundings is a sublime suggestions in my life.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/f/f0/T--SASTRA_Thanjavur--MemberSmriti.jpg" alt="Smriti">
-          <h5 class="card-title">Smriti Suresh</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Human Practices and Public Engagement Head</h6>
-          <div class="card-body">
-            <p class="card-text">Hey! I'm Smriti. Everyone knows me as the really tall girl who's very easy to spot in a crowd. I'm a very observant person and I notice the tiniest details everywhere. I like it when everything around me is clean and organized. I love talking to people. Science has always fascinated me and I can't wait to contribute to the field.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/4/47/T--SASTRA_Thanjavur--MemberUttara.jpg" alt="Uttara">
-          <h5 class="card-title">Uttara J</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab Head</h6>
-          <div class="card-body">
-            <p class="card-text">If you see a tiny, excited person with a book in her hand, jamming to 90's music, then you've found me- Uttara - an ambitious third year Biotechnology student. Knowing that the future is currently in the hands of my generation, I believe that it is our prerogative to open up doors in the field of science to create a positive change in the society. It's these kinds of things that help me get up every morning. And coffee, of course.</p>
-          </div>
-        </div>
-    </div>
-    <div class = "card-container">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/6/68/T--SASTRA_Thanjavur--MemberVishal.jpg" alt="Vishal">
-          <h5 class="card-title">Vishal Kannan</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Wet Lab (Sensor Team Head)</h6>
-          <div class="card-body">
-            <p class="card-text">It is what it is?!</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/9/91/T--SASTRA_Thanjavur--MemberTS.jpg" alt="TS">
-          <h5 class="card-title">Thamarai Selvi</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Software Team</h6>
-          <div class="card-body">
-            <p class="card-text">Hi, I am Thamarai Selvi, a budding bioinformaticist. I find the amalgamation of biology and computer science intriguing. Books are my haven and food is my happy place. The surroundings fascinate me and I end up spending long hours basking in it. But, I ain't antisocial, I am just genome friendly!</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/a/a4/T--SASTRA_Thanjavur--MemberSwetha.jpg" alt="Swetha">
-          <h5 class="card-title">Swetha N</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Modelling Team</h6>
-          <div class="card-body">
-            <p class="card-text">I am Swetha, mostly the quietest girl in the room until you get to know me! I am fascinated the most by Evolutionary biology, where I love reading and debating new hypotheses and theories. I hope on answering questions in this field through Systems Biology.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://2019.igem.org/wiki/images/d/d1/T--SASTRA_Thanjavur--MemberHema.jpg" alt="Anonymous">
-          <h5 class="card-title">Hema</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Instructor</h6>
-          <div class="card-body">
-            <p class="card-text">Love exploring Microbes and Music. Rest is all ukiyo!</p>
-          </div>
-        </div>
-    </div>
-    </body>
+</body>
 </html>
