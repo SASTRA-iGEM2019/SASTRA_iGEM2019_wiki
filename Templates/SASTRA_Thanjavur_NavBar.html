@@ -1,0 +1,270 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+{{SASTRA_Thanjavur/Bootstrap}}
+
+<style>
+  body{
+    overflow: hidden;
+  }
+  #one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
+    position: absolute;
+  }
+  #onex,#twox,#threex,#fourx,#fivex,#sixx,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
+    color:red
+  }
+  #one,#onex{top:7%}
+  #two,#twox{top:14%}
+  #three,#threex{top:21%}
+  #four,#fourx{top:28%}
+  #five,#fivex{top:35%}
+  #six,#sixx{top:42%}
+  #seven,#sevenx{top:49%}
+  #eight,#eightx{top:56%}
+  #nine,#ninex{top:63%}
+  #ten,#tenx{top:70%}
+  #eleven,#elevenx{top:77%}
+  #twelve,#twelvex{top:84%}
+  #thirt,#thirtx{top:91%}
+  #fourt,#fourtx{top:97%}
+  #one,#nine{
+      -webkit-animation: one 4s infinite;
+      -moz-animation: one 4s infinite;
+    }
+  #onex,#ninex{
+      -webkit-animation: onex 4s 2s infinite;
+      -moz-animation: onex 4s 2s infinite;
+    }
+  #two,#ten{
+      -webkit-animation: one 4s 0.5s infinite;
+      -moz-animation: one 4s 0.5s infinite;
+    }
+  #twox,#tenx{
+      -webkit-animation: onex 4s 2.5s infinite;
+      -moz-animation: onex 4s 2.5s infinite;
+    }
+  #three,#eleven{
+      -webkit-animation: one 4s 1s infinite;
+      -moz-animation: one 4s 1s infinite;
+    }
+  #threex,#elevenx{
+      -webkit-animation: onex 4s 3s infinite;
+      -moz-animation: onex 4s 3s infinite;
+    }
+  #four,#twelve{
+      -webkit-animation: one 4s 1.5s infinite;
+      -moz-animation: one 4s 1.5s infinite;
+    }
+  #fourx,#twelvex{
+      -webkit-animation: onex 4s 3.5s infinite;
+      -moz-animation: onex 4s 3.5s infinite;
+    }
+  #five,#thirt{
+      -webkit-animation: one 4s 2s infinite;
+      -moz-animation: one 4s 2s infinite;
+    }
+  #fivex,#thirtx{
+      -webkit-animation: onex 4s infinite;
+  	-moz-animation: onex 4s infinite;
+    }
+  #six,#fourt{
+      -webkit-animation: one 4s 2.5s infinite;
+      -moz-animation: one 4s 2.5s infinite;
+    }
+  #sixx,#fourtx{
+      -webkit-animation: onex 4s 0.5s infinite;
+      -moz-animation: onex 4s 0.5s infinite;
+    }
+  #seven{
+      -webkit-animation: one 4s 3s infinite;
+      -moz-animation: one 4s 3s infinite;
+    }
+  #sevenx{
+      -webkit-animation: onex 4s 1s infinite;
+      -moz-animation: onex 4s 1s infinite;
+    }
+  #eight{
+      -webkit-animation: one 4s 3.5s infinite;
+  	-moz-animation: one 4s 3.5s infinite;
+    }
+  #eightx{
+      -webkit-animation: onex 4s 1.5s infinite;
+      -moz-animation: onex 4s 1.5s infinite;
+    }
+  @-webkit-keyframes one{
+      0%   { left:87%;  z-index: 1; -webkit-transform: scale(1)}
+      25%  { -webkit-transform: scale(2); }
+      50%  { left:99%; z-index: 2; -webkit-transform: scale(1)}
+      75%  { -webkit-transform: scale(0.5); }
+      100% { left:87%;  z-index: 1; -webkit-transform: scale(1)}
+    }
+  @-webkit-keyframes onex{
+      0%   { left:87%;  z-index: 2; -webkit-transform: scale(1)}
+      25%  { -webkit-transform: scale(2); }
+      50%  { left:99%; z-index: 1; -webkit-transform: scale(1)}
+      75%  { -webkit-transform: scale(0.5); }
+      100% { left:87%;  z-index: 0; -webkit-transform: scale(1)}
+    }
+  @-moz-keyframes one{
+      0%   { left:87%;  z-index: 1; -moz-transform: scale(1)}
+      25%  { -moz-transform: scale(2); }
+      50%  { left:99%; z-index: 2; -moz-transform: scale(1)}
+      75%  { -moz-transform: scale(0.5); }
+      100% { left:87%;  z-index: 1; -moz-transform: scale(1)}
+    }
+  @-moz-keyframes onex{
+      0%   { left:87%;  z-index: 2; -moz-transform: scale(1)}
+      25%  { -moz-transform: scale(2); }
+      50%  { left:99%; z-index: 1; -moz-transform: scale(1)}
+      75%  { -moz-transform: scale(0.5); }
+      100% { left:87%;  z-index: 2; -moz-transform: scale(1)}
+    }
+  .text{
+  }
+  .home{
+    position: absolute;
+    top: 7%;
+    left: 92%;
+    z-index: 0;
+  }
+  .team{
+    position: absolute;
+    top: 14%;
+    left: 92%;
+    z-index: 0;
+  }
+  .collab{
+    position: absolute;
+    top: 21%;
+    left: 92%;
+    z-index: 0;
+  }
+  .proj{
+    position: absolute;
+    top: 28%;
+    left: 92%;
+    z-index: 0;
+  }
+  .desc{
+    position: absolute;
+    top: 35%;
+    left: 92%;
+    z-index: 0;
+  }
+  .design{
+    position: absolute;
+    top: 42%;
+    left: 92%;
+    z-index: 0;
+  }
+  .model{
+    position: absolute;
+    top: 49%;
+    left: 92%;
+    z-index: 0;
+  }
+  .attrib{
+    position: absolute;
+    top: 56%;
+    left: 92%;
+    z-index: 0;
+  }
+  .hp{
+    position: absolute;
+    top: 63%;
+    left: 92%;
+    z-index: 0;
+  }
+  .part{
+    position: absolute;
+    top: 70%;
+    left: 92%;
+    z-index: 0;
+  }
+  .safe{
+    position: absolute;
+    top: 77%;
+    left: 92%;
+    z-index: 0;
+  }
+  .award{
+    position: absolute;
+    top: 84%;
+    left: 92%;
+    z-index: 0;
+  }
+  .sw{
+    position: absolute;
+    top: 91%;
+    left: 92%;
+    z-index: 0;
+  }
+  .judge{
+    position: absolute;
+    top: 97%;
+    left: 92%;
+    z-index: 0;
+  }
+</style>
+
+<html>
+  <div id = "navbar">
+     <div id="one">&diams;</div>
+     <div id="onex">&diams;</div>
+
+     <div id="two">&diams;</div>
+     <div id="twox">&diams;</div>
+
+     <div id="three">&diams;</div>
+     <div id="threex">&diams;</div>
+
+     <div id="six">&diams;</div>
+     <div id="sixx">&diams;</div>
+
+     <div id="four">&diams;</div>
+     <div id="fourx">&diams;</div>
+
+     <div id="ten">&diams;</div>
+     <div id="tenx">&diams;</div>
+
+     <div id="eleven">&diams;</div>
+     <div id="elevenx">&diams;</div>
+
+     <div id="five">&diams;</div>
+     <div id="fivex">&diams;</div>
+
+     <div id="eight">&diams;</div>
+     <div id="eightx">&diams;</div>
+
+     <div id="seven">&diams;</div>
+     <div id="sevenx">&diams;</div>
+
+     <div id="nine">&diams;</div>
+     <div id="ninex">&diams;</div>
+
+     <div id="thirt">&diams;</div>
+     <div id="thirtx">&diams;</div>
+
+     <div id="twelve">&diams;</div>
+     <div id="twelvex">&diams;</div>
+
+     <div id="fourt">&diams;</div>
+     <div id="fourtx">&diams;</div>
+
+     <div class="text">
+       <div class="home centre">Home</div>
+       <div class="team centre">Team Members</div>
+       <div class="collab centre">Collaborations</div>
+       <div class="proj">Projects</div>
+       <div class="desc">Description</div>
+       <div class="design">Design</div>
+       <div class="model">Model</div>
+       <div class="attrib">Attributions</div>
+       <div class="hp">Human Practices</div>
+       <div class="part">Parts</div>
+       <div class="safe">Safety</div>
+       <div class="award">Awards</div>
+       <div class="sw">Software</div>
+       <div class="judge">Judging Form</div>
+     </div>
+  </div>
+</html>
