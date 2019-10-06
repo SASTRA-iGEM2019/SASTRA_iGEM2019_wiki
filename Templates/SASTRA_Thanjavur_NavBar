@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
 <!-- {{SASTRA_Thanjavur/Bootstrap}} -->
 
@@ -8,14 +8,14 @@
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     document.getElementById('floating').setAttribute("onclick","closeNav()");
-    document.getElementById('floating').innerHTML = "&nbsp&nbsp&lt;";
+    document.getElementById('floating').innerHTML = "&lt;";
   }
   function closeNav() {
     document.getElementById("navbar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
     document.body.style.backgroundColor = "white";
     document.getElementById('floating').setAttribute("onclick","openNav()");
-    document.getElementById('floating').innerHTML = "&nbsp&nbsp&gt;";
+    document.getElementById('floating').innerHTML = "&gt;";
   }
 </script>
 
@@ -137,7 +137,7 @@
       75%  { -moz-transform: scale(0.5); }
       100% { left:1%;  z-index: 2; -moz-transform: scale(1)}
     }
-  .sidenav {
+  .sidenav{
     height: 100%;
     width: 0;
     position: fixed;
@@ -148,12 +148,8 @@
     overflow: hidden;
     transition: 0.5s;
     color: green;
-}
+  }
   .sidenav a {
-    /* padding: 8px 8px 8px 32p
-    font-size: 25px;
-    color: #818181;
-    display: block; */
     text-decoration: none;
     transition: 0.3s;
     color: #D2F8BC;
@@ -186,7 +182,6 @@
     position: absolute;
     top: 7%;
     z-index: 0;
-    font-size: 15px;
   }
   .team{
     position: absolute;
@@ -254,7 +249,7 @@
     z-index: 0;
   }
   #floating{
-    font-size:30px;
+    font-size:40px;
     cursor:pointer;
     color:black;
     background:red;
@@ -262,55 +257,42 @@
     height:50px;
     border-radius:50%;
     position: fixed;
+    text-align: center;
     z-index:5;
   }
 </style>
 
 <html>
   <div id="navbar" class="sidenav">
-     <div id="one">&diams;</div>
-     <div id="onex">&diams;</div>
-
-     <div id="two">&diams;</div>
-     <div id="twox">&diams;</div>
-
-     <div id="three">&diams;</div>
-     <div id="threex">&diams;</div>
-
-     <div id="six">&diams;</div>
-     <div id="sixx">&diams;</div>
-
-     <div id="four">&diams;</div>
-     <div id="fourx">&diams;</div>
-
-     <div id="ten">&diams;</div>
-     <div id="tenx">&diams;</div>
-
-     <div id="eleven">&diams;</div>
-     <div id="elevenx">&diams;</div>
-
-     <div id="five">&diams;</div>
-     <div id="fivex">&diams;</div>
-
-     <div id="eight">&diams;</div>
-     <div id="eightx">&diams;</div>
-
-     <div id="seven">&diams;</div>
-     <div id="sevenx">&diams;</div>
-
-     <div id="nine">&diams;</div>
-     <div id="ninex">&diams;</div>
-
-     <div id="thirt">&diams;</div>
-     <div id="thirtx">&diams;</div>
-
-     <div id="twelve">&diams;</div>
-     <div id="twelvex">&diams;</div>
-
-     <div id="fourt">&diams;</div>
-     <div id="fourtx">&diams;</div>
-
-     <div class="text">
+       <div id="one">&diams;</div>
+       <div id="onex">&diams;</div>
+       <div id="two">&diams;</div>
+       <div id="twox">&diams;</div>
+       <div id="three">&diams;</div>
+       <div id="threex">&diams;</div>
+       <div id="six">&diams;</div>
+       <div id="sixx">&diams;</div>
+       <div id="four">&diams;</div>
+       <div id="fourx">&diams;</div>
+       <div id="ten">&diams;</div>
+       <div id="tenx">&diams;</div>
+       <div id="eleven">&diams;</div>
+       <div id="elevenx">&diams;</div>
+       <div id="five">&diams;</div>
+       <div id="fivex">&diams;</div>
+       <div id="eight">&diams;</div>
+       <div id="eightx">&diams;</div>
+       <div id="seven">&diams;</div>
+       <div id="sevenx">&diams;</div>
+       <div id="nine">&diams;</div>
+       <div id="ninex">&diams;</div>
+       <div id="thirt">&diams;</div>
+       <div id="thirtx">&diams;</div>
+       <div id="twelve">&diams;</div>
+       <div id="twelvex">&diams;</div>
+       <div id="fourt">&diams;</div>
+       <div id="fourtx">&diams;</div>
+    <div class="text">
        <div class="home"><a href="https://www.google.com">Home</a></div>
        <div class="team"><a href="https://www.google.com">Team Members</a></div>
        <div class="collab"><a href="https://www.google.com">Collaborations</a></div>
@@ -325,9 +307,9 @@
        <div class="award"><a href="https://www.google.com">Awards</a></div>
        <div class="sw"><a href="https://www.google.com">Software</a></div>
        <div class="judge"><a href="https://www.google.com">Judging Form</a></div>
-     </div>
+    </div>
   </div>
   <body id="main">
-    <div id="floating" onclick="openNav()">&nbsp&nbsp&gt;</div>
+    <div id="floating" onclick="openNav()">&gt;</div>
   </body>
 </html>
