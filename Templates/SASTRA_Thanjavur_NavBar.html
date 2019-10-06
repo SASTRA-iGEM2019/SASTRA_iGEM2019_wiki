@@ -1,17 +1,36 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-{{SASTRA_Thanjavur/Bootstrap}}
+<!-- {{SASTRA_Thanjavur/Bootstrap}} -->
+
+<script type="text/javascript">
+  function openNav() {
+    document.getElementById("navbar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById('floating').setAttribute("onclick","closeNav()");
+    document.getElementById('floating').innerHTML = "&nbsp&nbsp&lt;";
+  }
+  function closeNav() {
+    document.getElementById("navbar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+    document.getElementById('floating').setAttribute("onclick","openNav()");
+    document.getElementById('floating').innerHTML = "&nbsp&nbsp&gt;";
+  }
+</script>
 
 <style>
-  body{
-    overflow: hidden;
-  }
   #one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
     position: absolute;
   }
-  #onex,#twox,#threex,#fourx,#fivex,#sixx,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
-    color:red
-  }
+  #one,#five,#nine,#thirt,#threex,#sevenx,#elevenx{
+    color: blue;}/*A*/
+  #onex,#fivex,#ninex,#thirtx,#three,#seven,#eleven{
+    color: yellow;}/*T*/
+  #two,#six,#ten,#fourt,#four,#eight,#twelve{
+    color:red;}/*G*/
+  #twox,#sixx,#tenx,#fourtx,#fourx,#eightx,#twelvex{
+    color:orange;}/*C*/
   #one,#onex{top:7%}
   #two,#twox{top:14%}
   #three,#threex{top:21%}
@@ -91,123 +110,164 @@
       -moz-animation: onex 4s 1.5s infinite;
     }
   @-webkit-keyframes one{
-      0%   { left:87%;  z-index: 1; -webkit-transform: scale(1)}
+      0%   { left:1%;  z-index: 1; -webkit-transform: scale(1)}
       25%  { -webkit-transform: scale(2); }
       50%  { left:99%; z-index: 2; -webkit-transform: scale(1)}
       75%  { -webkit-transform: scale(0.5); }
-      100% { left:87%;  z-index: 1; -webkit-transform: scale(1)}
+      100% { left:1%;  z-index: 1; -webkit-transform: scale(1)}
     }
   @-webkit-keyframes onex{
-      0%   { left:87%;  z-index: 2; -webkit-transform: scale(1)}
+      0%   { left:1%;  z-index: 2; -webkit-transform: scale(1)}
       25%  { -webkit-transform: scale(2); }
       50%  { left:99%; z-index: 1; -webkit-transform: scale(1)}
       75%  { -webkit-transform: scale(0.5); }
-      100% { left:87%;  z-index: 0; -webkit-transform: scale(1)}
+      100% { left:1%;  z-index: 0; -webkit-transform: scale(1)}
     }
   @-moz-keyframes one{
-      0%   { left:87%;  z-index: 1; -moz-transform: scale(1)}
+      0%   { left:1%;  z-index: 1; -moz-transform: scale(1)}
       25%  { -moz-transform: scale(2); }
       50%  { left:99%; z-index: 2; -moz-transform: scale(1)}
       75%  { -moz-transform: scale(0.5); }
-      100% { left:87%;  z-index: 1; -moz-transform: scale(1)}
+      100% { left:1%;  z-index: 1; -moz-transform: scale(1)}
     }
   @-moz-keyframes onex{
-      0%   { left:87%;  z-index: 2; -moz-transform: scale(1)}
+      0%   { left:1%;  z-index: 2; -moz-transform: scale(1)}
       25%  { -moz-transform: scale(2); }
       50%  { left:99%; z-index: 1; -moz-transform: scale(1)}
       75%  { -moz-transform: scale(0.5); }
-      100% { left:87%;  z-index: 2; -moz-transform: scale(1)}
+      100% { left:1%;  z-index: 2; -moz-transform: scale(1)}
     }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow: hidden;
+    transition: 0.5s;
+    color: green;
+}
+  .sidenav a {
+    /* padding: 8px 8px 8px 32p
+    font-size: 25px;
+    color: #818181;
+    display: block; */
+    text-decoration: none;
+    transition: 0.3s;
+    color: #D2F8BC;
+  }
+  .sidenav a:hover {
+    color: #3C7A39;
+  }
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    font-size: 36px;
+    margin: auto;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
   .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .home{
     position: absolute;
     top: 7%;
-    left: 92%;
     z-index: 0;
+    font-size: 15px;
   }
   .team{
     position: absolute;
     top: 14%;
-    left: 92%;
     z-index: 0;
   }
   .collab{
     position: absolute;
     top: 21%;
-    left: 92%;
     z-index: 0;
   }
   .proj{
     position: absolute;
     top: 28%;
-    left: 92%;
     z-index: 0;
   }
   .desc{
     position: absolute;
     top: 35%;
-    left: 92%;
     z-index: 0;
   }
   .design{
     position: absolute;
     top: 42%;
-    left: 92%;
     z-index: 0;
   }
   .model{
     position: absolute;
     top: 49%;
-    left: 92%;
     z-index: 0;
   }
   .attrib{
     position: absolute;
     top: 56%;
-    left: 92%;
     z-index: 0;
   }
   .hp{
     position: absolute;
     top: 63%;
-    left: 92%;
     z-index: 0;
   }
   .part{
     position: absolute;
     top: 70%;
-    left: 92%;
     z-index: 0;
   }
   .safe{
     position: absolute;
     top: 77%;
-    left: 92%;
     z-index: 0;
   }
   .award{
     position: absolute;
     top: 84%;
-    left: 92%;
     z-index: 0;
   }
   .sw{
     position: absolute;
     top: 91%;
-    left: 92%;
     z-index: 0;
   }
   .judge{
     position: absolute;
     top: 97%;
-    left: 92%;
     z-index: 0;
+  }
+  #floating{
+    font-size:30px;
+    cursor:pointer;
+    color:black;
+    background:red;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    position: fixed;
+    z-index:5;
   }
 </style>
 
 <html>
-  <div id = "navbar">
+  <div id="navbar" class="sidenav">
      <div id="one">&diams;</div>
      <div id="onex">&diams;</div>
 
@@ -251,20 +311,23 @@
      <div id="fourtx">&diams;</div>
 
      <div class="text">
-       <div class="home centre">Home</div>
-       <div class="team centre">Team Members</div>
-       <div class="collab centre">Collaborations</div>
-       <div class="proj">Projects</div>
-       <div class="desc">Description</div>
-       <div class="design">Design</div>
-       <div class="model">Model</div>
-       <div class="attrib">Attributions</div>
-       <div class="hp">Human Practices</div>
-       <div class="part">Parts</div>
-       <div class="safe">Safety</div>
-       <div class="award">Awards</div>
-       <div class="sw">Software</div>
-       <div class="judge">Judging Form</div>
+       <div class="home"><a href="https://www.google.com">Home</a></div>
+       <div class="team"><a href="https://www.google.com">Team Members</a></div>
+       <div class="collab"><a href="https://www.google.com">Collaborations</a></div>
+       <div class="proj"><a href="https://www.google.com">Projects</a></div>
+       <div class="desc"><a href="https://www.google.com">Description</a></div>
+       <div class="design"><a href="https://www.google.com">Design</a></div>
+       <div class="model"><a href="https://www.google.com">Model</a></div>
+       <div class="attrib"><a href="https://www.google.com">Attributions</a></div>
+       <div class="hp"><a href="https://www.google.com">Human Practices</a></div>
+       <div class="part"><a href="https://www.google.com">Parts</a></div>
+       <div class="safe"><a href="https://www.google.com">Safety</a></div>
+       <div class="award"><a href="https://www.google.com">Awards</a></div>
+       <div class="sw"><a href="https://www.google.com">Software</a></div>
+       <div class="judge"><a href="https://www.google.com">Judging Form</a></div>
      </div>
   </div>
+  <body id="main">
+    <div id="floating" onclick="openNav()">&nbsp&nbsp&gt;</div>
+  </body>
 </html>
