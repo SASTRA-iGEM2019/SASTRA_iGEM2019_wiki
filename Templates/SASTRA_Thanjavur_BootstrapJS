@@ -1,7 +1,9 @@
 <html>
+<body>
 
-{{SASTRA_Thanjavur/jQuery}}
-{{SASTRA_Thanjavur/popperJS}}
-{{SASTRA_Thanjavur/bootstrapCDN}}
+<script src="https://2019.igem.org/wiki/index.php?title=Template:SASTRA_Thanjavur/bootstrapCDN&ctype=text/javascript&action=edit">
 
+<script src="https://2019.igem.org/wiki/index.php?title=Template:SASTRA_Thanjavur/popperJS&ctype=text/javascript&action=edit"></script>
+
+</body>
 </html>

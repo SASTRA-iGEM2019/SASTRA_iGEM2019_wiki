@@ -1,15 +1,7 @@
-<!--
-Path: https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices
--->
 {{SASTRA_Thanjavur}}
-
+{{SASTRA_Thanjavur/Bootstrap}}
+<html>
 <style>
-.mw-body{
-  width: 100% !important;
-}
-#top_title{
-  display: none;
-}
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
@@ -29,14 +21,16 @@ Path: https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices
   margin-bottom: 20px;
   position: relative;
 }
-.timeline > li:before, .timeline > li:after {
+.timeline > li:before,
+.timeline > li:after {
   content: " ";
   display: table;
 }
 .timeline > li:after {
   clear: both;
 }
-.timeline > li:before, .timeline > li:after {
+.timeline > li:before,
+.timeline > li:after {
   content: " ";
   display: table;
 }
@@ -58,12 +52,15 @@ Path: https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
-.timeline > li.timeline-inverted + li:not(.timeline-inverted), .timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+.timeline > li.timeline-inverted + li:not(.timeline-inverted),
+.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
 margin-top: -60px;
 }
+
 .timeline > li:not(.timeline-inverted) {
 padding-right:90px;
 }
+
 .timeline > li.timeline-inverted {
 padding-left:90px;
 }
@@ -141,7 +138,8 @@ padding-left:90px;
   margin-top: 0;
   color: inherit;
 }
-.timeline-body > p, .timeline-body > ul {
+.timeline-body > p,
+.timeline-body > ul {
   margin-bottom: 0;
 }
 .timeline-body > p + p {
@@ -151,7 +149,11 @@ li:hover{
     cursor: pointer;
 }
 .container{
-    width: 100%;
+    width: 200%
+    float: right !important;
+}
+body{
+
 }
 </style>
 
@@ -176,104 +178,103 @@ li:hover{
         }
     }
 </script>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Human Practices Events</h1>
+    </div>
 
-<html>
-    <body>
-        <div class="container">
-            <div class="page-header">
-                <h1 id="timeline">Human Practices Events</h1>
+    <ul class="timeline">
+
+        <li onclick="clicked('sn')">
+          <div class="timeline-badge dblue"><i class="glyphicon glyphicon-calendar"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Natesan Vidyalaya</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>20th April 2019</small></p>
             </div>
-            <ul class="timeline">
+            <div class="timeline-body">
+              <p>The iGEM SASTRA team in their second outing, conducted the human practices session for the students of class XI and XII at Shri Natesan Vidyasala, Mannivakkam on 20th June 2019. The activity developed for the school students was a grand Synthetic Biology auction, colloquially called the SynBio Auction. The session witnessed the participation of over 200 enthusiastic school students pursuing education in Science ...</p>
+            </div>
+          </div>
+        </li>
 
-                <li onclick="clicked('sn')">
-                  <div class="timeline-badge dblue"><i class="glyphicon glyphicon-calendar"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Natesan Vidyalaya</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>20th April 2019</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>The iGEM SASTRA team in their second outing, conducted the human practices session for the students of class XI and XII at Shri Natesan Vidyasala, Mannivakkam on 20th June 2019. The activity developed for the school students was a grand Synthetic Biology auction, colloquially called the SynBio Auction. The session witnessed the participation of over 200 enthusiastic school students pursuing education in Science ...</p>
-                    </div>
-                  </div>
-                </li>
+        <li class="timeline-inverted" onclick="clicked('dav')">
+            <div class="timeline-badge green"><i class="glyphicon glyphicon-calendar"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">DAV Public School</h4>
+                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>22nd April 2019</small></p>
+              </div>
+              <div class="timeline-body">
+                <p>It was a professional day as usual. The venue for the grand SynBio auction was getting ready at a decent pace. Tumultuous atmosphere prevailed with the setting up of the chairs, tables, desks and scorecards for the auction. Fervid participants of the auction were all geared up and were in intense discussions with their team members to fare well. The members of the iGEM SASTRA team, meanwhile had spent a week’s time with at most zeal and love for the fraternity of ...</p>
+              </div>
+            </div>
+        </li>
 
-                <li class="timeline-inverted" onclick="clicked('dav')">
-                    <div class="timeline-badge green"><i class="glyphicon glyphicon-calendar"></i></div>
-                    <div class="timeline-panel">
-                      <div class="timeline-heading">
-                        <h4 class="timeline-title">DAV Public School</h4>
-                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>22nd April 2019</small></p>
-                      </div>
-                      <div class="timeline-body">
-                        <p>It was a professional day as usual. The venue for the grand SynBio auction was getting ready at a decent pace. Tumultuous atmosphere prevailed with the setting up of the chairs, tables, desks and scorecards for the auction. Fervid participants of the auction were all geared up and were in intense discussions with their team members to fare well. The members of the iGEM SASTRA team, meanwhile had spent a week’s time with at most zeal and love for the fraternity of ...</p>
-                      </div>
-                    </div>
-                </li>
+        <li onclick="clicked('cv')">
+          <div class="timeline-badge orange"><i class="glyphicon glyphicon-calendar"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Chettinad Vidhyashram</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Our third human practices session was held at Chettinad Vidyashram, Chennai on 21st June 2019. The session was conducted in collaboration with IIT (Indian Institute of Technology) Madras iGEM team. Uttara J., Deeptha G., Navaneeth S., Srivathsan S., Hariprasad K., Smriti Suresh and Priyannth R.S. were the representatives from SASTRA Deemed University and were accompanied by Gayathri P., Neha S., Sriya V, the members of the IIT Madras iGEM team. The session witnessed the...</p>
+            </div>
+          </div>
+        </li>
 
-                <li onclick="clicked('cv')">
-                  <div class="timeline-badge orange"><i class="glyphicon glyphicon-calendar"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Chettinad Vidhyashram</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Our third human practices session was held at Chettinad Vidyashram, Chennai on 21st June 2019. The session was conducted in collaboration with IIT (Indian Institute of Technology) Madras iGEM team. Uttara J., Deeptha G., Navaneeth S., Srivathsan S., Hariprasad K., Smriti Suresh and Priyannth R.S. were the representatives from SASTRA Deemed University and were accompanied by Gayathri P., Neha S., Sriya V, the members of the IIT Madras iGEM team. The session witnessed the...</p>
-                    </div>
-                  </div>
-                </li>
+        <li class="timeline-inverted" onclick="clicked('pcvc')">
+          <div class="timeline-badge red"><i class="glyphicon glyphicon-calendar"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">International Foundation for Crime Prevention and Victim Care</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>iGEM is an international competition held on the theme of synthetic biology. We, the SASTRA iGEM Team, got an opportunity to meet a set of burn victim women sheltered by PCVC, Anna Nagar Chennai. The meet was aimed to create awareness about cervical cancer and Pap smear test to the women present there. PCVC is an NGO that provides help to women who have been victims of domestic violence and burn accidents. There were about 20 women present for the session. We informed them...</p>
+            </div>
+          </div>
+        </li>
 
-                <li class="timeline-inverted" onclick="clicked('pcvc')">
-                  <div class="timeline-badge red"><i class="glyphicon glyphicon-calendar"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">International Foundation for Crime Prevention and Victim Care</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>iGEM is an international competition held on the theme of synthetic biology. We, the SASTRA iGEM Team, got an opportunity to meet a set of burn victim women sheltered by PCVC, Anna Nagar Chennai. The meet was aimed to create awareness about cervical cancer and Pap smear test to the women present there. PCVC is an NGO that provides help to women who have been victims of domestic violence and burn accidents. There were about 20 women present for the session. We informed them...</p>
-                    </div>
-                  </div>
-                </li>
+        <li onclick="clicked('repco')">
+          <div class="timeline-badge lblue"><i class="glyphicon glyphicon-calendar"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Repco Micro Finance</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>It was an effulgent day in Trichy. We, the SASTRA iGEM team which included Bavithra I.,Deeptha G., Karunya V., Navaneeth S., Srivathsan S., and Uttara J. arrived at the REPCO Micro Finance office at 11:00 a.m. Having travelled in the bus from the college in Tirumalaisamudram to Trichy in the scorching heat, all of us were happy to see eager faces waiting to listen to us.The first set of audience consisted...</p>
+            </div>
+          </div>
+        </li>
 
-                <li onclick="clicked('repco')">
-                  <div class="timeline-badge lblue"><i class="glyphicon glyphicon-calendar"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Repco Micro Finance</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>It was an effulgent day in Trichy. We, the SASTRA iGEM team which included Bavithra I.,Deeptha G., Karunya V., Navaneeth S., Srivathsan S., and Uttara J. arrived at the REPCO Micro Finance office at 11:00 a.m. Having travelled in the bus from the college in Tirumalaisamudram to Trichy in the scorching heat, all of us were happy to see eager faces waiting to listen to us.The first set of audience consisted...</p>
-                    </div>
-                  </div>
-                </li>
+        <!-- <li class="timeline-inverted" onclick="clicked('')">
+          <div class="timeline-badge dblue"><i class="glyphicon glyphicon-calendar"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+        </li>
 
-                <!-- <li class="timeline-inverted" onclick="clicked('')">
-                  <div class="timeline-badge dblue"><i class="glyphicon glyphicon-calendar"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                  </div>
-                </li>
-
-                <li onclick="clicked('')">
-                  <div class="timeline-badge success"><i class="glyphicon glyphicon-calendar"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                  </div>
-                </li> -->
-            </ul>
-        </div>
-    </body>
+        <li onclick="clicked('')">
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-calendar"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+        </li> -->
+    </ul>
+</div>
+</body>
 </html>

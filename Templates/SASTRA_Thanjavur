@@ -1,7 +1,7 @@
 {{SASTRA_Thanjavur/Bootstrap}}
-
-<script type="text/javascript">
-  function openNav() {
+<html>
+<script>
+function openNav() {
     document.getElementById("navbar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
@@ -16,9 +16,14 @@
     document.getElementById('floating').innerHTML = "&gt;";
   }
 </script>
-
 <style>
-  #one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
+.mw-body{
+  width: 100% !important;
+}
+#top_title{
+  display: none;
+}
+#one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
     position: absolute;
   }
   #one,#five,#nine,#thirt,#threex,#sevenx,#elevenx{
@@ -206,7 +211,7 @@
     top: 42%;
     z-index: 0;
   }
-  .model{
+  .modelx{
     position: absolute;
     top: 49%;
     z-index: 0;
@@ -216,7 +221,7 @@
     top: 56%;
     z-index: 0;
   }
-  .hp{
+  .hpx{
     position: absolute;
     top: 63%;
     z-index: 0;
@@ -236,7 +241,7 @@
     top: 84%;
     z-index: 0;
   }
-  .sw{
+  .swx{
     position: absolute;
     top: 91%;
     z-index: 0;
@@ -259,8 +264,6 @@
     z-index:5;
   }
 </style>
-
-<html>
   <div id="navbar" class="sidenav">
        <div id="one">&diams;</div>
        <div id="onex">&diams;</div>
@@ -297,13 +300,13 @@
        <div class="proj"><a href="https://www.google.com">Projects</a></div>
        <div class="desc"><a href="https://www.google.com">Description</a></div>
        <div class="design"><a href="https://www.google.com">Design</a></div>
-       <div class="model"><a href="https://www.google.com">Model</a></div>
+       <div class="modelx"><a href="https://www.google.com">Model</a></div>
        <div class="attrib"><a href="https://www.google.com">Attributions</a></div>
-       <div class="hp"><a href="https://www.google.com">Human Practices</a></div>
+       <div class="hpx"><a href="https://www.google.com">Human Practices</a></div>
        <div class="part"><a href="https://www.google.com">Parts</a></div>
        <div class="safe"><a href="https://www.google.com">Safety</a></div>
        <div class="award"><a href="https://www.google.com">Awards</a></div>
-       <div class="sw"><a href="https://www.google.com">Software</a></div>
+       <div class="swx"><a href="https://www.google.com">Software</a></div>
        <div class="judge"><a href="https://www.google.com">Judging Form</a></div>
     </div>
   </div>
