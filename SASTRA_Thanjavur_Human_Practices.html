@@ -1,280 +1,125 @@
-{{SASTRA_Thanjavur}}
+<!-- {{SASTRA_Thanjavur}}
 {{SASTRA_Thanjavur/Bootstrap}}
+{{SASTRA_Thanjavur/Fullpage}} -->
 <html>
-<style>
-.timeline {
-  list-style: none;
-  padding: 20px 0 20px;
-  position: relative;
-}
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: "";
-  width: 3px;
-  background-color: #32ee43;
-  left: 50%;
-  margin-left: -1.5px;
-}
-.timeline > li {
-  margin-bottom: 20px;
-  position: relative;
-}
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-.timeline > li:after {
-  clear: both;
-}
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-.timeline > li:after {
-  clear: both;
-}
-.timeline > li > .timeline-panel {
-  width: 50%;
-  float: left;
-  border: 1px solid #d4d4d4;
-  border-radius: 2px;
-  padding: 20px;
-  position: relative;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  transition: box-shadow 0.5s;
-}
-.timeline > li > .timeline-panel:hover {
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
-}
-.timeline > li.timeline-inverted + li:not(.timeline-inverted),
-.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
-margin-top: -60px;
-}
-
-.timeline > li:not(.timeline-inverted) {
-padding-right:90px;
-}
-
-.timeline > li.timeline-inverted {
-padding-left:90px;
-}
-.timeline > li > .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-.timeline > li > .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: " ";
-}
-.timeline > li > .timeline-badge {
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.4em;
-  text-align: center;
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  margin-left: -25px;
-  background-color: #999999;
-  z-index: 100;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-}
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
-}
-.timeline-badge.dblue {
-  background-color: #2e6da4 !important;
-}
-.timeline-badge.green {
-  background-color: #3f903f !important;
-}
-.timeline-badge.orange {
-  background-color: #f0ad4e !important;
-}
-.timeline-badge.red {
-  background-color: #d9534f !important;
-}
-.timeline-badge.lblue {
-  background-color: #5bc0de !important;
-}
-.timeline-title {
-  margin-top: 0;
-  color: inherit;
-}
-.timeline-body > p,
-.timeline-body > ul {
-  margin-bottom: 0;
-}
-.timeline-body > p + p {
-  margin-top: 5px;
-}
-li:hover{
-    cursor: pointer;
-}
-.container{
-    width: 200%
-    float: right !important;
-}
-body{
-
-}
-</style>
-
-<script type="text/javascript">
-    function clicked(string){
-        switch(string){
-            case "dav":
-                window.open('https://medium.com/@igemsastra.2019/report-on-human-practices-session-01-held-at-d-a-v-public-school-velachery-on-22nd-april-2-ce6ac8d56b60');
-                break;
-            case "sn":
-                window.open('https://medium.com/@igemsastra.2019/human-practices-numero-due-b1e63121f81e');
-                break;
-            case "cv":
-                window.open('https://medium.com/@igemsastra.2019/roses-are-red-violets-are-blue-698bf7f6636a');
-                break;
-            case "pcvc":
-                window.open('https://medium.com/@igemsastra.2019/third-time-is-also-the-charm-7fb1bf3dc54b');
-                break;
-            case "repco":
-                window.open('https://medium.com/@igemsastra.2019/repco-micro-finance-human-practice-9ac9064b8eba');
-                break;
-        }
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
+  <style>
+    .section{
+      text-align: center;
     }
-</script>
-<body>
-<div class="container">
-    <div class="page-header">
-        <h1 id="timeline">Human Practices Events</h1>
+    .first{
+      font-size: 6em;
+    }
+    .third{
+      font-size: 2.5em;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+		      navigation: false,
+		      navigationPosition: 'right',
+		      slidesNavigation: true,
+		      slidesNavPosition: 'bottom',
+          controlArrows: true,
+          sectionsColor: ['#f2f2f2', '#4BBFC3'],
+        });
+    });
+  </script>
+  <body>
+    <div id="fullpage">
+        <div class="section first">Human Practices Events</div>
+        <div class="section second">
+          <div class="slide">
+            <img src="https://2019.igem.org/wiki/images/1/18/T--SASTRA_Thanjavur--DAVS1.jpeg">
+          </div>
+          <div class="slide active">
+            <p>
+
+            </p>
+          </div>
+          <div class="slide">
+            <<img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--DAVS3.jpeg">
+          </div>
+        </div>
+        <div class="section third">
+          <div class="slide">
+            <img src="">
+          </div>
+          <div class="slide active">
+          The iGEM SASTRA team in their second outing, conducted the human practices session for the students of class XI and XII at Shri Natesan Vidyasala, Mannivakkam on 20th June 2019. The activity developed for the school students was a grand Synthetic Biology auction, colloquially called the SynBio Auction. The session witnessed the participation of over 200 enthusiastic school students pursuing education in Science streams. An introductory presentation on Synthetic Biology and our current project had the audience engaged. Then, the grand SynBio auction began. The students were divided into 5 teams, led by a teacher for participation in the auction. The phases saw heated bidding for each of the components. The auction went on for nearly an hour and we were surprised to see the participating students maintain a fervent atmosphere throughout. The final stage of the activity involved the teams to consolidate their strategies and justify their choice of components purchased in the course of the auction. Subsequently, the teams were asked to send a member from their team to the center stage to present their solution to the judges within a minute. The curtains finally fell on the second human practice session of our iGEM team with a group photo of the staff, students and the iGEM SASTRA team.
+          </div>
+          <div class="slide">
+            <<img src="">
+          </div>
+        </div>
+        <div class="section">
+          <div class="slide">
+            <img src="">
+          </div>
+          <div class="slide active">
+            <p>
+
+            </p>
+          </div>
+          <div class="slide">
+            <<img src="">
+          </div>
+        </div>
+        <div class="section">
+          <div class="slide">
+            <img src="">
+          </div>
+          <div class="slide active">
+            <p>
+
+            </p>
+          </div>
+          <div class="slide">
+            <<img src="">
+          </div>
+        </div>
+        <div class="section">
+          <div class="slide">
+            <img src="">
+          </div>
+          <div class="slide active">
+            <p>
+
+            </p>
+          </div>
+          <div class="slide">
+            <<img src="">
+          </div>
+        </div>
+        <div class="section">
+          <div class="slide">
+            <img src="">
+          </div>
+          <div class="slide active">
+            <p>
+
+            </p>
+          </div>
+          <div class="slide">
+            <<img src="">
+          </div>
+        </div>
+        <div class="section">
+          <div class="slide">
+            <img src="">
+          </div>
+          <div class="slide active">
+            <p>
+
+            </p>
+          </div>
+          <div class="slide">
+            <<img src="">
+          </div>
+        </div>
     </div>
-
-    <ul class="timeline">
-
-        <li onclick="clicked('sn')">
-          <div class="timeline-badge dblue"><i class="glyphicon glyphicon-calendar"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Natesan Vidyalaya</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>20th April 2019</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>The iGEM SASTRA team in their second outing, conducted the human practices session for the students of class XI and XII at Shri Natesan Vidyasala, Mannivakkam on 20th June 2019. The activity developed for the school students was a grand Synthetic Biology auction, colloquially called the SynBio Auction. The session witnessed the participation of over 200 enthusiastic school students pursuing education in Science ...</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-inverted" onclick="clicked('dav')">
-            <div class="timeline-badge green"><i class="glyphicon glyphicon-calendar"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">DAV Public School</h4>
-                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>22nd April 2019</small></p>
-              </div>
-              <div class="timeline-body">
-                <p>It was a professional day as usual. The venue for the grand SynBio auction was getting ready at a decent pace. Tumultuous atmosphere prevailed with the setting up of the chairs, tables, desks and scorecards for the auction. Fervid participants of the auction were all geared up and were in intense discussions with their team members to fare well. The members of the iGEM SASTRA team, meanwhile had spent a week’s time with at most zeal and love for the fraternity of ...</p>
-              </div>
-            </div>
-        </li>
-
-        <li onclick="clicked('cv')">
-          <div class="timeline-badge orange"><i class="glyphicon glyphicon-calendar"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Chettinad Vidhyashram</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>Our third human practices session was held at Chettinad Vidyashram, Chennai on 21st June 2019. The session was conducted in collaboration with IIT (Indian Institute of Technology) Madras iGEM team. Uttara J., Deeptha G., Navaneeth S., Srivathsan S., Hariprasad K., Smriti Suresh and Priyannth R.S. were the representatives from SASTRA Deemed University and were accompanied by Gayathri P., Neha S., Sriya V, the members of the IIT Madras iGEM team. The session witnessed the...</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-inverted" onclick="clicked('pcvc')">
-          <div class="timeline-badge red"><i class="glyphicon glyphicon-calendar"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">International Foundation for Crime Prevention and Victim Care</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>iGEM is an international competition held on the theme of synthetic biology. We, the SASTRA iGEM Team, got an opportunity to meet a set of burn victim women sheltered by PCVC, Anna Nagar Chennai. The meet was aimed to create awareness about cervical cancer and Pap smear test to the women present there. PCVC is an NGO that provides help to women who have been victims of domestic violence and burn accidents. There were about 20 women present for the session. We informed them...</p>
-            </div>
-          </div>
-        </li>
-
-        <li onclick="clicked('repco')">
-          <div class="timeline-badge lblue"><i class="glyphicon glyphicon-calendar"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Repco Micro Finance</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>21st June 2019</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>It was an effulgent day in Trichy. We, the SASTRA iGEM team which included Bavithra I.,Deeptha G., Karunya V., Navaneeth S., Srivathsan S., and Uttara J. arrived at the REPCO Micro Finance office at 11:00 a.m. Having travelled in the bus from the college in Tirumalaisamudram to Trichy in the scorching heat, all of us were happy to see eager faces waiting to listen to us.The first set of audience consisted...</p>
-            </div>
-          </div>
-        </li>
-
-        <!-- <li class="timeline-inverted" onclick="clicked('')">
-          <div class="timeline-badge dblue"><i class="glyphicon glyphicon-calendar"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-            </div>
-            <div class="timeline-body">
-              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-            </div>
-          </div>
-        </li>
-
-        <li onclick="clicked('')">
-          <div class="timeline-badge success"><i class="glyphicon glyphicon-calendar"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-            </div>
-            <div class="timeline-body">
-              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-            </div>
-          </div>
-        </li> -->
-    </ul>
-</div>
-</body>
+  </body>
 </html>

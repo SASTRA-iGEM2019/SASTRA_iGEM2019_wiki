@@ -1,4 +1,4 @@
-{{SASTRA_Thanjavur/Bootstrap}}
+<!-- {{SASTRA_Thanjavur/Bootstrap}} -->
 <html>
 <script>
 function openNav() {
@@ -17,15 +17,15 @@ function openNav() {
   }
 </script>
 <style>
-.mw-body{
+  .mw-body{
   width: 100% !important;
   margin: 0;
   padding: 0;
 }
-#top_title{
+  #top_title{
   display: none;
 }
-#one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
+  #one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
     position: absolute;
   }
   #one,#five,#nine,#thirt,#threex,#sevenx,#elevenx{
@@ -171,12 +171,11 @@ function openNav() {
   }
   #main {
     transition: margin-left .5s;
-    padding: 20px;
   }
   @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
+  }
   .text{
     display: flex;
     flex-direction: column;
@@ -264,6 +263,8 @@ function openNav() {
     position: fixed;
     text-align: center;
     z-index:5;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 </style>
   <div id="navbar" class="sidenav">
