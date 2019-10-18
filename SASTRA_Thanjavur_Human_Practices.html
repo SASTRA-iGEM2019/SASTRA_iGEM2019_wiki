@@ -3,8 +3,8 @@
 {{SASTRA_Thanjavur/Fullpage}} -->
 <html>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script> -->
   <style>
     .section{
       text-align : center;
@@ -40,21 +40,26 @@
 		      slidesNavPosition: 'bottom',
           controlArrows: true,
           sectionsColor: ['#faebd7','#0e9aa7','#f6cd61','#fe8a71','#adcbe3','#e0a899','#faebd7','#feb2a8','#65c3ba'],
+          parallax: true,
+		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
         });
     });
   </script>
   <body>
     <div id="fullpage">
-        <div class="section first">Human Practices Events</div>
+        <div class="section first"><div class="fp-bg"></div>Human Practices Events</div>
         <div class="section common">
           <div class="slide">
+            <div class="fp-bg"></div>
             <img src="https://2019.igem.org/wiki/images/1/18/T--SASTRA_Thanjavur--DAVS1.jpeg">
           </div>
           <div class="slide active">
+           <div class="fp-bg"></div>
            <span>DAV Public School, Velachery</span>
            It was a bustling Monday morning on the Chennai roads. The venue for the grand SynBio Auction was getting ready at a fervent pace. Tumultuous atmosphere prevailed with the setting up of the chairs, tables, desks and scorecards for the auction.  Avid participants of the auction were all geared up and were intensely discussing with their team members to strategize and win. We, the members of the iGEM SASTRA Team had spent a week’s time crafting the SynBio auction with love for the fraternity of D. A. V. Public School, Velachery. The target audience for the session was the 12th-grade students of Biology and Computer Science streams, who were accompanied by their subject teachers.
           </div>
           <div class="slide">
+            <div class="fp-bg"></div>
             <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--DAVS3.jpeg">
           </div>
         </div>

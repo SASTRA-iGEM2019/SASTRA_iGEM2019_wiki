@@ -1,31 +1,29 @@
-<!-- {{SASTRA_Thanjavur/Bootstrap}} -->
+{{SASTRA_Thanjavur/Bootstrap}}
 <html>
 <script>
 function openNav() {
     document.getElementById("navbar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     document.getElementById('floating').setAttribute("onclick","closeNav()");
     document.getElementById('floating').innerHTML = "&lt;";
   }
   function closeNav() {
     document.getElementById("navbar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
     document.getElementById('floating').setAttribute("onclick","openNav()");
     document.getElementById('floating').innerHTML = "&gt;";
   }
 </script>
 <style>
-  .mw-body{
+.mw-body{
   width: 100% !important;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-  #top_title{
+#top_title{
   display: none;
 }
-  #one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
+#one,#two,#three,#four,#five,#six,#onex,#twox,#threex,#fourx,#fivex,#sixx,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirt,#fourt,#sevenx,#eightx,#ninex,#tenx,#elevenx,#twelvex,#thirtx,#fourtx{
     position: absolute;
   }
   #one,#five,#nine,#thirt,#threex,#sevenx,#elevenx{
@@ -175,7 +173,7 @@ function openNav() {
   @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-  }
+}
   .text{
     display: flex;
     flex-direction: column;
@@ -255,8 +253,9 @@ function openNav() {
   #floating{
     font-size:40px;
     cursor:pointer;
-    color:black;
-    background:red;
+    color:white;
+    border-style:solid;
+    background:black;
     width:50px;
     height:50px;
     border-radius:50%;
@@ -297,15 +296,15 @@ function openNav() {
        <div id="fourt">&diams;</div>
        <div id="fourtx">&diams;</div>
     <div class="text">
-       <div class="home"><a href="https://www.google.com">Home</a></div>
-       <div class="team"><a href="https://www.google.com">Team Members</a></div>
+       <div class="home"><a href="https://2019.igem.org/Team:SASTRA_Thanjavur">Home</a></div>
+       <div class="team"><a href="https://2019.igem.org/Team:SASTRA_Thanjavur/Team">Team Members</a></div>
        <div class="collab"><a href="https://www.google.com">Collaborations</a></div>
        <div class="proj"><a href="https://www.google.com">Projects</a></div>
        <div class="desc"><a href="https://www.google.com">Description</a></div>
        <div class="design"><a href="https://www.google.com">Design</a></div>
        <div class="modelx"><a href="https://www.google.com">Model</a></div>
        <div class="attrib"><a href="https://www.google.com">Attributions</a></div>
-       <div class="hpx"><a href="https://www.google.com">Human Practices</a></div>
+       <div class="hpx"><a href="https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices">Human Practices</a></div>
        <div class="part"><a href="https://www.google.com">Parts</a></div>
        <div class="safe"><a href="https://www.google.com">Safety</a></div>
        <div class="award"><a href="https://www.google.com">Awards</a></div>
