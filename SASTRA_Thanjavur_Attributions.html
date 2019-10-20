@@ -1,11 +1,25 @@
 {{SASTRA_Thanjavur}}
 {{SASTRA_Thanjavur/Bootstrap}}
 <html>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script type="text/javascript">
+    $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    });
+});
+  </script>
   <style>
+    .container-fluid{
+    padding-left: 15%;
+    padding-right: 15%;
+    }
     footer{
         transform: translate(0px,35px);
         color: black;
@@ -26,43 +40,214 @@
     .social{
       float: right;
     }
+    .float{
+      position: sticky;
+      top: 18%;
+      list-style-type: none;
+    }
+    #index{
+      text-align: center;
+      font-size: 23px;
+      font-family: GOT;
+      margin-bottom: 10px;
+    }
+    .float a{
+      margin-bottom: 5px;
+      font-size: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .spectral{font-family: Spectral;}
+    .spectralb{font-family: SpectralBoldItalic;}
+    .title{font-family: GOT;font-size:20px;margin-bottom:15px;}
+    .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+    .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+    p{font-family: Spectral;font-size:14px;}
+    li{font-family: Spectral;font-size:14px;}
+    span{font-family: Spectral;font-size:14px;}
+    .dawd a{font-family: Spectral;font-size:14px;}
   </style>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-3">
           <div class="float">
-            <div id="index"><strong>Index</strong></div>
-            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;">
-              <a href="">The Small Council</a><hr>
-              <a href="">Hands of the King</a><hr>
-              <a href="">The House of Wetlab</a><hr>
-              <a href="">The House of Sensors</a><hr>
-              <a href="">The House of Modelling</a><hr>
-              <a href="">The House of Software</a><hr>
-              <a href="">Human Practices and Collaborations</a><hr>
-              <a href="">Design and Web Dev</a><hr>
+            <div id="index">Index</div>
+            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;padding-top: 10px;padding-bottom: 10px;">
+              <a href="#council">The Small Council</a><hr>
+              <a href="#arch">Archmaesters</a><hr>
+              <a href="#hands">Hands of the King</a><hr>
+              <a href="#wetlab">The House of Wetlab</a><hr>
+              <a href="#sensor">The House of Sensors</a><hr>
+              <a href="#model">The House of Modelling</a><hr>
+              <a href="#software">The House of Software</a><hr>
+              <a href="#hpc">Human Practices and Collaborations</a><hr>
+              <a href="#design">Design and Web Development</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+          <a id="council">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="hoc">
+            <div class="title">The Small Council</div>
+            <div class="name spectralb">Dr. Vaidhyasubramaniam S., Vice Chancellor - SASTRA Deemed University</div>
+            <div class="desc spectral">Our team is extremely grateful to our management and especially, our Vice Chancellor Dr. Vaidhyasubramaniam S., for his financial support to our entire iGEM venture without which whatever we have accomplished over the past 5 months would not have been possible. Beginning from the iGEM registration (funds released from the SASTRA Student Innovation Fund) to obtaining the cell-free protein synthesis kit for our experiments (released from Research & Modernization Fund), his support was incessant.</div>
+            <div class="name spectralb">Dr. Rajan K. S., Dean - School of Chemical and Biotechnology</div>
+            <div class="desc spectral">Our team is indebted to Dr. Rajan K.S., Dean of the School of Chemical and Biotechnology in our University, for his continuous administrative support requisite to obtain the funds for our project through the SASTRA Student Innovation Fund (iGEM Team Registration Fee) and Research & Modernization Fund (Cell-free Protein Synthesis Kit). He was the creative head behind launching the SynBio club in our university.</div>
+            <div class="name spectralb">Dr. Uma Maheswari K., Dean - SASTRA Arts Science and Humanities</div>
+            <div class="desc spectral">	Our team is indebted to Dr. Uma Maheswari K., Dean - SASH of our University, for her periodic reviewing of the progress made by our team towards our wet lab experiments in spite of her jam-packed schedule. Her suggestions during each of the review meeting were valuable and were subsequently incorporated into our experimental designs after extensive discussions with her. </div>
+          </div>
+          <a id="arch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="archm">
+            <div class="title">Archmaesters</div>
+            <div class="name spectralb">Dr. Ashok Palaniappan, Senior Assistant Professor, School of Chemical and Biotechnology</div>
+            <div class="desc spectral">	Our team is heartily thankful to our Primary Principal Investigator, Dr. Ashok Palaniappan for his envisaged suggestions and strategies towards the design and implementation of our project, in general. He constantly supported us in each of the steps in our maiden journey and he viewed our project as much with a microscope as a telescope.</div>
+            <div class="name spectralb">Dr. Adline Princy S., Associate Dean - Research, School of Chemical and Biotechnology</div>
+            <div class="desc spectral">Our team is grateful to our Secondary Primary Investigator, Dr. Adline Princy S., for her infrastructural support of providing us with her lab space in our University. Her unwavering support to our wet lab team members was crucial to carry out our experiments in time. She was instrumental in getting us with the Institutional BioSafety Committee certification for carrying out synthetic biology based experiments.</div>
+          </div>
+          <a id="hands">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="hotk">
+            <div class="title">Hands of the King</div>
+            <div class="name spectralb">Priyannth R.S.</div>
+            <div class="desc spectral">	Pulling off as a student team leader and managing SASTRA iGEM team’s journey along with his fellow team leader could be the major accomplishment of this member of The House of Admins. With his connatural interest in physics and mathematics, he found himself some significant space and time in The House of Modelling and helped them to realize the mass action kinetic model requisite to validate the experimental results from the sensor studies. Apart from this, he was the creative head behind the idea of a SynBio Auction and floated it to be an activity for the Human Practices session and his presence was conspicuous in all of the Human Practices and Integrated Human Practices sessions hosted by our team. The Human Practices session at D. A. V. Public School, Chennai was possible through his efforts.</div>
+            <div class="name spectralb">Shivaramakrishna S.</div>
+            <div class="desc spectral">	He could be called the chief architect of the House of Toeholds, because of the very reason of him being the one who introduced the entire team to iGEM and stitched together such a diverse team of 15 members. With his innate interest in minimalistic designs and software development, he headed The House of Software and was instrumental in extracting the toehold secondary structure features, those relating to its structure, sequence and thermodynamics predominantly. The gblocks that we used in our project owes its design and ordering to him as he spearheaded the Twist Biosciences and IDT promotional offers and ensured that they reached us in time. He was also the creative head behind the idea of Primers and floated it to be a collaboration for our Human Practices. The Integrated Human Practices session at PCVC, Chennai was possible through his efforts. The amazing cartoon illustrations that you see in our project video, that is Shiva’s!</div>
+            <div class="name spectralb">Ashwin Kumar Jainarayanan</div>
+            <div class="desc spectral">We would like to thank our team’s advisor, Mr. Ashwin Kumar Jainarayanan, a prospective D. Phil student in Interdisciplinary Bioscience at the University of Oxford for his constant technical and non-technical support on how to go about with our maiden iGEM journey. He constantly kept in touch with us throughout our iGEM season and suggested us with appropriate strategies whenever we faced roadblocks, owing to his experience in leading the IISER-Mohali iGEM team twice in 2017 and 2018.</div>
+            <div class="name spectralb">Ramit B.</div>
+            <div class="desc spectral">	We would like to thank Mr. Ramit B., a former iGEM team member from Sri Venkateshwara College of Engineering, Chennai for his valuable help with the design of gblocks requisite for our BioBrick characterization.</div>
+          </div>
+          <a id="wetlab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="thow">
+            <div class="title">The House of Wetlab</div>
+            <p><span style="font-weight: 400;">Of the four houses in the HOUSE OF TOEHOLDS,</span><em><span style="font-weight: 400;">The House of Wet Lab</span></em><span style="font-weight: 400;"> was instrumental in validating the identified panel of biomarkers, namely hsa-miR-21-5p and hsa-miR-20a-5p obtained from the survival analysis of the panel, through a literature survey. The survival analysis along with validation from the literature survey bolsters the prognostic value of our biomarker choice towards early-stage cervical cancer detection. The other </span><em><span style="font-weight: 400;">chores</span></em><span style="font-weight: 400;"> performed by this house were,&nbsp;</span></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Filling up of the iGEM 2019 Safety form after obtaining suggestions from our Institutional Bio-Safety Committee (iBSC), post their certification of carrying out our designed experiments in our labs,&nbsp;</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Performed experiments to study the effect of pH on the promoter activity of the BioBrick Bba_K608011, which has a constitutive medium strength promoter</span></li>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Transformation of NEB #C2997I DH5-alpha competent </span><em><span style="font-weight: 400;">E. coli</span></em><span style="font-weight: 400;"> cells</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Optimization of the transformation protocol&nbsp;</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Selection of transformed cells by chloramphenicol</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Optimization of the chloramphenicol concentration&nbsp;</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Observation of growth in various pH conditions</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Fluorescence measurements&nbsp;&nbsp;</span></li>
+            </ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Design of the PCR experiments and subsequent amplification of the toehold DNA construct to be used for the biosensor experiments (miR-21 and miR-20a toehold DNA constructs were amplified)&nbsp;</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Ordering of the cell-free protein synthesis kit requisite for the characterization of our designed toehold switch for miR-21 </span></li>
+            </ul>
+            <div class="name spectralb" style="margin-top:10px;">Hema B.</div>
+            <div class="desc spectral">As one of our instructors and an experienced ocular microbiologist, she was pivotal in guiding the members of both the House of Wet Lab and House of Sensors with regards to the lab procedures to be followed, safety concerns while performing the experiments and review of the protocols to be employed for the studies of existing BioBrick and new BioBrick characterization. </div>
+            <div class="name spectralb">Uttara J.</div>
+            <div class="desc spectral">She headed the wetlab team and was pivotal in the design of experiments for the Bba_K608011 characterization and subsequent collation & interpretation of the obtained results. She helped the sensor team with choosing the appropriate cell-free protein synthesis kit required for the biosensor characterization, through extensive brainstorming sessions with Dr. Bindu Simon. Apart from these, she actively involved herself in the engagement activities as part of our Human Practices sessions and helped the Primers magazine collaboration team with proofreading the received contributions. The sweet voice that you hear in our project video, that is Uttara’s!</div>
+            <div class="name spectralb">Smriti Suresh</div>
+            <div class="desc spectral">She spearheaded the Human Practices & Public engagement drive of our iGEM team, which involved the design of events and sessions for the same. She formulated the Google Form, which our team circulated to gauge the Awareness on Cervical Cancer amongst general public to strengthen the relevance of our project to the society. The Integrated Human Practices session with Dr. M.A. Raja and the Human Practices session at Chettinad Vidyashram, Chennai was possible through her efforts. The hsa-miR-21-5p and hsa-miR-20a-5p toehold DNA amplification, essentially requisite for obtaining enough concentration for the biosensor characterization studies was taken care of by Smriti through PCR experiments, with valuable help from Deeptha.  </div>
+            <div class="name spectralb">Deeptha G.</div>
+            <div class="desc spectral">Apart from significantly helping out Smriti in designing and performing the PCR experiments for the hsa-miR-21-5p and hsa-miR-20a-5p toehold DNA amplification, she was one of the moderators for our Human Practices sessions at D.A.V. Public School, Chennai and Chettinad Vidyashram, Chennai. The Integrated Human Practice session amidst the Repco Microfinance Self Help Group women was possible through her efforts. She was helpful in proofreading the received contributions for our Primers magazine collaboration. </div>
+            <div class="name spectralb">Pooja M.</div>
+            <div class="desc spectral">She was actively involved in the transformation of competent cells and its optimization spanning three test runs, which was the primary step in our efforts towards additional characterization of an existing BioBrick part, Bba_K608011. She performed inoculation works associated with the experiments for the effect of pH on the chosen BioBrick. She was an active participant in our Integrated Human Practice sessions and aided in documenting the report for our Integrated Human Practice session at Cancer Institute (W.I.A), Chennai. She was helpful in proofreading the received contributions for our Primers magazine collaboration. </div>
+            <div class="name spectralb">Navaneeth  S.</div>
+            <div class="desc spectral">He calls himself the Preserver of Cultures, obviously the microbial ones owing to his valuable contribution towards optimizing the transformation protocol that was requisite for selection of competent cells to be used in the existing BioBrick characterization experiment. When he was not busy culturing the microbes, he introduced the students to the world of Synthetic biology during the school visits as part of our Human Practices. He wishes to take credit for the most terrible pictures that you could see in our wiki page, because he was the one behind the lens!</div>
+            <div class="name spectralb">Dr. Bindu Simon, Assistant Professor (Research), SCBT</div>
+            <div class="desc spectral">A plant biotechnologist by profession and the Principal Investigator of Phytoengineering Lab in our University, she was instrumental in furnishing us with technical advice and gave valuable suggestions such as opting for a cell-free characterization & the appropriate protein synthesis kit for the same and ways to increase the transformation efficiency, to name a few. </div>
+            <div class="name spectralb">Dr. Srinandan C.S., Assistant Professor (Research), SCBT</div>
+            <div class="desc spectral">A microbiologist by profession and the Principal investigator of Biofilm Biology Lab in our University, he provided the necessary infrastructural support in his laboratory to ensure that some of our experiments were performed.  </div>
+            <div class="name spectralb">The Central Instrumentation Facility, SASTRA Deemed University</div>
+            <div class="desc spectral">We are grateful to the Central Instrumentation facility of our University for providing us with the necessary infrastructural support such as -80 °C storage facility to store our cell-free protein synthesis kit and the DH5-alpha competent E. coli cells, water bath and incubator shaker that were used in the transformation experiments.</div>
+            <div class="name spectralb">Nanosensors Lab, SASTRA Deemed University</div>
+            <div class="desc spectral">We are extremely thankful to Dr. John Bosco Balaguru R., Principal Investigator, Nanosensors Lab of our University and his lab members for permitting us to use their spectrofluorometer as part of our existing BioBrick characterization experiments.
+              We would also like to thank Dr. Anbazhagan V., Senior Assistant Professor and his lab members for permitting us to use their spectrofluorometer as well.</div>
+            <div class="name spectralb">Biopharmaceutical Research Lab, SASTRA Deemed University</div>
+            <div class="desc spectral">We would also like to thank Dr. Senthil Visaga Ambi, Principal Investigator, Biopharmaceutical Research Lab of our University for providing us with their lab’s fluorescent plate reader to measure O.D values for fixing the cell number density. </div>
+            <div class="name spectralb">Genurem Life Sciences, Thanjavur</div>
+            <div class="desc spectral">We would like to acknowledge the wet lab assistance provided by Genurem Life Sciences, Thanjavur in performing PCR purification and sequencing of the amplified toehold construct.</div>
+          </div>
+          <a id="sensor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="thos">
+            <div class="title">The House of Sensors</div>
+            <p><span style="font-weight: 400;">The next house to be attributed is </span><em><span style="font-weight: 400;">The House of Sensors</span></em><span style="font-weight: 400;">. They predominantly performed the cell-free transcription &amp; translation for the conversion of toehold DNA to the toehold secondary structure, which is the sensing element of our biosensor. Since a second generation toehold design was employed for our project, the essential incubation of the miR and anti-miR for the hybrid trigger formation in cases of both hsa-miR-21-5p and hsa-miR-20a-5p markers, was performed by this team. The calibration of the fluorescent plate reader for our study was undertaken using the fluorescein provided in the DNA Distribution kit of our iGEM&rsquo;s registration kit. Finally, the members of this house carried out the requisite fluorescence measurements associated with our BioBrick characterization, which was the design of a biosensor.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">The members of this house are </span><em><span style="font-weight: 400;">Medical Nanotechnologists, </span></em><span style="font-weight: 400;">who are in their final year of Integrated Master of Technology programme in Medical Nanotechnology. Vishal Kannan, Hariprasad K., Karunya V. and Bavithra I. were the occupants of this house. </span></p>
+            <div class="name spectralb">Vishal Kannan</div>
+            <div class="desc spectral">He headed this house and was instrumental in formulating the design of experiments associated with our biosensor studies along with the sensor team members. He subsequently collected & interpreted the obtained results from their studies along with his team. Also, he took part in frequent discussions with the modelling team and provided the necessary inputs to the modelling team regarding the experimental design for the biosensor studies. This in turn channelised the modelling aspects to a certain extent and bolstered the work of the modeling team. In addition, the Human Practices session at Natesan Vidyalaya, Chennai was moderated by him.</div>
+            <div class="name spectralb">Hariprasad K.</div>
+            <div class="desc spectral">He played a key role towards formulating the experimental design for our Biobrick characterization along with Vishal, assisted in reagent preparation and fluorescence measurements. The Integrated Human Practices session with Dr. J. S. Malliga and the Human Practices session at Natesan Vidyalaya, Chennai was possible through his efforts. Apart from these, he took care of the overall event coverage of our Human Practices sessions organised at Natesan Vidyalaya and Chettinad Vidyashram, Chennai.</div>
+            <div class="name spectralb">Karunya V. </div>
+            <div class="desc spectral">Apart from assisting the sensor team with their experiments, she was pivotal in optimizing the protocols employed for the sensor studies by appropriately identifying the mistakes during the trial runs. She helped the wet lab team with the existing BioBrick part characterization and was an active participant in our Integrated Human Practices sessions at PCVC NGO, Chennai and Repco Microfinance Self Help Group, Trichy.  She also aided in documenting the report for our Integrated Human Practice session at PCVC NGO, Chennai.</div>
+            <div class="name spectralb">Bavithra I.</div>
+            <div class="desc spectral">She assisted the sensor team with their experiments and helped the wet lab team with the existing BioBrick part characterization. She actively engaged herself in our Integrated Human Practices sessions at PCVC NGO, Chennai and Repco Microfinance Self Help Group, Trichy. She helped in documenting the report for our Integrated Human Practice session at Apollo Cancer Institute, Chennai.</div>
+            <div class="name spectralb">Vascular Biology Lab, SASTRA Deemed University</div>
+            <div class="desc spectral">We are extremely thankful to Vascular Biology Lab of our University and the lab members for permitting us to use their fluorescent plate reader as part of our new BioBrick characterization experiments. </div>
+            <div class="name spectralb">National Center for Biological Sciences, Bengaluru</div>
+            <div class="desc spectral">We are extremely grateful to NCBS, Bengaluru for providing us with a 96-well plate with U-bottom to handle 30 µL sample volumes as part of our new BioBrick characterization experiments.</div>
+          </div>
+          <a id="model">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="thom">
+            <div class="title">The House of Modelling</div>
+            <p><em><span style="font-weight: 400;">The House of Modelling</span></em><span style="font-weight: 400;"> sheltered one of the integral aspects of our project that corroborated the interdisciplinary nature of synthetic biology, ranging from collating and utilising results provided by our software team to giving useful suggestions and insights to the sensor team towards design of experiments &amp; results validation.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">The members of this house are </span><em><span style="font-weight: 400;">Medical Nanotechnologists, </span></em><span style="font-weight: 400;">who are in their pre-final year of Integrated Master of Technology programme in Medical Nanotechnology. Swetha N. and Raghavv Raghavender Suresh were the occupants of this house</span></p>
+            <div class="name spectralb">Swetha N.</div>
+            <div class="desc spectral">She remained the backbone of the modelling team as she made immense contributions in terms of formulating the differential equations requisite for our model and subsequently coded the same in MATLAB R2017b. Even though she was a late entrant into our team, she was instrumental in the analysis of the output and results obtained from the modelling simulations.</div>
+            <div class="name spectralb">Raghavv Raghavender Suresh</div>
+            <div class="desc spectral">A late entrant to the team, he made significant contributions with the requisite literature survey and documentation for modelling. Apart from this, he aided the team with editing and proof-reading the documents prepared for our team’s wiki page and was extremely instrumental in collating the Primers magazine (a venture as part of our collaboration) and formulated the script for the video.</div>
+            <div class="name spectralb">Sangeetha M.</div>
+            <div class="desc spectral">As one of our instructors, she was instrumental in performing the initial phase of modelling with the miRNA differential expression profiling and survival analysis based on Cox regression models and Kaplan-Meier curves, essential for the choice of our biomarkers to be used in our project.</div>
+          </div>
+          <a id="software">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="thof">
+            <div class="title">The House of Software</div>
+            <p>The House of Software covered the essential aspects of our project which included the gblocks design (second generation toehold switch design for hsa-miR-21-5p and hsa-miR-20a-5p) and extraction of toehold secondary structure features using regression models.</p>
+            <div class="name spectralb" style="margin-top:10px;">Srivathsan S.</div>
+            <div class="desc spectral">A quirky person and the odd one out in our team (being the lone student from the Department of Information and Communications Technology), he undertook the process of shaping our wiki page single handedly with his web page development skills. Our team logo and our team banner owes its creation to him and our social media pages (Instagram and Medium) owes its maintenance to him. He wishes to take credit for adding humour elements to an otherwise somber iGEM team!</div>
+            <div class="name spectralb">Thamarai Selvi</div>
+            <div class="desc spectral">She made immense contributions towards the analysis of secondary structure based features for toehold switch and trigger. She also scripted the secondary structure based features using ViennaRNA package. </div>
+          </div>
+          <a id="hpc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="hpac">
+            <div class="desc">
+              <div class="title">Human Practices and Collaborations</div>
+              <p><span style="font-weight: 400;">We would like to thank the management of D. A. V. Public School, Chennai, Natesan Vidyasala Matriculation School, Chennai and Chettinad Vidyashram, Chennai for providing us with their space and time to host our Human Practices Public Engagement sessions, aimed at disseminating the interest of learning Synthetic Biology.</span></p>
+              <p><span style="font-weight: 400;">We would also like to thank PCVC, Chennai and Repco Microfinance Self Help Group for allowing us to meet the women sheltered in their NGOs to gauge the significance of our project.&nbsp;&nbsp;</span></p>
+              <p><span style="font-weight: 400;">We are grateful to </span>Mr. Ramadorai S.<span style="font-weight: 400;">, former adviser to the Prime Minister of India in the National Council on Skill Development and presently the Chairman of Tata Technologies for agreeing to meet our team leaders and provide his immensely valuable suggestions towards sculpting our project into more proper shape.&nbsp;&nbsp;</span></p>
+              <p><span style="font-weight: 400;">We are thankful to Dr. M. A. Raja, Medical Oncologist at the Apollo Cancer Institute, Chennai and Dr. J. S. Malliga, Head of the Preventive Oncology Department at the Cancer Institute (W.I.A), Chennai for their acceptance to meet us as part of our Integrated Human Practice sessions.</span></p>
+              <p><span style="font-weight: 400;">We would like to thank Indian Institute of Science Education and Research, Bhopal and the IISER-Bhopal team for hosting us during the All India iGEM Meet 2019.</span></p>
+            </div>
+          </div>
+          <a id="design">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="dawd">
+            <div class="desc">
+              <div class="title">Design and Web Development</div>
+              <p><span style="font-weight: 400;">We would like to thank our fellow friends Mr. Muralidhar V. and Mr. Krishna Sathyamurthy, final year Mechanical Engineering students for aiding us in designing our customized iGEM Tees.</span></p>
+              <p><span style="font-weight: 400;">First and foremost,we would like to thank the Web Developer from US AFRL Carroll HS for their tutorial on YouTube on how to style the iGEM Wiki. (</span><a href="https://www.youtube.com/playlist?list=PLg5B0YEXzgEorRa8vuZPoHaH5e1jmgVQ6"><span style="font-weight: 400;">https://www.youtube.com/playlist?list=PLg5B0YEXzgEorRa8vuZPoHaH5e1jmgVQ6</span></a><span style="font-weight: 400;">)</span></p>
+              <p><span style="font-weight: 400;">The following list of code snippets and templates were grabbed from open source websites, without which our iGEM wiki could never be styled:</span></p>
+              <ol>
+                <li style="font-weight: 400;"><span style="font-weight: 400;">Shapiro Matron, VB Script to convert Excel tables to HTML Format </span><a href="https://gist.github.com/shapiromatron/5024948"><span style="font-weight: 400;">https://gist.github.com/shapiromatron/5024948</span></a>)</li>
+                <li style="font-weight: 400;"><span style="font-weight: 400;">Emanuele, for their awesome row separators! </span><a href="https://codepen.io/emared/pen/gWGBLR">https://codepen.io/emared/pen/gWGBLR</a>)</li>
+                <li style="font-weight: 400;"><span style="font-weight: 400;">Ariel Fresler, for his Smooth Scroll Plugin </span><a href="https://github.com/flesler/jquery.scrollTo">https://github.com/flesler/jquery.scrollTo</a></li>
+                <li style="font-weight: 400;"><span style="font-weight: 400;">Charlie Samways. for the Game of Throne Font! (</span><a href="https://www.fonts4free.net/game-of-thrones-font.html">https://www.fonts4free.net/game-of-thrones-font.html</a></li>
+                <li style="font-weight: 400;"><span style="font-weight: 400;">Alvoro Trigo, for the fullpage.js <a href="https://alvarotrigo.com/fullPage">https://alvarotrigo.com/fullPage</a></span></li>
+                <li style="font-weight: 400;"><span style="font-weight: 400;">The Bootstrap Team, (<a href="getbootstrap.com">getbootstrap.com</a>)</span></li>
+                <li style="font-weight: 400;">The Developers Behind <a href="https://wordhtml.com/"><span style="font-weight: 400;">https://wordhtml.com</span></a></li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
-  <footer>
-     <span>Our Sponsors</span>
-     <div class="icons">
-       <div class="sponsors">
-         <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
-         <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
-         <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
-         <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
-         <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
-         <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
-       </div>
-       <div class="social">
-         <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
-         <a href="mailto:igemsastra.2019@gmail.com	"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
-       </div>
+    <footer>
+   <span style="font-family: GOT;">Our Sponsors</span>
+   <div class="icons">
+     <div class="sponsors">
+       <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
      </div>
-   </footer>
+     <div class="social">
+       <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+       <a href="mailto:igemsastra.2019@gmail.com"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+     </div>
+   </div>
+ </footer>
+  </body>
 </html>

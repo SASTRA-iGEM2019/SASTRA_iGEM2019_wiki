@@ -1,0 +1,1095 @@
+{{SASTRA_Thanjavur}}
+{{SASTRA_Thanjavur/Bootstrap}}
+<html>
+  <style>
+    .container-fluid{
+    padding-left: 15%;
+    padding-right: 15%;
+    }
+    footer{
+        transform: translate(0px,35px);
+        color: black;
+        font-family: GOT;
+        height: 100px;
+        padding-left: 50px;
+    }
+    footer img{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .icons{
+        margin-top: 15px;
+    }
+    .sponsors{
+      float: left;
+    }
+    .social{
+      float: right;
+    }
+    .section{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+    .spectral{font-family: Spectral;}
+    .spectralb{font-family: SpectralBoldItalic;}
+    .title{font-family: GOT;font-size:20px;margin-bottom:15px;}
+    .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+    .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+    p{font-family: Spectral;font-size:14px;}
+    li{font-family: Spectral;font-size:14px;}
+    span{font-family: Spectral;font-size:14px;}
+    .dawd a{font-family: Spectral;font-size:14px;}
+    .table-container{display:flex;flex-direction:column;justify-content:center;align-content:center;"}
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Modelling</div>
+      <p><span style="font-weight: 400;">Modelling formed an integral aspect of our project that corroborated the interdisciplinary nature of synthetic biology, ranging from collating and utilising results provided by our software team to giving useful suggestions and insights to our wet lab team towards design of experiments and results validation. Our model is designed in terms of providing a quantitative basis towards differential expression of miRNA biomarkers.</span></p>
+      <p><span style="font-weight: 400;">Our modelling consists of three major facets</span></p>
+      <ol>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Biomarker choice through differential expression profiling and survival curve analysis</span></li>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">NUPACK Simulation for the design of our teohold constructs</span></li>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Mass action kinetics model</span></li>
+      </ol>
+      <img src="https://2019.igem.org/wiki/images/f/f5/T--SASTRA_Thanjavur--ModellingBG.png" style="max-width:100%;max-height:100%;" alt="">
+      <a id="omics">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Omics Analysis</div>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">SURVIVAL CURVES</div>
+        <p>The Cancer Genome Atlas (TCGA) is a reliable cancer genomics program that began in 2006 as a joint effort between the National Cancer Institute and the National Human Genome Research Institute. It is a standalone database that consists of over 20,000 primary cancer and matched normal samples with molecular characterization, covering around 33 different tumour types. In this context, the TCGA has released a large amount of miRNA sequencing data from CESC (Comprehensive RNA Expression Signature for Cervical Cancer) patients. The analysis of differentially expressed miRNA markers obtained from the corresponding cervical cancer miRNA-Seq omics data (obtained from TCGA), for normal tissue samples and cervical adenocarcinoma based tissue samples revealed plausible prognosis value associated with these markers. This opens up a novel way of detecting the survival rates of a patient via this miRNA signature.&nbsp;</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Methodology followed towards survival curve formulation</div>
+        <p>Normalized and log2-transformed Illumina HiSeq RNASeq gene expression data was processed by the RSEM pipeline (which were in turn obtained from TCGA via the <em>firebrowse.org portal</em>). The patient sample barcodes UUID encoded in variable &ldquo;Hybridisation REF&rdquo; was parsed and correspondingly annotated as cancer and normal. The stage information of the patient sample is then stored in the clinical stage variable, which essentially corresponds to the surgical stage, prior to any treatment received, determined with the tissue obtained at the time of surgery.</p>
+        <p>The miRNA expression analyses were performed using the &ldquo;limma&rdquo; package in R. The linear model was subjected to empirical Bayes adjustment to obtain moderated t-statistics. To account for multiple hypothesis testing and the false discovery rate, the p-values of the F-statistic of the linear fit were adjusted using the method of Od Hochberg and Benjamini. All Differentially Expressed Genes (DEG) were considered significant if the absolute fold changes were more than 1.5 and the P-value was &lt;0.05. For top 100 DEGs obtained from the linear model, the following 4 DEGs were chosen based on the above differential expression profiling, corroborated by our extensive literature backing.&nbsp;&nbsp;</p>
+        <div class="table-container">
+          <p><strong>Table 1. Differential Expression profiling of 4 chosen DEGs from top 100 DEGs obtained from linear model </strong></p>
+          <table style="width:auto;" class="table table-hover table-bordered">
+          <tbody>
+          <thead>
+          <tr>
+          <th>
+          <p><strong>DEGs</strong></p>
+          </th>
+          <th>
+          <p><strong>logFC</strong></p>
+          </th>
+          <th>
+          <p><strong>Average</strong></p>
+          <p><strong>Expression</strong></p>
+          </th>
+          <th>
+          <p><strong>t</strong></p>
+          </th>
+          <th>
+          <p><strong>p value</strong></p>
+          </th>
+          <th>
+          <p><strong>Adjacentp value</strong></p>
+          </th>
+          <th>
+          <p><strong>B</strong></p>
+          </th>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p>hsa-mir-21</p>
+          </td>
+          <td>
+          <p>-18.6676</p>
+          </td>
+          <td>
+          <p>18.39681</p>
+          </td>
+          <td>
+          <p>-27.2302</p>
+          </td>
+          <td>
+          <p>1.47E-84</p>
+          </td>
+          <td>
+          <p>7.97E-82</p>
+          </td>
+          <td>
+          <p>143.6128</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-20a</p>
+          </td>
+          <td>
+          <p>-7.5285</p>
+          </td>
+          <td>
+          <p>8.7422</p>
+          </td>
+          <td>
+          <p>-6.59869</p>
+          </td>
+          <td>
+          <p>1.77E-10</p>
+          </td>
+          <td>
+          <p>1.16E-09</p>
+          </td>
+          <td>
+          <p>12.06215</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-29a</p>
+          </td>
+          <td>
+          <p>-12.0232</p>
+          </td>
+          <td>
+          <p>12.4346</p>
+          </td>
+          <td>
+          <p>-10.8081</p>
+          </td>
+          <td>
+          <p>2.38E-23</p>
+          </td>
+          <td>
+          <p>3.58E-22</p>
+          </td>
+          <td>
+          <p>36.86442</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-200a</p>
+          </td>
+          <td>
+          <p>-9.31171</p>
+          </td>
+          <td>
+          <p>10.26658</p>
+          </td>
+          <td>
+          <p>-6.41446</p>
+          </td>
+          <td>
+          <p>5.21E-10</p>
+          </td>
+          <td>
+          <p>3.17E-09</p>
+          </td>
+          <td>
+          <p>11.15374</p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Stage&ndash;control</div>
+        <p>Top 4 DEG genes of the linear model with the log-fold change expression of the genes in each stage relative to the controls are given below in the table, followed by p-value adjustment for the false discovery rate.</p>
+        <div class="table-container">
+          <p><strong>Table 2.Stage wise log fold change of gene expression relative to controls</strong></p>
+          <table style="width:auto;" class="table table-hover table-bordered">
+          <tbody>
+          <thead>
+          <tr>
+          <th>
+          <p><strong>DEGs</strong></p>
+          </th>
+          <th>
+          <p><strong>Stage_1.</strong></p>
+          <p><strong>Control</strong></p>
+          </th>
+          <th>
+          <p><strong>Stage_2.</strong></p>
+          <p><strong>Control</strong></p>
+          </th>
+          <th>
+          <p><strong>Stage_3</strong></p>
+          <p><strong>Control</strong></p>
+          </th>
+          <th>
+          <p><strong>Stage_4.</strong></p>
+          <p><strong>Control</strong></p>
+          </th>
+          <th>
+          <p><strong>Average</strong></p>
+          <p><strong>Expression</strong></p>
+          </th>
+          <th>
+          <p><strong>F value</strong></p>
+          </th>
+          <th>
+          <p><strong>p value</strong></p>
+          </th>
+          <th>
+          <p><strong>adjacent.p value</strong></p>
+          </th>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p>hsa-mir-21</p>
+          </td>
+          <td>
+          <p>-18.6872</p>
+          </td>
+          <td>
+          <p>-18.6273</p>
+          </td>
+          <td>
+          <p>-18.641</p>
+          </td>
+          <td>
+          <p>-18.6328</p>
+          </td>
+          <td>
+          <p>18.40209</p>
+          </td>
+          <td>
+          <p>185.0495</p>
+          </td>
+          <td>
+          <p>8.12E-80</p>
+          </td>
+          <td>
+          <p>4.40E-77</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-20a</p>
+          </td>
+          <td>
+          <p>-7.63549</p>
+          </td>
+          <td>
+          <p>-7.46839</p>
+          </td>
+          <td>
+          <p>-7.44558</p>
+          </td>
+          <td>
+          <p>-7.38787</p>
+          </td>
+          <td>
+          <p>8.720818</p>
+          </td>
+          <td>
+          <p>11.57827</p>
+          </td>
+          <td>
+          <p>9.32E-09</p>
+          </td>
+          <td>
+          <p>6.01E-08</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-29a</p>
+          </td>
+          <td>
+          <p>-11.9232</p>
+          </td>
+          <td>
+          <p>-12.0534</p>
+          </td>
+          <td>
+          <p>-12.1063</p>
+          </td>
+          <td>
+          <p>-12.3912</p>
+          </td>
+          <td>
+          <p>12.44322</p>
+          </td>
+          <td>
+          <p>30.29603</p>
+          </td>
+          <td>
+          <p>3.39E-21</p>
+          </td>
+          <td>
+          <p>5.41E-20</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-200a</p>
+          </td>
+          <td>
+          <p>-9.23351</p>
+          </td>
+          <td>
+          <p>-9.46469</p>
+          </td>
+          <td>
+          <p>-9.44375</p>
+          </td>
+          <td>
+          <p>-9.01185</p>
+          </td>
+          <td>
+          <p>10.27391</p>
+          </td>
+          <td>
+          <p>10.9008</p>
+          </td>
+          <td>
+          <p>2.88E-08</p>
+          </td>
+          <td>
+          <p>1.66E-07</p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <p>The differential expression profiling of miRNAs associated with early-stage cervical cancer furnished us with the requisite biomarkers for our project, which was further validated by the survival curve analysis <em>via</em> a Cox proportional hazards model using Kaplan-Meier curves. The association between the expression of differentially expressed miRNAs and the overall survival of a patient was evaluated by univariate Cox proportional hazards regression analysis using the survival R package. The <strong>Hazards Ratio (HR)</strong> associated with a predictor variable is given by the exponent of its coefficient. A hazard ratio above 1 indicates a covariate that is positively associated with the event probability, and thus negatively associated with the length of survival.</p>
+        <div class="table-container">
+          <p><strong>Table 3. Hazard Ratio, Z-Score and P value for three chosen miRNA biomarkers</strong></p>
+          <table style="width:auto;" class="table table-hover table-bordered">
+          <tbody>
+          <thead>
+          <tr>
+          <th>
+          <p><strong>Gene Symbol</strong></p>
+          </th>
+          <th>
+          <p><strong>HR</strong></p>
+          </th>
+          <th>
+          <p><strong>Z-Score</strong></p>
+          </th>
+          <th>
+          <p><strong>P-Value</strong></p>
+          </th>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p>hsa-mir-20a-5p</p>
+          </td>
+          <td>
+          <p>0.5231</p>
+          </td>
+          <td>
+          <p>-2.479</p>
+          </td>
+          <td>
+          <p>0.0132</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-200a-5p</p>
+          </td>
+          <td>
+          <p>1.8075</p>
+          </td>
+          <td>
+          <p>2.076</p>
+          </td>
+          <td>
+          <p>0.0379</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-21-5p</p>
+          </td>
+          <td>
+          <p>0.5951</p>
+          </td>
+          <td>
+          <p>-1.961</p>
+          </td>
+          <td>
+          <p>0.0498</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-29a-3p</p>
+          </td>
+          <td>
+          <p>0.6735</p>
+          </td>
+          <td>
+          <p>-1.497</p>
+          </td>
+          <td>
+          <p>0.1340</p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <p>The Kaplan-Meier estimator is used to estimate the survival function. The visual representation of this function is usually called the Kaplan-Meier curve, as&nbsp;the probability of surviving in a given length of time while considering time in many small intervals. The time starting from a defined point to the occurrence of a given event, for example death is called as survival time and the analysis of group data as survival analysis. The log rank test is the most common method used for comparing the survival curve. The K-M plot for the differentially expressed miRNA of interest is as follows.</p>
+        <img src="https://2019.igem.org/wiki/images/6/6d/T--SASTRA_Thanjavur--ModelF1.png" style="max-height:100%; max-width:100%">
+        <p><strong>Figure 1</strong></p>
+        <p>(a) K-M plot for hsa-miR-20a-5p</p>
+        <p>(b)K-M plot for hsa-miR-200a-5p</p>
+        <p>(c) K-M plot for hsa-miR-21-5p&nbsp;</p>
+        <p>(d) K-M plot for hsa-miR-29a-3p</p>
+        <p>In order to explore the strategy of relying on a panel of miRNA biomarkers for early-stage cervical cancer detection, a predictive model was defined as a linear combination of the expression levels of the three miRNAs weighted by their relative coefficients in the multivariate Cox regression test as follows: survival risk score(SRS) = (-0.5967 * Expression value of hsa-miR-20a) + (0.5376 * Expression value of hsa-miR-200a) + ( - 0.4736* Expression value of hsa-miR-21). hsa-miR-29a was dropped as a prospective biomarker owing to its p-value ≮ 0.05. hsa_mir_20a and hsa_mir_21 showed a negative coefficient in cox regression analysis indicating a protective effect of the variable with which it is associated whereas has_mir200a showed a positive coefficient indicates a worse prognosis.</p>
+        <div class="table-container">
+          <p><strong>Table 4. Cox Regression, Z-Score and P value for three chosen miRNA biomarkers</strong></p>
+          <table style="width:auto;" class="table table-hover table-bordered">
+          <tbody>
+          <thead>
+          <tr>
+          <th>
+          <p><strong>Gene Symbol</strong></p>
+          </th>
+          <th>
+          <p><strong>RC</strong></p>
+          </th>
+          <th>
+          <p><strong>Z-Score</strong></p>
+          </th>
+          <th>
+          <p><strong>P-Value</strong></p>
+          </th>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p>hsa-mir-20a-5p</p>
+          </td>
+          <td>
+          <p>-0.5967</p>
+          </td>
+          <td>
+          <p>-2.280</p>
+          </td>
+          <td>
+          <p>0.0226<sup>*</sup></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-200a-5p</p>
+          </td>
+          <td>
+          <p>0.5376</p>
+          </td>
+          <td>
+          <p>1.879</p>
+          </td>
+          <td>
+          <p>0.0603</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-21-5p</p>
+          </td>
+          <td>
+          <p>-0.4739</p>
+          </td>
+          <td>
+          <p>-1.786</p>
+          </td>
+          <td>
+          <p>0.0740</p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <p>According to the predictive miRNA signature model, the risk score for each of the 307 patients was calculated. The patients were then classified into high-risk or low-risk group by identifying optimal cut point using <em>survminer</em> package. Overall survival curves were generated using the Kaplan-Meier method, and two-sided log-rank tests were employed to compare the differences in overall survival time between the high-risk and low-risk patient groups. The Kaplan-Meier overall survival curves of the two groups based on the three miRNAs were notably different (log-rank p = 0.00068&lt; 0.001). The results of the multivariate Cox regression analysis suggested that one miRNA, hsa-mir-20a can act as an independent prognostic factor in CESC cancer (p &lt; 0.05).</p>
+        <img src="https://2019.igem.org/wiki/images/7/75/T--SASTRA_Thanjavur--ModelF2.png" style="max-height:100%; max-width:100%">
+        <p><strong>Figure 2.</strong></p>
+        <p>(a) Kaplan-Meier curves of the two groups based on the three miRNA signatures</p>
+        <p>(b) Kaplan-Meier curves of the two groups based on the two miRNA signatures</p>
+        <p>The multivariate Cox regression test with just the hsa-miR-21 and hsa-miR-20a biomarkers as a biomarker panel was tested owing to their better prognostic value.&nbsp; The survival risk score (SRS) = (-0.6170*Expression value of hsa_mir_20a) + (-0.4799* Expression value of hsa_mir_21) was calculated. hsa_mir_20a and hsa_mir_21 showed a negative coefficient in cox regression analysis indicating a protective effect of the variable with which it is associated, as observed in the previous trial.</p>
+        <div class="table-container">
+          <p><strong>Table 5. Cox Regression, Z-Score and P value for two chosen miRNA biomarkers</strong></p>
+          <table style="width:auto;" class="table table-hover table-bordered">
+          <tbody>
+          <thead>
+          <tr>
+          <th>
+          <p><strong>Gene Symbol</strong></p>
+          </th>
+          <th>
+          <p><strong>RC</strong></p>
+          </th>
+          <th>
+          <p><strong>Z-Score</strong></p>
+          </th>
+          <th>
+          <p><strong>P-Value</strong></p>
+          </th>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p>hsa-mir-20a-5p</p>
+          </td>
+          <td>
+          <p>-0.6170</p>
+          </td>
+          <td>
+          <p>-2.358</p>
+          </td>
+          <td>
+          <p>0.0184<sup>*</sup></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>hsa-mir-21-5p</p>
+          </td>
+          <td>
+          <p>-0.4799</p>
+          </td>
+          <td>
+          <p>-1.807</p>
+          </td>
+          <td>
+          <p>0.0707</p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <p>The Kaplan-Meier overall survival curves of the two groups based on the two miRNAs were notably different (log-rank p = 0.00075 &lt; 0.001), indicating the prospective use of hsa-miR-21 and hsa-miR-20a as members of the biomarker panel for early-stage cervical cancer detection due to minimal differences in the p-value between the panel group with three miRNA markers and two miRNA markers. Thus, the consideration of hsa-miR-21 and hsa-miR-20a as biomarkers for cervical cancer stands significant and anchors the biomarker choice for our project</p>
+      </div>
+      <a id="toehold">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Toehold Design</div>
+        <p>We used the ViennaRNA suite to visualize the secondary structures of our toehold switches.  Specifically, we used the RNAfold web server version to visualize our designed structures.  We were able to find and optimize the nucleotides after passing the sequence via RNAfold. The ensemble diversity of the structure provides insight into the average base-pair distance between all the structures in the thermodynamic ensemble and the minimum free energy value of a sequence indicates the energy value of the most stable structure of that sequence.  Therefore, we observed that our designed sequences adopted a toehold switch MFE structure.</p>
+        <p>The calculated free energy value for the second generation toehold switch for hsa-miR-21-5p was -21.4 kcal/mol, with an ensemble diversity of 4.95. The calculated free energy value for the second generation toehold switch for hsa-miR-21-5p was -22.68 kcal/mol, with an ensemble diversity of 8.79.</p>
+        <div class="images" style="display:flex;justify-content:space-evenly">
+          <img src="https://2019.igem.org/wiki/images/8/82/T--SASTRA_Thanjavur--F23.png" alt="">
+          <img src="https://2019.igem.org/wiki/images/b/b6/T--SASTRA_Thanjavur--ModelF24.png" alt="">
+        </div>
+      </div>
+      <a id="mak">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Mass Action Kinetics</div>
+        <p>In mass action kinetic models, the dynamics of concentration of the product is seen to depend on the instantaneous values of the reactants. Due to the lesser complexity and minimal parameter requirements associated with these deterministic models, we chose to use it for our project. We opted for MATLAB 2017b as a platform to run the simulations as all three of us in the modelling team were familiar with its programming language.</p>
+        <p>Since the crux of our project is akin to iGEM CLSB-UK (2017), we referred to their excellent documentation and initially decided to emulate their model for us to get an insight of their kinetic model and anticipate the plausible errors that could be encountered during our simulations. This emulation in turn gave us confidence, setting up a substantial premise towards the modelling. A literature survey was also carried out by our modelling team to gain more clarity and gather information on the different mass action kinetic models proposed so far in relation to toehold switches and GFP expression.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Literature Review</div>
+        <p>We looked into the back references cited by iGEM CLSB-UK (2017) for their modelling and went through the same in detail. Of many papers we looked into, the research article titled <em>Experiment and mathematical modeling of gene expression dynamics in a cell-free system</em>, authored by Stogbeaur et al. and his corresponding thesis proved to be most useful [1]. The former in particular paved the way towards understanding mathematical equations and their formulations in modelling a cell free system, while the latter gave us insights on the cell free system (NEB&rsquo;s PURExpress Protein Synthesis kit) and the experimental procedure to be followed to carry out fluorescence measurements, where requisite information from our understanding of the thesis was passed onto our sensor team for the design of experiments [2].</p>
+        <p>Owing to the use of second-generation toehold switches in our project, it was requisite for us to model the miR-antimiR interactions in the solution system for which we decided to search for methods that could aid us in estimating the kinetic aspects for modelling such interactions. In this search, so as to include the thermodynamic aspects in the model, we went through the documentation provided by iGEM Exeter (2015) and simulated their MATLAB code. Their work represented a Brownian motion based model for interaction of 2 particles in a solution system. We decided to emulate this simulation twice so as to model the interaction between antimiR-miR that facilitates the formation of a primary complex and then model the interaction between the formed complex and toehold to form the secondary complex. We spent quite some time understanding the intricate aspects in the MATLAB code that was provided on their wiki, which involved neglecting the interactions with the walls of the container, formulating equations for the geometry of the container (in our case a round bottom well instead of a microcentrifuge tube used by the Exeter team) so as to define the boundary conditions for the particles in the system [4]. The model in turn aided the visualisation of interactions happening within the system; following this we had an organic discussion with our primary principal investigator, Dr. Ashok Palaniapan, who also happens to be our systems biology instructor. However, post the discussion we found out that the model gave only a spatial representation of the dynamics involved in the container and not any useful information on the kinetics/thermodynamic aspects. Hence, we did not proceed further on this front.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Initial works in the process of Modelling</div>
+        <p>With no headway in terms of modelling the anti-miR and miR interactions, we shifted our full focus towards modelling the miR and toehold interactions. We decided to do so because, once we simulate the interactions between the miRNA and the toehold it becomes only a matter of replacing the miRNA with complex (miR-anti_miR complex) and then simulating the kinetics of its complex formation with the toehold.</p>
+        <p>The research article titled &ldquo;<em>Experiment and mathematical modelling of gene expression in cell free systems</em>&rdquo; by Stogbauer <em>et.al. </em>furnished us with the variations in GFP fluorescence as a function of DNA concentration, which forms the major aspect of our project. The article gave insights on intricate aspects such as including an incubation time to facilitate significant transcription of the toehold DNA to RNA using the master mix. The incubation time was calculated to be 8 minutes from the transcription rate, provided in this article.&nbsp;</p>
+        <p>As per our plan, we kicked off our simulations via emulating the kinetic model of iGEM CLSB-UK (2017). The initial model was fairly simple as it involved only two of our major reactants, the closed toehold switch and miRNA reacting to give away an intermediate partially bound toehold switch, which eventually forms the open toehold switch upon its linearization.</p>
+        <img src="https://2019.igem.org/wiki/images/4/45/T--SASTRA_Thanjavur--ModelF25.png" style="margin-left: auto;margin-right:auto"alt="">
+        <p>CTS - Closed Toehold Switch</p>
+        <p>PBTS - Partially Bound Toehold Switch</p>
+        <p>OTS - Open Toehold Switch</p>
+        <p>k - The rates of the respective reactions</p>
+        <p>The above kinetic equation was translated into the following differential equations:</p>
+        <img src="https://2019.igem.org/wiki/images/9/96/T--SASTRA_Thanjavur--ModelF26.png" alt="">
+        <p>Using the interactive platforms provided in the iGEM CLSB-UK 2017 wiki, which had sliders for varying the parameters involved in their modelling, we set our parameters such that the forward reactions were more favoured and initially plotted our graphs.</p>
+        <img src="https://2019.igem.org/wiki/images/9/96/T--SASTRA_Thanjavur--ModelF26.png" alt="">
+        <p><strong>Figure 3. </strong>Results obtained from emulating the initial model of CLSB using the following parameters; CTS(0) = 1 M; miRNA(0) = 0.8 M; k<sub>1</sub> = 0.1 s<sup>-1</sup>; k<sub>2</sub> =&nbsp; 0.2 M<sup>-1</sup>s<sup>-1</sup>; k<sub>-1</sub> = 0.01 s<sup>-1</sup>; k<sub>-2</sub> = 0.01 s<sup>-1</sup></p>
+        <p>The responses we obtained were akin to the plots displayed by the interactive sliders on the iGEM CLSB-UK 2017 wiki, confirming the working of our MATLAB code. Briefly, from the above plot, it could be seen that the open toehold switch concentration increases and saturates with time while the reactants (closed toehold switch and miRNA) concentration decreases with time along with a slight initial increase of the partially bound toehold switch and its subsequent decrease with time, when a threshold concentration of the open toehold switch is reached.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Final mass action kinetics modelling</div>
+        <p>Although this had set a premise towards our modelling journey, it represented a very crude model and hence in order to make our model more realistic and useful, we emulated the final model of CLSB which had certain added quintessential parameters such as transcription rate, translation rate and characteristic decay of individual RNA elements.</p>
+        <img src="https://2019.igem.org/wiki/images/0/03/T--SASTRA_Thanjavur--ModelF5.png" alt="">
+        <p>This was again translated into the following ODEs:</p>
+        <img src="https://2019.igem.org/wiki/images/2/2c/T--SASTRA_Thanjavur--ModelF6.png" alt="">
+        <p>The &lsquo;sensor team&rsquo; provided us with the approximate concentration of PCR amplified DNA and we utilised the same (~120 nM) as the initial concentration for the toehold DNA. The other parameters were maintained similar to what CLSB had used.</p>
+        <p><strong>Output:</strong></p>
+        <img src="https://2019.igem.org/wiki/images/8/89/T--SASTRA_Thanjavur--ModelF7.png" alt="">
+        <p><strong>Figure 4. </strong>Results obtained from emulating the initial model of CLSB using the following parameters; miRNA(0) = 1 M; k<sub>transcription</sub> = 1.1&times;10<sup>-3 </sup>s<sup>-1</sup>; k<sub>translation</sub> = 1.7&times;10<sup>-2</sup>s<sup>-1</sup>; k<sub>open</sub> = 6&times;10<sup>5</sup> M<sup>-1</sup>s<sup>-1</sup>;&nbsp; k<sub>decay</sub> = 1.28&times;10<sup>-3</sup>;</p>
+        <p>The responses we obtained were similar to the plots of the simple kinetic model used before, wherein from the above plot, it could be seen that the GFP concentration increases steadily and saturates with time while the reactants (closed toehold switch and miRNA) concentration decreases sharply with time along with a slight initial increase of the open toehold switch and its subsequent decrease with time, when a threshold concentration of the GFP is reached.</p>
+        <p>Throughout the process of emulating the work of iGEM CLSB-UK 2017, we had frequent discussions amongst ourselves in terms of interpreting trends and discrepancies exhibited in the graphs. This gave us more clarity and boosted our confidence in the modelling aspect. Following this, we decided to make a plot of GFP expression for different initial concentrations of miRNA so as to check the correctness of expected trends (i.e increasing fluorescence of GFP with increase in concentration of miRNA)</p>
+        <p>We utilised the rate constants given by iGEM CLSB-UK 2017 for the initial model and later planned to carry out a curve fitting with results provided by the &lsquo;sensor team&rsquo;.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Plot of GFP expression for different initial concentrations of miRNA:</div>
+        <p>We varied the miRNA concentration from 1 fM to 1 &micro;M with a 10- fold difference for each simulation, upon receiving inputs from the sensor team on their experiment design. However, on plotting the concentration curves, we observed negative concentration values for miRNA. We speculated that this could be due to a faster decay rate of RNA that was employed in the model. On decreasing the k<sub>decay </sub>value, the negative values disappeared. We correspondingly chose a value of&nbsp; 3&times;10<sup>-4&nbsp; </sup>which was used in the CLSB model for curve fitting purpose.</p>
+        <p>The plot for all components at different concentrations of miRNA ranging from 1 fM to 1 &micro;M is shown below. The DNA concentration used for this simulation run was 120 nM. The GFP and OTS curves are alone plotted in semi-logarithmic scale (Y axis in log), owing to the ~10 fold difference in the concentrations with change in miRNA.</p>
+        <p>k<sub>transcription</sub> = 1.1&times;10<sup>-3 </sup>s<sup>-1</sup>; k<sub>translation</sub> = 1.7&times;10<sup>-2</sup>s<sup>-1</sup>; k<sub>open</sub> = 10<sup>5</sup> M<sup>-1</sup>s<sup>-1</sup>;&nbsp; k<sub>decay</sub> = 3&times;10<sup>-4</sup>;</p>
+        <p>It could be seen that the GFP concentration increases with increase in the initial concentration of miRNA. This is expected since, higher concentrations of miRNA would open more closed toehold switches for translation of GFP. Similar trends were observed with OTS also, which in turn propels the GFP expression.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Relationship between miRNA and initial DNA concentration so to get an idea of the latter</div>
+        <p>The dynamics of CTS production (via transcription) depends on the initial concentration of DNA. We felt a necessity to probe into the relationship between concentrations of DNA and miRNA, since the latter binds to the transcribed DNA (CTS) and facilitates GFP expression. Hence, in order to get significant fluorescence an optimum concentration of toehold DNA has to be fixed.</p>
+        <p>If the initial concentration of DNA is high when compared to miRNA concentration, more amounts of CTS would be present owing to the conversion of the toehold DNA into the corresponding CTS.</p>
+        <p>So, when the miRNA concentration is lower than that of DNA, the production rate (i.e. transcription) of CTS dominates in the equation,</p>
+        <img src="https://2019.igem.org/wiki/images/1/1e/T--SASTRA_Thanjavur--ModelF8.png" alt="">
+        <p>as a result of which we observe overlapping curves in the graph from miRNA concentrations between 1 fM-10 nM.</p>
+        <p>However, when the DNA and miRNA are at comparable concentrations ~100 nM and &gt; 100 nM, where until 1000 s, the curve increases slowly (as CTS gets converted to OTS). Beyond 1000 s (after miRNA(t)=0), the curve again increases linearly, since the miRNA present is consumed and hence, transcription begins to dominate in the equation. The concentration of the latter toehold DNA when similar to that of miRNA concentration would result in lower CTS amounts, owing to the interaction of miRNA with much of the transcribed CTS (from DNA) resulting in the conversion to OTS.</p>
+        <p>When miRNA(0) = 1 &micro;M, the concentration of miRNA exceeds that of DNA by ~8 fold. In this case, the consumption of CTS to obtain OTS dominates, and hence we observe very little increase in the concentration of CTS.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Concentration Profiles of miRNA</div>
+        <img src="https://2019.igem.org/wiki/images/9/93/T--SASTRA_Thanjavur--ModelF9.png" alt="">
+        <p>Since it is the miRNA that is acting as a switch for initiating the fluorescence in the system, it became imperative for us to probe into the concentration profiles associated with these.</p>
+        <p>The studies performed by Stogbeuar <em>et.al. </em>clearly indicated the fluorescence to saturate after 2 h and hence we decided to choose an initial concentration of miRNA that gets consumed by that time. At a high concentration of miRNA(0) = 1 &micro;M, we observe a steady decrease in the plot, where even at t = 7200 s, we find the miRNA concentration to be ~100 nM. However, in the case of miRNA(0) = 100 nM and other lesser concentrations, the decay occurs to 0 by 1000 s.</p>
+        <img src="https://2019.igem.org/wiki/images/d/de/T--SASTRA_Thanjavur--ModelF10.png" style="max-width:100%;max-height:100%;" alt="">
+        <p>Figure 5.Graphical representation of concentration of&nbsp; <strong>(a) </strong>CTS <strong>(b) </strong>miRNA <strong>(c) </strong>OTS and <strong>(d) </strong>GFP with time for varying initial concentration of miRNA from 1 fM to 1 &micro;M for 2 h</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">miR-miR_anti-miR Interactions</div>
+        <p>At this point in time, the major architecture of our model was built; following this, we had to replace the miR/toehold interaction with miR-anti_miR/toehold interaction. Here is where a stiff challenge awaited us; with the aid of CLSB-UK&rsquo;s documentation we were able to assign meaningful values to the rate constants and proceed with the simulation; however there were no sources we could rely on, to gather information on kinetic aspects of miR-anti_miR interactions.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Obtaining rate constants from the kinetics of anti_miR-miRinteraction</div>
+        <p>The structures obtained from NUPACK simulations of miR-21 and anti_miR-21 corresponded to their MFE state; we initially planned to utilise the concept of MFE towards unearthing the rate constants for the kinetics of miR-anti_miR complex formation.</p>
+        <p>We were required to know the energy required to form the hydrogen bonds associated with the miR-anti_miR complex formation. If the cumulative energy required to form hydrogen bonds with the participating nucleotides in the miR-anti_miR complex is less than the complex&rsquo;s MFE (since the free energy contributes to bond formation), the miR and anti-miR in their MFE state could take part in bond formation.</p>
+        <p>Initially, we did not look into the energy requirements associated with hydrogen bond formation for miR-anti_miR complex formation; from the thermodynamics relationship of Gibbs free energy, we proceed to find the equilibrium constant for MFE;</p>
+        <p><strong>Calculations for equilibrium constant</strong></p>
+        <p>Values used: R = 1.987*10<sup>-3 </sup>kcal mol<sup>-1</sup> K<sup>-1</sup>, T = 298 K,</p>
+        <p>For antimiR-miR binding: &Delta;G = -22.2 kcal mol<sup>-1</sup></p>
+        <p>k<sub>eq&nbsp; </sub>= 1.9167*10<sup>16</sup></p>
+        <p>For complex-CTS binding: &Delta;G = -26 kcal mol<sup>-1</sup></p>
+        <p>k<sub>eq&nbsp; </sub>= 1.1733*10<sup>19</sup></p>
+        <p><strong>Parameters used:</strong></p>
+        <p>kmiRantimiR_b=1.9167*10<sup>16</sup>; (3.3 * 10^5)</p>
+        <p>kmiRantimiR_ub=1;</p>
+        <p>kcomplexcts_b=1.1733*10<sup>10</sup>;</p>
+        <p>ktranscription=1.1*10<sup>-3</sup>;</p>
+        <p>ktranslation=1.7*10<sup>-2</sup>;</p>
+        <p>kdecay=3*10<sup>-4</sup>;</p>
+        <p>We obtained an enormously high value for the equilibrium constant; Our major objective was to find out the rate constants associated with the reactions, for this, we assumed the backward rate to be 1 and estimated the forward reaction rate; we thought it was a reasonable assumption due to very large associated equilibrium constants; However, for such very high rate constants, the MATLAB code halted at some point of time during the execution.</p>
+        <p><strong>Output obtained: Error message: </strong></p>
+        <p>Code failed at t = 5s. <strong>&nbsp;Unable to meet integration tolerances without reducing the step size below the smallest value allowed (1.323489e-23) at time t. </strong></p>
+        <p>To combat this, we arbitrarily reduced the values of the fed forward rate constants and tried executing the code; the code seemed to work fine for reduced values of rate constants (around 10^5).</p>
+        <p>Perplexed by the trends, we rechecked our calculations but did not find any discrepancies. However, when checked the MFE values, we found out that those values correspond to the complex and not for the individual anti_miRNA and miRNA. We ascertained this to be cause for such trends.</p>
+        <p>Also, this time we resorted to a clearer way of ascertaining the equilibrium constant from the NUPACK through the equilibrium concentrations (this we obtained via feeding the separate miRNA and anti_miRNA sequences in NUPACK, [3]); with the equilibrium concentrations, we found out the equilibrium constant and correspondingly the forward rate of the reaction. The obtained forward rates were in the order of 10^5 supporting the serendipitous simulation results obtained in the previous case. Also, here in this calculation we substituted a temperature value of around 18 &deg;C (input furnished by the &lsquo;sensor team&rsquo;, because the incubation of the miR and anti-miR was carried out at this temperature only).</p>
+        <p>The possibility of temperature giving very high values of equilibrium constants in the previous case was immediately neglected, owing to its little intuitive sense.</p>
+        <p><sup>&nbsp;</sup></p>
+        <p><strong>For miR 21a,</strong></p>
+        <img src="https://2019.igem.org/wiki/images/6/63/T--SASTRA_Thanjavur--ModelF11.png" alt="">
+        <p>From the image, we gather that all of the miRNA and anti_miR had hybridised to yield the complex. However, when we looked into the histogram data, the equilibrium concentrations were found to be:</p>
+        <p>Complex =&nbsp; 99.97 nM&nbsp;</p>
+        <p>miRNA and anti_miR: 0.0264 nM</p>
+        <p>Estimated equilibrium constant from above data: 1*10<sup>5 </sup>nM<sup>-1</sup></p>
+        <p><strong>For miR 20a,</strong></p>
+        <img src="https://2019.igem.org/wiki/images/5/50/T--SASTRA_Thanjavur--ModelF12.png" alt="">
+        <p>Equilibrium concentrations of complex = 0.099 &micro;M;</p>
+        <p>miRNA and antimiRNA = 0.001 &micro;M</p>
+        <p>Estimated equilibrium constant from above data: 9.9*10<sup>4 </sup>&micro;M<sup>-1</sup></p>
+        <p>The sole purpose for us to obtain the equilibrium constant was to get an idea about the rate constants(k<sub>forward</sub>/k<sub>backward</sub>).We used this value as the forward rate constant by assuming the backward rate constant to be 1.</p>
+        <p>As per plan, we just had to replace the miRNA terms used in the previous case with complex term (miR-anti_miR) and hence correspondingly we had formulated the following equations,</p>
+        <img src="https://2019.igem.org/wiki/images/4/4c/T--SASTRA_Thanjavur--ModelF13.png" alt="">
+        <p>However, this was in negation to the experimental design, where it was elaborated by the sensor team that miR-anti_miR complex is formed separately and then this complex is allowed to interact with the toehold DNA mixture. Hence, we formulated two separate set of equations that catered to the discussed experimental design;</p>
+        <p><strong>Set 1: </strong></p>
+        <img src="https://2019.igem.org/wiki/images/5/53/T--SASTRA_Thanjavur--ModelF14.png" alt="">
+        <p><strong>Set&nbsp; 2:</strong></p>
+        <img src="https://2019.igem.org/wiki/images/1/1b/T--SASTRA_Thanjavur--ModelF15.png" alt="">
+        <p>The initial experimental design of the sensor team was to prepare varying concentrations of the miR and anti_miR separately, incubate them for complex formation and hence, quantify the fluorescence intensity. However, from the simulation results, we obtained a trend that did not follow any logical trend which might be attributed to the low concentrations of miR and anti-miR available in the sample solution in case of diluted concentrations, resulting in higher time for their binding due to the low probability of finding each other spatially in the solution space. Following these results, we suggested the &lsquo;sensor team&rsquo; to prepare a stock solution of complex and subject it to serial dilutions for their required concentrations and this proved valuable towards their experimental procedure.</p>
+        <p>The graph obtained for the suggested simulation method is as follows;</p>
+        <img src="https://2019.igem.org/wiki/images/1/15/T--SASTRA_Thanjavur--ModelF16.png" alt="">
+        <p><strong>Figure 6. </strong>Graph representing the variation in concentration of miRNA, antimiRNA and subsequent complex formed within 2 h time frame with miR-antimiR binding rate constant as 10<sup>5 </sup>mol<sup>-1</sup>s<sup>-1</sup></p>
+        <p>The simulation time was chosen to be 7200 s since the sensor team had reported an incubation time of 2 h for the complex formation. However, from the above graph it is evident that the complex formation takes place much more quickly (well before 500 s) and both the complex and miRNA/anti-miRNA attains saturation by then.&nbsp;</p>
+        <img src="https://2019.igem.org/wiki/images/d/d8/T--SASTRA_Thanjavur--ModelF17.png" alt="">
+        <p><strong>Figure 7. </strong>Graph representing the variation in concentration of complex, CTS and OTS formed within 2 h time frame with Complex-CTS binding rate constant as 10<sup>5 </sup>mol<sup>-1</sup>s<sup>-1</sup> However, negative concentration obtained for the complex, which was resolved after inclusion of incubation time for transcription (Fig 9)</p>
+        <p>Although the intention of any literature survey is to give us a prelude towards mathematical modelling of cell free systems, it surprisingly aided us to cruise an anomaly associated with the occurring negative concentrations of CTS. Since, the emergence of negative concentration made little sense, we looked into means to resolve this issue; The Stogbauer <em>et.al</em>&rsquo;s paper gave insights on intricate aspects such as including an incubation time so as to facilitate significant transcription of the toehold DNA to RNA using the master mix. The incubation time was calculated to be 8 minutes from the transcription rate.</p>
+        <p>On adding the incubation time associated with transcription of toehold DNA to CTS (around 8 minutes), this anomaly was removed.</p>
+        <img src="https://2019.igem.org/wiki/images/6/69/T--SASTRA_Thanjavur--ModelF18.png" alt="">
+        <p><strong>Figure 8. </strong>Graph representing the variation in concentration of GFP and mature GFP for 2 h time frame with maturation factor of 0.033 s<sup>-1</sup></p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">Modelling GFP Fluorescence</div>
+        <p>The output of our biosensor experiments was a measure of GFP fluorescence. We also included the GFP maturation factor (0.2 min<sup>-1</sup>), which the CLSB-UK team had omitted for their convenience. We utilised the maturation factor/scaling factor to be <strong>79.429 </strong>calculated by <a href="http://parts.igem.org/Part:BBa_E0040">http://parts.igem.org/Part:BBa_E0040</a> team and used it in our code [6].</p>
+        <p>We changed the DNA concentration also to 223.5 nM after confirming the final experimental protocol with the &lsquo;sensor team&rsquo;.</p>
+        <p>We ran the simulation for a 2 h time frame and we obtained the following graph;</p>
+        <img src="https://2019.igem.org/wiki/images/b/b6/T--SASTRA_Thanjavur--ModelF19.png" alt="">
+        <p><strong>Figure 9. </strong>Variation in concentration of Complex, CTS and OTS with time; the ambiguity in terms of negative concentration was resolved via including the incubation time of 8 minutes for transcription process</p>
+        <p>We plotted a graph to understand the trends in concentration of the various components of our model with time. The CTS concentration initially was around 118 nM owing to the transcriptional incubation time. The complex concentration was obtained on solving the &lsquo;Set 1&rsquo; differential equations. The CTS and complex rapidly hybridise to open the CTS, which is evident from the drop in their concentrations and increase in OTS concentration. However, at around 500 s, the complex is completely consumed, following which OTS begins to decay, while CTS increases due to continued transcription.</p>
+        <p>When we look into the dynamics of GFP and mature GFP, in the initial 500 s, translation of GFP increases as OTS increases, which begins to mature slowly. Following this period, the GFP decreases as the OTS concentration decreases. However, the mature GFP increases due to maturation of the continually produced GFP.</p>
+        <p>The next stage in our modeling process was to obtain trends for fluorescence intensity with variations in complex concentration. We plotted the intensity at 2 h against the complex concentration and obtained a linear fit with a correlation coefficient value (R<sup>2</sup> = 0.9993). This showed that our model was working fine and we repeated the process for a time period for 4 h.</p>
+        <img src="https://2019.igem.org/wiki/images/4/47/T--SASTRA_Thanjavur--ModelF20.png" alt="">
+        <p><strong>Figure 10.</strong>The fluorescence intensity varies linearly with concentration of complex for time frame of 2 h</p>
+        <p>For 4 h:</p>
+        <img src="https://2019.igem.org/wiki/images/f/fd/T--SASTRA_Thanjavur--ModelF21.png" alt="">
+        <div class="table-container">
+          <table style="width:auto;" class="table table-hover table-bordered">
+            <tbody>
+            <thead>
+            <tr>
+            <th>
+            <p>miRNA/anti-miR concentration</p>
+            </th>
+            <th>
+            <p>100 pM</p>
+            </th>
+            <th>
+            <p>1 nM</p>
+            </th>
+            <th>
+            <p>10 nM</p>
+            </th>
+            <th>
+            <p>25 nM</p>
+            </th>
+            <th>
+            <p>50 nM</p>
+            </th>
+            <th>
+            <p>75 nM</p>
+            </th>
+            <th>
+            <p>100 nM</p>
+            </th>
+            </tr>
+            <tr>
+            </thead>
+            <td>
+            <p>Complex</p>
+            <p>(miR-antimiR-</p>
+            <p>Toehold switch)</p>
+            </td>
+            <td>
+            <p>98 pM</p>
+            </td>
+            <td>
+            <p>980 pM</p>
+            </td>
+            <td>
+            <p>9.87 nM</p>
+            </td>
+            <td>
+            <p>24.69 nM</p>
+            </td>
+            <td>
+            <p>49.37 nM</p>
+            </td>
+            <td>
+            <p>74.05 nM</p>
+            </td>
+            <td>
+            <p>98.74 nM</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>CTS</p>
+            </td>
+            <td>
+            <p>739 nM</p>
+            </td>
+            <td>
+            <p>738 nM</p>
+            </td>
+            <td>
+            <p>737 nM</p>
+            </td>
+            <td>
+            <p>736 nM</p>
+            </td>
+            <td>
+            <p>733 nM</p>
+            </td>
+            <td>
+            <p>729 nM</p>
+            </td>
+            <td>
+            <p>726 nM</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>OTS</p>
+            </td>
+            <td>
+            <p>0.018 nM</p>
+            </td>
+            <td>
+            <p>0.18 nM</p>
+            </td>
+            <td>
+            <p>1.17 nM</p>
+            </td>
+            <td>
+            <p>3.01 nM</p>
+            </td>
+            <td>
+            <p>5.85 nM</p>
+            </td>
+            <td>
+            <p>9.74 nM</p>
+            </td>
+            <td>
+            <p>12.1 nM</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>GFP</p>
+            </td>
+            <td>
+            <p>0.067 nM</p>
+            </td>
+            <td>
+            <p>0.67 nM</p>
+            </td>
+            <td>
+            <p>6.66 nM</p>
+            </td>
+            <td>
+            <p>16.9 nM</p>
+            </td>
+            <td>
+            <p>32.32 nM</p>
+            </td>
+            <td>
+            <p>54.1 nM</p>
+            </td>
+            <td>
+            <p>65.8 nM</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>Mature GFP</p>
+            </td>
+            <td>
+            <p>0.0048 uM</p>
+            </td>
+            <td>
+            <p>0.048 uM</p>
+            </td>
+            <td>
+            <p>0.48 uM</p>
+            </td>
+            <td>
+            <p>1.21 uM</p>
+            </td>
+            <td>
+            <p>2.43 uM</p>
+            </td>
+            <td>
+            <p>3.08 uM</p>
+            </td>
+            <td>
+            <p>4.85 uM</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>Fluorescence Intensity</p>
+            </td>
+            <td>
+            <p>1.74</p>
+            </td>
+            <td>
+            <p>17.40</p>
+            </td>
+            <td>
+            <p>174.16</p>
+            </td>
+            <td>
+            <p>432.12</p>
+            </td>
+            <td>
+            <p>868.03</p>
+            </td>
+            <td>
+            <p>1348.51</p>
+            </td>
+            <td>
+            <p>1728.04</p>
+            </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container">
+          <table style="width:auto;" class="table table-hover table-bordered">
+          <tbody>
+          <thead>
+          <tr>
+          <th>
+          <p>miRNA/</p>
+          <p>anti-miR concentration</p>
+          </th>
+          <th>
+          <p>100 pM</p>
+          </th>
+          <th>
+          <p>1 nM</p>
+          </th>
+          <th>
+          <p>10 nM</p>
+          </th>
+          <th>
+          <p>25 nM</p>
+          </th>
+          <th>
+          <p>50 nM</p>
+          </th>
+          <th>
+          <p>75 nM</p>
+          </th>
+          <th>
+          <p>100 nM</p>
+          </th>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p>Complex</p>
+          <p>(miR-antimiR-</p>
+          <p>Toehold switch)</p>
+          </td>
+          <td>
+          <p>98 pM</p>
+          </td>
+          <td>
+          <p>980 pM</p>
+          </td>
+          <td>
+          <p>9.87 nM</p>
+          </td>
+          <td>
+          <p>24.69 nM</p>
+          </td>
+          <td>
+          <p>49.37 nM</p>
+          </td>
+          <td>
+          <p>74.05 nM</p>
+          </td>
+          <td>
+          <p>98.74 nM</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>CTS</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          <td>
+          <p>810 nM</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>OTS</p>
+          </td>
+          <td>
+          <p>0.0013 nM</p>
+          </td>
+          <td>
+          <p>0.010 nM</p>
+          </td>
+          <td>
+          <p>0.13 nM</p>
+          </td>
+          <td>
+          <p>0.34 nM</p>
+          </td>
+          <td>
+          <p>0.73 nM</p>
+          </td>
+          <td>
+          <p>1.13 nM</p>
+          </td>
+          <td>
+          <p>1.38 nM</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>GFP</p>
+          </td>
+          <td>
+          <p>0.0079 nM</p>
+          </td>
+          <td>
+          <p>0.0734 nM</p>
+          </td>
+          <td>
+          <p>0.785 nM</p>
+          </td>
+          <td>
+          <p>1.97 nM</p>
+          </td>
+          <td>
+          <p>3.23 nM</p>
+          </td>
+          <td>
+          <p>5.58 nM</p>
+          </td>
+          <td>
+          <p>7.96 nM</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>Mature GFP</p>
+          </td>
+          <td>
+          <p>0.0055 uM</p>
+          </td>
+          <td>
+          <p>0.055 uM</p>
+          </td>
+          <td>
+          <p>0.551 uM</p>
+          </td>
+          <td>
+          <p>1.38 uM</p>
+          </td>
+          <td>
+          <p>2.75 uM</p>
+          </td>
+          <td>
+          <p>4.32 uM</p>
+          </td>
+          <td>
+          <p>5.51 uM</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p>Fluorescence Intensity</p>
+          </td>
+          <td>
+          <p>4.76</p>
+          </td>
+          <td>
+          <p>47.73</p>
+          </td>
+          <td>
+          <p>477.17</p>
+          </td>
+          <td>
+          <p>1188.49</p>
+          </td>
+          <td>
+          <p>2382.83</p>
+          </td>
+          <td>
+          <p>3722.41</p>
+          </td>
+          <td>
+          <p>4754.4</p>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+        <p><strong>Figure 11. </strong>The fluorescence intensity varies linearly with concentration of complex for time frame of 4 h</p>
+        <p>The trend obtained for 4 h was similar to that of 2 h with the intensity increasing linearly with increase in concentration of complex (R<sup>2</sup> = 0.9992)</p>
+        <p>However, on referring to the &lsquo;sensors team&rsquo;, we gathered that the GFP fluorescence intensity saturated for them after a concentration of 10 nM. We observed that CLSB-UK had faced a similar issue and hence had included a term for GFP decay, which we followed as well (GFPdecay = 5*10<sup>-5</sup>). Furthermore, on discussion with our PI, we realised that the probability of the toehold DNA being a limiting factor could be an <em>ad-hoc</em> explanation for the saturation profile (beyond 10 nM) observed with our experimental results. He suggested that even though the &lsquo;sensor team&rsquo; had used a DNA concentration of 220 nM there are chances that due to the round bottom wells that were used for the fluorescence measurements, a significant amount of DNA would have been &ldquo;trapped&rdquo; to the walls of the wells and hence not available for transcription by the cell-free solutions used, possibly leading to saturation at 10 nM itself. Hence, we decreased the DNA concentration 20 fold to 10 nM.</p>
+        <img src="https://2019.igem.org/wiki/images/c/cd/T--SASTRA_Thanjavur--ModelF22.png" alt="">
+        <p><strong>Figure 12. </strong>The fluorescence intensity is seen to exhibit a linear trend from 10 nM to 100 nM following which it saturates</p>
+        <p>Following implementation of these two changes, we obtained saturation of fluorescence intensity at 100 nM. However, the &lsquo;sensors team&rsquo; obtained it at 10 nM. This difference could be attributed to experimental errors and could be addressed by further experimentation for estimating the parameters for several rates including miRNA-antimiR binding, complex- CTS binding.</p>
+        <div class="title" style="margin-top:10px;margin-bottom:10px;">References</div>
+        <ol>
+        <li>St&ouml;gbauer, S. (2012) Experiment and quantitative modeling of cell-free gene expression dynamics. Ludwig Maximilian University of Munich, Germany</li>
+        <li>St&ouml;gbauer, T., Windhager, L., Zimmer, R., &amp; R&auml;dler, J. O. (2012). Experiment and mathematical modeling of gene expression dynamics in a cell-free system. <em>Integrative Biology</em>, <em>4</em>(5), 494. doi: 10.1039/c2ib00102k</li>
+        <li>Zadeh, J. N., Steenberg, C. D., Bois, J. S., Wolfe, B. R., Pierce, M. B., Khan, A. R., &hellip; Pierce, N. A. (2010). NUPACK: Analysis and design of nucleic acid systems. <em>Journal of Computational Chemistry</em>, <em>32</em>(1), 170&ndash;173. doi: 10.1002/jcc.21596</li>
+        <li><a href="http://2015.igem.org/Team:Exeter/Modeling">http://2015.igem.org/Team:Exeter/Modeling</a></li>
+        <li><a href="http://2017.igem.org/Team:CLSB-UK">&nbsp;</a><a href="http://2017.igem.org/Team:CLSB-UK">http://2017.igem.org/Team:CLSB-UK</a></li>
+        </ol>
+        <p><a href="http://parts.igem.org/Part:BBa_E0040">http://parts.igem.org/Part:BBa_E0040</a></p>
+      </div>
+    </div>
+  </body>
+</html>
