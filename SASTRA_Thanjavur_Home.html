@@ -2,17 +2,26 @@
 {{SASTRA_Thanjavur/Bootstrap}} -->
 <html>
   <style>
-    @font-face {
-      font-family: 'GOT';
-      font-style: normal;
-      font-weight: 700;
-      src: url('D:/Photoshop Files/Fonts/GameofThrones/Game_of_Thrones.eot');
-      src: local('GOT Bold'), local('GOT-Bold'),
-      url('D:/Photoshop Files/Fonts/GameofThrones/Game_of_Thrones.eot') format('embedded-opentype'),
-      url('D:/Photoshop Files/Fonts/GameofThrones/Game_of_Thrones.woff') format('woff') ,
-      url('D:/Photoshop Files/Fonts/GameofThrones/Game_of_Thrones.ttf') format('truetype'),
-      url('D:/Photoshop Files/Fonts/GameofThrones/Game_of_Thrones.svg') format('svg');
-    }
+  footer{
+      transform: translate(0px,35px);
+      color: black;
+      font-family: GOT;
+      height: 100px;
+      padding-left: 50px;
+  }
+  footer img{
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .icons{
+      margin-top: 15px;
+  }
+  .sponsors{
+    float: left;
+  }
+  .social{
+    float: right;
+  }
     body{
       margin: 0px;
     }
@@ -25,7 +34,7 @@
       font-weight:700;
       color:#ffffff;
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
     #throne{
       width: 20vw;
@@ -77,7 +86,7 @@
   <body>
     <div class="roww black">
       <h1>HOUSE OF TOEHOLDS</h1>
-      <img id="throne" src="D:/Workspaces/iGEM/Iron Throne.png">
+      <img id="throne" src="https://2019.igem.org/wiki/images/a/a4/T--SASTRA_Thanjavur--IronThroneInvert.png">
       <span id="tagline"><strong>You Know Nothing, miRNA</strong><span>
     </div>
     <div class="roww red">
@@ -188,5 +197,22 @@
       </div>
       <h1 style="color:#000000;">Design</h1>
     </div>
+    <footer>
+       <span>Our Sponsors</span>
+       <div class="icons">
+         <div class="sponsors">
+           <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+           <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+           <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+           <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+           <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+           <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+         </div>
+         <div class="social">
+           <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+           <a href="mailto:igemsastra.2019@gmail.com	"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+         </div>
+       </div>
+     </footer>
   </body>
 </html>
