@@ -1,0 +1,307 @@
+{{SASTRA_Thanjavur}}
+{{SASTRA_Thanjavur/Bootstrap}}
+<html>
+  <script type="text/javascript">
+    $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    });
+});
+  </script>
+  <style>
+    .container-fluid{
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+    footer{
+        transform: translate(0px,35px);
+        color: black;
+        font-family: GOT;
+        height: 100px;
+        padding-left: 50px;
+    }
+    footer img{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .imgcontain{
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+    .icons{
+        margin-top: 15px;
+    }
+    .sponsors{
+      float: left;
+    }
+    .social{
+      float: right;
+    }
+    .float{
+      position: sticky;
+      top: 18%;
+      list-style-type: none;
+    }
+    #index{
+      text-align: center;
+      font-size: 23px;
+      font-family: GOT;
+      margin-bottom: 10px;
+    }
+    .float a{
+      margin-bottom: 3px;
+      font-size: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .spectral{font-family: Spectral;}
+    .spectralb{font-family: SpectralBoldItalic;}
+    .title{font-family: GOT;font-size:20px;margin-bottom:15px;}
+    .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+    .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+    p{font-family: Spectral !important;font-size:14px !important;}
+    li{font-family: Spectral;font-size:14px;}
+    span{font-family: Spectral;font-size:14px;}
+    .dawd a{font-family: Spectral;font-size:14px;}
+    strong{font-family: SpectralBold !important; font-size: 14px !important;}
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">RESULTS</div>
+      <div class="row">
+        <div class="col-3">
+          <div class="float">
+            <div id="index">Index</div>
+            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;padding-top: 10px;padding-bottom: 10px;">
+              <a href="#council">Transformation</a><hr>
+              <a href="#arch">Effect of pH</a><hr>
+              <a href="#hands">PCR</a><hr>
+              <a href="#wetlab">Switch Characterization</a><hr>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+          <img src="https://2019.igem.org/wiki/images/4/42/T--SASTRA_Thanjavur--ResultsTitle.jpeg" style="max-height:100%; max-width:100%;">
+          <p>The House of Toeholds was able to characterize a second generation toehold switch for detecting the presence of hsa-miR-21-5p and hsa-miR-20a-5p, the differentially expressed miRNA biomarkers for early-stage detection of cervical cancer. Briefly, toehold switches are translational regulators that modulate the translation of a reporter protein (in our case, GFP). In the absence of the trigger RNA, the toehold switch is stable in its secondary structure thereby representing the OFF   state of the switch as the ribosomes do not garner access to the RBS. On the contrary, in the presence of the trigger RNA, the switch linearizes owing to the hybridization between the participating RNA structures thereby promoting the translation of the reporter protein and representing the ON state of the switch.<br><br>
+            Hence, the biosensor involving toehold switches as the sensing element will provide a fluorescence output, which is a function of the miRNA levels in the sample. But, in our case, since the chosen miRNAs have a stop codon in the open reading frame of the toehold switch construct, the use of a hybrid trigger element consisting of the biomarker and anti-miRNA is necessitated to prevent the stop codon problem. Hence, it is not required to expect a linear correlation between miRNA levels and the obtained fluorescence, which is what we obtained through our studies involving the second generation toehold switches.<br><br>
+            We performed a cell-free characterization of our computationally designed second generation toehold switches, which is our novel BioBrick contribution to iGEM 2019 and the synthetic biology community. The performance of our switch was rudimentary and gave us preliminary results, which could possibly indicate the presence of the chosen miRNA biomarkers. We strongly believe that our BioBrick could be further enhanced with regards to its design features and sensor characteristics to produce an effective, patient compliant screening mechanism for a panel of cervical cancer biomarkers through a simple blood test.<br><br>
+            As a part of our Bronze medal criteria, we performed a varying pH study on E.coli DH5alpha containing biobrick Bba_K608011, and were able to conclude that pH 7.2 was the optimum pH for the growth of our transformants, followed closely by pH 8 and then pH 6.</p>
+          <a id="council">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="hoc">
+            <div class="title">Transformation of DH5-alpha competent cells</div>
+            <div class="desc spectral">E.coli DH5 alpha cells (C2987I, New England Biolabs) were transformed with the plasmid pSB1C3 containing Bba_K608011 to study the effect of pH conditions on the activity of the medium strength promoter, which could be correlated to the fluorescence intensity of the Green Fluorescence Protein (GFP) encoded by the biobrick.</div>
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://2019.igem.org/wiki/images/b/b5/T--SASTRA_Thanjavur--2R.jpeg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Take 1</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://2019.igem.org/wiki/images/7/75/T--SASTRA_Thanjavur--3R.jpeg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Take 2</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://2019.igem.org/wiki/images/4/49/T--SASTRA_Thanjavur--4R.png" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Take 3</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="name spectralb">Take 1:</div>
+            <div class="desc spectral">For the first transformation experiment, we observed one transformant colony for the control sample (pUC19 plasmid DNA) and one for the test sample (Bba_K608011). Due to the very low transformation efficiency and discrepancies such as higher heat shock incubation temperature period and clump formation in the SOC cell growth media during the transformation process, we decided to repeat the experiment.</div>
+            <div class="name spectralb">Take 2:</div>
+            <div class="desc spectral">Steps were taken to ensure accurate heat shock incubation temperature and time period. Cells were grown in SOC medium and LB medium. We still observed clump formation in the SOC medium. As a result, we decided to utilize the transformants grown in LB medium for further experiments.</div>
+            <div class="name spectralb">Take 3:</div>
+            <div class="desc spectral">The transformation was repeated to further improve transformation efficiency. To visibly observe the transformed cells in the selection medium containing chloramphenicol antibiotic, an incubation period of 48 hours was required. The transformants were selected and the colonies were subcultured in a selection medium containing chloramphenicol antibiotic to maintain a pure culture of the transformed bacteria.</div>
+          </div>
+          <a id="arch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="archm">
+            <div class="title">Effect of pH on the biobrick BBa_K608011 activity</div>
+            <div class="name spectralb">Optimization of Chloramphenicol Concentration</div>
+            <div class="desc spectral">
+              As the first step of our characterization experiment, we decided to optimize the chloramphenicol concentration for our DH5alpha cells, transformed with biobrick Bba_K608011- consisting of a medium constitutive promoter, a medium RBS and Green Fluorescence Protein (GFP). We decided to vary the chloramphenicol concentrations in the LB broth as - 10 µg/mL, 20 ug/mL and 30 ug/mL. This was done to identify the most suitable concentration for the transformed cells to grow, without creating a stressful condition for the bacteria, all the while allowing optimal production of GFP, measured in spectrofluorometer. From our experiment, we concluded that 20 µg/mL was the optimal concentration for the growth of our transformed cells and decided to keep this as our standard concentrations for all further experiments.
+              <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--R5.jpg" style="max-height:100%; max-width:100%;">
+            </div>
+            <div class="name spectralb">Identifying the Optimal pH conditions for the growth of our transformed cells</div>
+            <div class="desc spectral">
+              Once the optimal chloramphenicol concentration was identified, we went on to characterize the biobrick Bba_K608011 by identifying the ideal pH conditions under which our transformants can grow, with optimal expression of GFP. We varied the pH conditions of LB broth as- pH 5, 6, 7.2 (standard pH of LB Broth), 8 and 9 and allowed the transformants to grow under these conditions for 48 hours. After measuring the cell Optical Density (OD) at 595 nm and normalizing the cell OD to 0.35, we measured the fluorescence intensity of the cell solutions in a spectrofluorometer.<br>Our results indicate that the fluorescence intensity was maximum at pH 7.2 (The standard pH of LB broth). Surprisingly, the intensity at pH 8 did not vary significantly from the intensity at pH 7.2 while the intensity at pH 6 deviated much more drastically. At pH values of 5 and 9, we found that the cell growth was extremely low. As we expected, the absorbance at 595 nm of pH 5 and 9 broth with transformant inoculum were similar to that of control LB broth.<br>We were thus able to conclude that pH 7.2 and 8 were optimal conditions for the expression of our biobrick. On the other hand, pH 6 was found to be suboptimal for GFP production. We suspect that this variation in GFP intensity could be due to the effect of pH on the plasmid copy number and the binding affinity of proteins involved in the transcription and translation machinery, such as RNA polymerases and ribosomes.
+              <img src="https://2019.igem.org/wiki/images/3/38/T--SASTRA_Thanjavur--FinalpH.jpeg" style="max-height:100%; max-width:100%;">
+            </div>
+          </div>
+          <a id="hands">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="hotk">
+            <div class="title">PCR - Standardization and Amplification of Toehold</div>
+            <div id="carouselExampleCaptions5" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions5" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions5" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions5" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions5" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://2019.igem.org/wiki/images/c/cb/T--SASTRA_Thanjavur--R6PCR.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Run 1</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://2019.igem.org/wiki/images/c/cb/T--SASTRA_Thanjavur--R7PCR.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Run 2</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://2019.igem.org/wiki/images/c/c6/T--SASTRA_Thanjavur--R8PCR.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Run 3</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://2019.igem.org/wiki/images/9/96/T--SASTRA_Thanjavur--R9PCR.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Run 4</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="name spectralb">PCR Run 1: Toehold for miR20a</div>
+            <div class="desc spectral">
+              Gradient PCR was set up to optimize the annealing temperature. The PCR products were then run on a 1.5% agarose gel and TBE buffer.  The results were observed as follows:
+              Clear 1 kb bands were observed at all 6 temperatures (61-66°C). The size of our toehold construct is around 1 kb and hence, this PCR run proved to be a successful attempt. The annealing temperature was optimised to 63°C.
+              <table>
+                <tbody>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">98</span><span style="font-weight: 400;">&deg;C</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">30s</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">98</span><span style="font-weight: 400;">&deg;C</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">10s</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">61</span><span style="font-weight: 400;">&deg;C-63&deg;C/ 64&deg;C-66&deg;C</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">20s</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">72</span><span style="font-weight: 400;">&deg;C</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">30s</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">72</span><span style="font-weight: 400;">&deg;C</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">3 mins</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">4</span><span style="font-weight: 400;">&deg;C</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">&infin;</span></p>
+                </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="name spectralb">PCR Run 2 - Toehold for miR21 and miR29</div>
+            <div class="desc spectral">The PCR reaction was set up for three temperatures (62-64°C). A gradient PCR was set up as the toeholds for miR21 and miR29 were amplified as opposed to toehold for miR20a in the first run. No definite bands were observed in 1.5% agarose gel. This could be due to low concentration (1 in 100 dilution of the stock) of the template DNA used.</div>
+            <div class="name spectralb">PCR Run 3 - Toehold for miR20a and miR21</div>
+            <div class="desc spectral">The PCR reaction was set up with an annealing temperature of 63°C with more concentration of DNA (1 in 3 dilution of stock). Clear 1 kb bands were observed on increasing the sample concentration.</div>
+            <div class="name spectralb">PCR Run 4 - Toehold for miR20a and miR21</div>
+            <div class="desc spectral">The PCR reaction was set up with an annealing temperature of 63°C using 1 µL  of the stock sample directly (no dilution was performed). Five reactions were pooled and results were observed in 1.5% agarose gel. Clear bands were observed.</div>
+            <div class="name spectralb">PCR Run 5 - Toehold for miR20a and miR21</div>
+            <div class="desc spectral">The PCR reaction was set up with an annealing temperature of 63°C using 1 µL  of the stock sample directly (no dilution was performed). Five reactions were pooled and results were observed in 1.5% agarose gel. Clear bands were observed.Purification and Quantification of PCR product
+              The PCR product from PCR Run 4 and Run 5 were purified and quantified.
+              The PCR product from the two runs were pooled into three different tubes and purified.
+              Concentration of Toehold miR21 -
+              1 - 93.8 ng/µL
+              2 - 128.5 ng/µL
+              3 - 118.9 ng/µL
+              Concentration of Toehold miR20a -
+              1 - 26.5 ng/µL
+              2 - 30.7 ng/µL
+              3 - 33.7 ng/µL
+            </div>
+          </div>
+          <a id="wetlab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="thow">
+            <div class="title">Second Gen Toehold switch characterization</div>
+            <div class="desc spectral">Sensor characterization was designed with toehold switch for hsa-miR-21-5p as the sensing element, miR21:antimiR21 complex as the analyte and the fluorescence of GFP reported as the sensor output. The working of the sensor follows the basic principle of second-generation toehold switches wherein upon binding of miR:antimiR complex, the toehold switch unfolds to its linear conformation exposing the ribosome binding site. This triggers the translation of reporter gene (GFP) following which its fluorescence could be measured. Thus, the concentration of analyte (miR21:antimiR21 complex) is expected to follow a linear relation with the GFP fluorescence intensity.<br><br>
+              The fluorescent plate reader (Biotek Synergy H1 Multimode Reader) was calibrated using sodium fluorescein with varying concentration and the linearity plot was constructed with R2 = 0.99. The fluorescence was measured with excitation at 395 nm and emission at 520 nm with the instrument gain set at 100. We were quite intrigued initially on the obtained fluorescence values for excitation of GFP at 395 nm, because this excitation wavelength is a characteristic of the wt GFP while we had used a mut3b version of GFP which has its characteristic excitation wavelength at 485 nm. So, what we observe here is a blue shift of the absorption spectra, which could possibly be due to anything in the PURExpress Protein Synthesis kit that is interfering in the fluorescence phenomenon. We carried out a control study to validate this and we obtained fluorescence value of ~400 units for the kit solution alone. In addition, the wt and mut3b variants of the GFP vary from one another by 3 mutations in the sequence leading to a protonated & deprotonated variations of the chromophore. The ratio of the protonated and deprotonated chromophore species in the sample decides the excitation wavelength of the GFP, plausibly from our understanding. Hence, in our case, we obtained the maximum fluorescence intensity at 385 nm excitation with 520 nm being the emission wavelength, possibly due to protonation effects in the reaction system. This was fixed as the instrument parameters for the specificity and concentration study.<br><br>These instrumental parameters were set for all the following studies. The NEB (#E6800) kit was tested using the DHFR control provided by the manufacturer. The protein expression was confirmed by SDS PAGE using a standard protein ladder for 20 kDa.
+            </div>
+            <div class="name spectralb">Specificity of toehold for miR-21-5p:</div>
+            <div class="desc spectral">
+              In order to comment on the specificity of the proposed toehold switch, non-specific analytes such as miR-200a-3p and miR-29a-3p with a concentration of 100 nM each, were used as sources of interfering analytes (Figure 1). The readings at 4 h were taken into consideration as 2 h reading had less significant intensity and hence the trend could not be inferred. The values were normalized with the control wherein miR-200-3p showed a four-fold decrease in intensity while the miR-29a-3p had effectively ‘zero’ intensity in comparison to that of miR-21-5p. The minimal leakiness towards miR-200a-3p might be attributed to its sequence similarity with miR-21-5p in the region which binds to the trigger domain of the toehold switch. Thus, the toehold for miR-21-5p was found to be highly unobtrusive for miR-200-3p and miR-29a-3p implicating its specificity.<br>
+              <div class="imgcontain"><img src="https://2019.igem.org/wiki/images/e/ef/T--SASTRA_Thanjavur--StudySpec.jpeg" alt="" style="max-height:100%; max-width:100%;">
+              <p style="margin-left:auto;margin-right:auto;"><strong>Figure 1 – Specificity study of toehold for miR-21-5p</strong></p></div>
+            </div>
+            <div class="name spectralb">Concentration study of toehold for miR-21-5p:</div>
+            <div class="desc spectral">
+              The concentration study was performed for 3-fold range of concentration (100 pM, 1 nM, 10 nM and 100 nM). The readings taken at 4 h were considered as the 2 h readings had less significant intensity for lower concentrations and hence the trend was not discernable. The graph illustrates an increasing trend from 100 pM to 10 nM and the intensity was found to saturate at 100 nM (Figure 2). This implicates the linear range to be between 100 pM and 10 nM. The limit of detection (LOD) was found to be 100 pM implying its responsiveness even at very low concentration. A calibration curve was plotted by taking log of concentration of miR21:antimiR21 complex normalized with 10 pM (Figure 3). The sigmoidal curve was seen to saturate at about 10 nM validating the linear range (R2 = 0.99). A heat map was also constructed to better substantiate the saturation and the expected linear range was corroborated.
+              <div class="imgcontain">
+              <img src="https://2019.igem.org/wiki/images/2/2d/T--SASTRA_Thanjavur--ConcStudy.jpeg" alt="" style="max-height:100%; max-width:100%;"><br>
+              <strong>Figure 2 – Concentration study of the toehold switch for miR-21-5p after after 4 h</strong><br>
+              <img src="https://2019.igem.org/wiki/images/a/ae/T--SASTRA_Thanjavur--MapHeat.jpeg" alt="" style="max-height:100%; max-width:100%;"><br>
+              <strong>Figure 3 – Heat map of fluorescence for concentration study of the toehold switch for miR-21-5p after 4 h</strong><br>
+              <img src="https://2019.igem.org/wiki/images/1/16/T--SASTRA_Thanjavur--CalibCurve.jpeg" alt="" style="max-height:100%; max-width:100%;">
+              <strong>Figure 4 – Calibration curve for the biosensor with toehold switch for miR-21-5p as the sensing element</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+   <span style="font-family: GOT;">Our Sponsors</span>
+   <div class="icons">
+     <div class="sponsors">
+       <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+     </div>
+     <div class="social">
+       <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+       <a href="mailto:igemsastra.2019@gmail.com"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+     </div>
+   </div>
+ </footer>
+  </body>
+</html>

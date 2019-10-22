@@ -1,0 +1,120 @@
+{{SASTRA_Thanjavur}}
+{{SASTRA_Thanjavur/Bootstrap}}
+<html>
+  <style>
+    .container-fluid{
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+    footer{
+        transform: translate(0px,35px);
+        color: black;
+        font-family: GOT;
+        height: 100px;
+        padding-left: 50px;
+    }
+    footer img{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .icons{
+        margin-top: 15px;
+    }
+    .sponsors{
+      float: left;
+    }
+    .social{
+      float: right;
+    }
+    .section{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+    .spectral{font-family: Spectral;}
+    .spectralb{font-family: SpectralBoldItalic;}
+    .title{font-family: GOT;font-size:20px;line-height: 25px;margin-bottom:15px;}
+    .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+    .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+    strong{font-family: SpectralBold !important; font-size: 16px !important;}
+    p{font-family: Spectral !important;font-size:14px !important;}
+    li{font-family: Spectral;font-size:14px;}
+    span{font-family: Spectral;font-size:14px;}
+    .section a{font-family: Spectral;font-size:14px;}
+    .table-container{display:flex;flex-direction:column;justify-content:center;align-content:center;}
+  </style>
+  <body>
+    <div class="container-fluid section">
+      <div class="title" style="font-size: 35px;margin-top:35px;margin-bottom:20px;">Design</div>
+      <div class="desc spectral section">
+        <p>Our project, House of Toeholds, is aimed at the detection of the microRNA biomarkers of cervical cancer.  We make use of toehold switches, an mRNA based riboregulator of gene expression, as a biosensory element that is engineered to bind to the unique biomarker target.
+          We had the following design guidelines and steps that we followed during the course of our project.
+          <br></p>
+        <img src="https://2019.igem.org/wiki/images/2/20/T--SASTRA_Thanjavur--Design1.png" style="max-width:100%;max-height:100%;" alt=""><br>
+        <div class="title">Stage 1: Biomarker Panel</div>
+        <p>Our project’s first essential step was to determine the choice of our biomarkers.  microRNAs are short oligonucleotides about 22 nt in length that have been cited in recent literature as potent indicators of various cancers.  In addition, mircoRNAs are also circulatory biomarkers, thus identified in the bloodstream and aren’t localised to the tumour origin.<br></p>
+        <p>However, we realised early into our project that no single miRNA could act as the key indicator of cervical cancer as cancer reigns the “emperor of all maladies”, quoting the famous oncologist and writer Siddharth Mukherjee.<br></p>
+        <p>microRNAs are differentially expressed in the bloodstream, either as upregulated or downregulated factors in the advent of cervical cancer. We identified the prominent microRNAs using differential expression profiling and subsequent survival analysis based on multivariate Cox regression models and hence came up with a biomarker panel for cervical cancer.<br></p>
+      </div>
+      <div class="title">Toehold Switch Design</div>
+      <img src="https://2019.igem.org/wiki/images/e/e7/T--SASTRA_Thanjavur--TM3.png" style="max-width:100%;max-height:100%;" alt="">
+      <div class="desc spectral section">
+        <p>Translational riboregulators are mRNA elements whose secondary structures effectively inhibit the binding of the ribosome to carry out the process of translation for any downstream gene.  Therefore, translational riboregulators have been incorporated in synthetic biology to study the expression of a gene or genes of interest downstream of the riboregulators.</p>
+        <p>Toehold switches are a class of completely synthetic riboregulators de novo designed by Green et al.[3]  in 2014.  Their high dynamic range, orthogonality and low crosstalk are a result of highly specific nucleotide composition.  Each switch has a computationally optimized sequence that forms a double looped structure in the inactivated/ off state.  Upon base pairing with a unique, linear trigger mRNA sequence, the toehold structure of the switch unfolds, allowing translational gene expression for the gene of interest downstream.<br></p>
+        <img src="https://2019.igem.org/wiki/images/e/e4/T--SASTRA_Thanjavur--TM2.png" style="max-width:100%;max-height:100%;" alt="">
+        <p>The toehold switch, like all engineered elements in science, is carefully designed with intricate parameters.<br></p>
+        <p>The illustration depicts the key domains or regions by which a toehold switch is identified.  This section shall explain the features of every domain in a toehold switch and how we came up with our switch designs based on these requirements.<br></p>
+        <p>The leader sequence is special GGG region that enhances efficient transcription by RNA Polymerase in the T7 promoter system.<br></p>
+        <p>The toehold domain, the unique complement to the trigger sequence.<br></p>
+        <p>The bottom stem sequence is the region above the toehold domain that is base-paired extensively.<br></p>
+        <p>The top stem is the base paired region preceding the loop containing the ribosome binding site.<br></p>
+        <p>The pre Ribosome Binding Site sequence, a short domain part of the primary loop before the RBS sequence that increases the size of the loop.  The Ribosome Binding Site (shorthand is RBS) is the consensus sequence to which the ribosome binds to translate an mRNA strand.  These sequences are categorised and designed due to their ability to bind with prokaryotic ribosomes and initialise translation.  The Registry of Standard Biological Parts contains two major RBS collections, the Anderson RBS Library created and curated by the Anderson lab at the University of California, Berkeley and the RBS collection from the synthetic biology community.<br></p>
+        <p>The sequestered start codon AUG is the first codon of any gene to be expressed.<br></p>
+        <p>The final domain is a horizontal linker domain to the gene of interest.  This domain partially base pairs with the toehold domain and forms the stem bottom of the toehold switch.<br></p>
+        <img src="https://2019.igem.org/wiki/images/c/c4/T--SASTRA_Thanjavur--TM1.png" style="max-width:100%;max-height:100%;" alt=""><br>
+        <p><span style="font-weight: 400;">In the above figure, a trigger sequence binds to the toehold switch, causing the toehold domain of the switch to base pair with the trigger and thereby losing its double looped structure.&nbsp; As a result, the switch becomes linear and the gene expression of the particular gene of interest is observed.</span></p>
+        <p><span style="font-weight: 400;">The dynamic range is a metric to measure the sensitivity of the toehold switch, based on the minimum and maximum intensity of fluorescent protein expression, typically GFP expression.&nbsp;&nbsp;</span></p>
+        <p><span style="font-weight: 400;">The dynamic range of the toehold is quantified by the ON/OFF ratio values obtained by GFP expression.&nbsp; The greater the ON/OFF ratio, the larger the dynamic range of the toehold switch.&nbsp;&nbsp;</span></p>
+        <p><span style="font-weight: 400;">We have analysed the sequence and structural features of domains unique to each toehold switch and constructed a multivariate regression model to analyse the dependence of the dynamic range on each of our engineered features.</span></p>
+        <p><span style="font-weight: 400;">We engineered our toehold domain to be longer than 10 nucleotides to allow effective binding of the trigger to the switch. We also ensured that the toehold domain did not base-pair within itself or to the horizontal linker towards the 3&rsquo; end of the sequence.&nbsp; We felt that this was an important yet overlooked design aspect as the intra-domain base pairing of the toehold region could potentially hinder the binding of the trigger to the toehold switch. Similarly, an association of the toehold domain with the horizontal linker also negates the trigger binding event and eventually may not result in any reporter expression.&nbsp;&nbsp;</span></p>
+        <p><span style="font-weight: 400;">The bottom stem of the toehold switch was kept at a minimum of 12 nucleotides to allow for 4 amino acids after the start codon in the open reading frame during translation before the horizontal linker.&nbsp; The thermodynamic stability of the toehold switch in the OFF state is also increased by having a longer, base paired bottom stem region.&nbsp;</span></p>
+        <p><span style="font-weight: 400;">The AUG containing secondary loop of the toehold switch consists of three diametrically opposite bases that don&rsquo;t base pair with the start codon.&nbsp; We were unsure of having the wobble base pair in the start codon region as the binding event of the trigger may not break the base pairing. Our results validate the rationale behind the choice of keeping the AUG intact without base pairing.&nbsp;</span></p>
+        <p><span style="font-weight: 400;">The RBS loop or the primary loop was designed around the Anderson RBS with the conserved RBS sequence for prokaryotic ribosomal binding.&nbsp; The Anderson ABS is AGAGGA and we designed the primary loop sequence such that the preRBS sequence part of the loop was long enough to sequester the RBS effectively to prevent ribosomal binding.&nbsp; We kept the primary loop length at 11 nucleotides and added adenines prior to the RBS for enhancing transcription.&nbsp;&nbsp;</span></p>
+        <p><span style="font-weight: 400;">The small linker portion below the RBS, the constitutive top stem element, was comprised of a scar site sequence.&nbsp;&nbsp;</span></p>
+        <p><span style="font-weight: 400;">The horizontal linker that we used after the bottom stem is AACCUGGCGGCAGCGCAAAAG, the 21nt long linker used in Green et al., 2014.&nbsp; The purpose of the linker is to sequester the proteins formed by the construct so that it doesn&rsquo;t interfere with the reporter expression.&nbsp; The linker produces flexible amino acids such as glycine or serine and doesn&rsquo;t affect the translation of amino acids essential to the green&nbsp; fluorescent protein.</span></p>
+      </div>
+      <div class="title">Second Generation Toehold Switch Design</div>
+      <img src="https://2019.igem.org/wiki/images/a/a6/T--SASTRA_Thanjavur--2GT1.png" style="max-width:100%;max-height:100%;" alt="">
+      <div class="desc spectral">
+        <p><span style="font-weight: 400;">As mentioned before, the bottom stem of the toehold switch consists of an ascending sequence at the 5&rsquo; end and a descending sequence in the 3&rsquo; end that are base-complementary to each other.&nbsp; The full length of our miRNA was used as a trigger to our designed toehold switch.</span></p>
+        <p><span style="font-weight: 400;">The orientation of the toehold switch is from 5&rsquo; to 3&rsquo; and the trigger runs from 3&rsquo; to 5&rsquo;.&nbsp; We noticed that the triggers miR21 and miR20a consist of a stop codon in the ORF towards the 5&rsquo; region of their sequence.&nbsp; Specifically, the stop codon was observed as the first three nucleotides in the sequences. Logically, when the binding event is to occur, this stop codon would bind to the 3&rsquo; end of the toehold switch, or the last three nucleotides of the ascending bottom stem sequence (at the top, just below the secondary loop).&nbsp; This would imply that in order for a proposed switch design to bind to the trigger, the descending bottom stem sequence would have to be base-complementary to the ascending sequence, thus resulting in the same sequence of the miR trigger. In other words, the 12 nucleotides of the descending bottom stem sequence would possess a stop codon in the ORF just after the start codon.&nbsp; This means that no GFP can be expressed as translation is brought to a halt because of this molecular roadblock.</span></p>
+      </div>
+      <div class="title">antimiR Design</div>
+      <img src="https://2019.igem.org/wiki/images/e/e8/T--SASTRA_Thanjavur--2GT2.png" style="max-width:100%;max-height:100%;" alt="">
+      <div class="desc spectral">
+        <p><span style="font-weight: 400;">We thus came up with a design inspired from Green et al.(2017), to effectively isolate the portion of the miRNA trigger containing the stop codon.&nbsp; We designed a partially complementary antisense RNA strand (or antimiR), to bind to 12 nt starting from the 5&rsquo; end of the miR sequences. Thus, we created a hybrid trigger molecule shaped like a half pulled zipper, with a base-paired region and two free ends.</span></p>
+<p><span style="font-weight: 400;">The advantage of this design is that it allows for the customizability of the free end of the non-complementary region of the anti-miR.&nbsp; We used this to maximise that sequence to bind to the toehold domain.&nbsp;&nbsp;</span></p>
+<p><span style="font-weight: 400;">The second generation toehold switch thus binds to two different molecules treated as a single hybrid structure.&nbsp; The customizable nucleotide design of the anti-miR sequence is transferred to the toehold switch, improving the trigger binding event and allowing for better unfolding of the toehold switch.</span></p>
+      </div>
+      <div class="title">Stages 3 and 4: Experimental Characterization</div>
+      <img src="https://2019.igem.org/wiki/images/3/3e/T--SASTRA_Thanjavur--2GT3.png" style="max-width:100%;max-height:100%;" alt="">
+      <div class="desc spectral">
+        <p><span style="font-weight: 400;">We characterized our toehold switch construct by concatenating it to the Green Fluorescent Protein gene.&nbsp; We measured fluorescence to determine the performance as well as leakiness of the switch, thereby evaluating its specificity.&nbsp; Upon confirmation of the specificity, we moved on to perform concentration studies where increasing concentrations of the microRNA biomarkers varying across orders of magnitude were considered to estimate the calibration curve for the proposed biosensor. From the calibration curve, the biosensor parameters such as linear range, limit of detection were estimated to define the performance of the biosensor towards the detection of the chosen microRNA markers. The biosensor we have developed is a solution based proof-of-concept, which we were able to achieve by cell-free characterization of our designed Biobricks.&nbsp;</span></p>
+<p><span style="font-weight: 400;">In the future, we hope to develop a paper based diagnostic device for the detection of early stage biomarkers of cervical cancer.&nbsp; We hope for this device to be a low cost, minimally invasive value-addition to existing screening method and a self administered protocol. </span></p>
+      </div>
+    </div>
+  </body>
+  <footer>
+     <span style="font-family: GOT !important;font-size: 15px !important;">Our Sponsors</span>
+     <div class="icons">
+       <div class="sponsors">
+         <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+         <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+         <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+         <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+         <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+         <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+       </div>
+       <div class="social">
+         <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+         <a href="mailto:igemsastra.2019@gmail.com"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+       </div>
+     </div>
+   </footer>
+</html>

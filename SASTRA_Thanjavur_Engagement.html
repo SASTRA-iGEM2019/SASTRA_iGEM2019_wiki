@@ -1,158 +1,252 @@
 {{SASTRA_Thanjavur}}
 {{SASTRA_Thanjavur/Bootstrap}}
-{{SASTRA_Thanjavur/Fullpage}}
 <html>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <style>
-    .section{
-      text-align : center;
-    }
-    .first{
-      font-size : 72pt;
-      line-height: 72pt;
-    }
-    .common{
-      font-size : 32pt;
-      line-height: 32pt;
-    }
-    .smaller{
-      font-size : 16pt;
-      line-heightL 16pt;
-    }
-    div > img {
-      width : auto;
-      height : auto;
-      max-height: 100%;
-      max-width: 100%;
-    }
-    @media screen {
-      img{display: block;margin-left: auto;margin-right: auto;width: 100%;}
-    }
-  </style>
-  <script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-		      navigation: false,
-		      navigationPosition: 'right',
-		      slidesNavigation: true,
-		      slidesNavPosition: 'bottom',
-          controlArrows: true,
-          sectionsColor: ['#faebd7','#0e9aa7','#f6cd61','#fe8a71','#adcbe3','#e0a899','#faebd7','#feb2a8','#65c3ba'],
-        });
+  <script type="text/javascript">
+    $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
     });
+   });
   </script>
+  <style>
+    .container-fluid{
+    padding-left: 15%;
+    padding-right: 15%;
+    }
+    footer{
+        transform: translate(0px,35px);
+        color: black;
+        font-family: GOT;
+        height: 100px;
+        padding-left: 50px;
+    }
+    footer img{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .icons{
+        margin-top: 15px;
+    }
+    .sponsors{
+      float: left;
+    }
+    .social{
+      float: right;
+    }
+    .float{
+      position: sticky;
+      top: 18%;
+      list-style-type: none;
+    }
+    #index{
+      text-align: center;
+      font-size: 23px;
+      font-family: GOT;
+      margin-bottom: 10px;
+    }
+    .float a{
+      margin-bottom: 5px;
+      font-size: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .spectral{font-family: Spectral;}
+    .spectralb{font-family: SpectralBoldItalic;}
+    .title{font-family: GOT;font-size:20px;margin-bottom:15px;}
+    .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+    .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+    p{font-family: Spectral !important;font-size:14px !important;}
+    li{font-family: Spectral;font-size:14px;}
+    span{font-family: Spectral;font-size:14px;}
+    .dawd a{font-family: Spectral;font-size:14px;}
+  </style>
   <body>
-    <div id="fullpage">
-        <div class="section first">Public Engagement</div>
-        <div class="section smaller">
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/7/75/T--SASTRA_Thanjavur--DAVS2.png">
-          </div>
-          <div class="slide active container-fluid">
-            <div class="row">
-              <div class="col align-self-center">
-                 <span><strong>DAV Public School, Velachery</strong></span><br>
-                 <span style="font-size: 14pt;color:#404040;">22nd April 2019</span><br><br><br>
-                 Our first human practices session was for the 12-th grade students of the Biology and Computer Science streams along with their teachers. The introductory session about iGEM and synthetic biology  for 20-25 minutes perked the interest of our beloved audience. We observed excellent interactions between the presenters and the students. A humorous yet memorable anecdote was where Pooja (part of our wet lab team) compared the double looped structures of toehold switches to balloons, setting off a chain of roaring laughter in the crowd. The students were introduced to the SynBio auction and its working. Each team was asked to give themselves a cool team name for easier correspondence later in the auction. Each team was also furnished with the SynBio Auction Handbook, the bible for each team during the course of the auction. The teams were given 20 minutes to go through the rules and regulations of the auction provided in the handbook and were asked to approach the iGEM team members for any clarifications.  In order to engage the audience, we came up with an impromptu solution. The teams could garner extra money (Rs.100) by virtue of a trivia question correctly answered by anyone from the audience. In addition, the audience was given the option to choose to which team they would be providing the money. Each of the phases gave way to intense bidding for each of the components. The auction went on for nearly four hours.The final stage of the activity involved the teams to consolidate their strategies in 15 minutes from the components purchased in the course of the auction.  The teams were asked to send a member from their team to the centre stage to present their solution to the judges in under five minutes.  We were proud to see that the students did an excellent job in pulling off a formidable presentation of their solution and were confident enough to rebut questions from the iGEM team members and the audience. This proved to us that the message of synthetic biology got through to the students.
-              </div>
-              <div class="col align-self-center">
-                 <img src="https://2019.igem.org/wiki/images/1/18/T--SASTRA_Thanjavur--DAVS1.jpeg">
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--DAVS3.jpeg">
-          </div>
-        </div>
-        <div class="section smaller">
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/d/d3/T--SASTRA_Thanjavur--NatesanS1.jpeg">
-          </div>
-          <div class="slide active container-fluid">
-            <div class="row">
-              <div class="col align-self-center">
-               <span><strong>Shri Natesan Vidyasala Matriculation School,Chennai</strong></span><br>
-               <span style="font-size: 14pt;color:#404040;">20th June 2019</span><br><br><br>
-               The iGEM SASTRA team in their second outing, conducted the human practices session for the students of class XI and XII at Shri Natesan Vidyasala, Mannivakkam on 20th June 2019. The activity developed for the school students was a grand Synthetic Biology auction, colloquially called the SynBio Auction. The session witnessed the participation of over 200 enthusiastic school students pursuing education in Science streams. An introductory presentation on Synthetic Biology and our current project had the audience engaged. Then, the grand SynBio auction began. The students were divided into 5 teams, led by a teacher for participation in the auction. The phases saw heated bidding for each of the components. The auction went on for nearly an hour and we were surprised to see the participating students maintain a fervent atmosphere throughout. The final stage of the activity involved the teams to consolidate their strategies and justify their choice of components purchased in the course of the auction. Subsequently, the teams were asked to send a member from their team to the center stage to present their solution to the judges within a minute. The curtains finally fell on the second human practice session of our iGEM team with a group photo of the staff, students and the iGEM SASTRA team.
-              </div>
-              <div class="col align-self-center">
-                <img src="https://2019.igem.org/wiki/images/f/fa/T--SASTRA_Thanjavur--NatesanS2.jpeg">
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/5/59/T--SASTRA_Thanjavur--NatesanS3.jpeg">
-          </div>
-        </div>
-        <div class="section smaller">
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/1/1f/T--SASTRA_Thanjavur--CVS1.jpeg">
-          </div>
-          <div class="slide active">
-            <div class="row">
-              <div class="col align-self-center">
-               <span>Chettinad Vidyashram, Chennai</span><br>
-               <span style="font-size: 14pt;color:#404040;">21st June 2019</span><br><br><br>
-               Our third human practices session was held at Chettinad Vidyashram, Chennai on 21st June 2019. The session was conducted in collaboration with IIT (Indian Institute of Technology) Madras iGEM team. The session witnessed the participation of 250 enthusiastic class XI and XII students from the biology and biotechnology streams, lasting just over 2 hours. We had three separate sessions addressing the different aspects of Synthetic Biology and also made sure that the content was put across in a simplified way for the students to understand. A few cool iGEM project examples were also discussed and these included projects about mimicking the smell of rain in the lab and playing minesweeper with E.coli. This was followed by the members of the IIT Madras team talking about their iGEM project and a small card game called Micropolis. The curtains finally fell on the third human practices session of our team with a group photo along with the IIT Madras iGEM team members.
-              </div>
-              <div class="col align-self-center">
-                <img src="https://2019.igem.org/wiki/images/7/78/T--SASTRA_Thanjavur--CVS2.jpeg">
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/e/ee/T--SASTRA_Thanjavur--CVS3.jpeg">
-          </div>
-        </div>
-        <div class="section common">
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/1/1f/T--SASTRA_Thanjavur--CVS1.jpeg">
-          </div>
-          <div class="slide active">
-            SynBio Club - Lorem Ipsum
-          </div>
-          <div class="slide">
-            <img src="https://2019.igem.org/wiki/images/1/1f/T--SASTRA_Thanjavur--CVS1.jpeg">
-          </div>
-        </div>
-        <div class="section common">
-          <div class="slide active">
-            Social Media Outreach
-          </div>
-          <div class="slide container-fluid">
-            <div class="row">
-              <div class="col align-self-center">
-                <h1>Instagram</h1>
-                <p>From Daily Updates on Lab Work progress to the latest iGEM Memes to Collaboration posts with other teams, Instagram is where is all the fun stuff happens!</p>
-                <a href="https://www.instagram.com/igem_sastra">Come Visit Us!</a>
-              </div>
-              <div class="col align-self-center"><img style="float:right;" src="https://2019.igem.org/wiki/images/b/bf/T--SASTRA_Thanjavur--Insta.png"></div>
-            </div>
-          </div>
-          <div class="slide container-fluid">
-            <div class="row">
-              <div class="col align-self-center">
-                <h1>Medium</h1>
-                <p>Detailed Reports on Human Practices sessions and SynBio Articles from our Campus!</p>
-                <a href="https://medium.com/@igemsastra.2019">Give us a Read!</a>
-              </div>
-              <div class="col align-self-center"><img src="https://2019.igem.org/wiki/images/5/5b/T--SASTRA_Thanjavur--Medium.png"></div>
-            </div>
-          </div>
-          <div class="slide container-fluid">
-            <div class="row">
-              <div class="col align-self-center">
-                <h1>YouTube</h1>
-                <p>Our Detailed Project Video goes here! Along with frantically searching on CSS How-Tos.. Shoutout to US AFRL Carroll HS for their playlist <br><a href="https://www.youtube.com/playlist?list=PLg5B0YEXzgEorRa8vuZPoHaH5e1jmgVQ6">How to iGEM Wiki</a></p>
-                <a href="#">Do Subscribe!</a>
-              </div>
-              <div class="col align-self-center"><img src="https://2019.igem.org/wiki/images/b/bf/T--SASTRA_Thanjavur--Insta.png"></div>
+   <div class="container-fluid">
+      <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:25px;">Public Engagement</div><br><br>
+      <div class="row">
+        <div class="col-3">
+          <div class="float">
+            <div id="index">Index</div>
+            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;padding-top: 10px;padding-bottom: 10px;">
+              <a href="#school">School Visits</a><hr>
+              <a href="#ngo">Sessions for NGOs and WSHGs</a><hr>
+              <a href="#synbio">SynBio Club @ SASTRA</a><hr>
+              <a href="#video">Project Video</a><hr>
+              <a href="#act">Activities</a><hr>
             </div>
           </div>
         </div>
+        <div class="col-9">
+          <a id="school">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="sv">
+            <div class="title">School Visits</div>
+
+            <div class="name spectralb">D. A. V. Public School, Velachery, Chennai – 22nd April 2019</div>
+            <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/1/18/T--SASTRA_Thanjavur--DAVS1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--DAVS3.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/7/75/T--SASTRA_Thanjavur--DAVS2.png" alt="Third slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">Our first human practices session was for the 12-th grade students of the Biology and Computer Science streams along with their teachers at D. A. V. Public School, Velachery, Chennai on the 22nd of April 2019. The introductory session about iGEM and synthetic biology for 20-25 minutes perked the interest of our beloved audience. We observed excellent interactions between the presenters and the students. A humorous yet memorable anecdote was where Pooja (part of our wet lab team) compared the double looped structures of toehold switches to balloons, setting off a chain of roaring laughter in the crowd. The students were introduced to the SynBio auction and its working. Each team was asked to give themselves a cool team name for easier correspondence later in the auction. Each team was also furnished with the SynBio Auction Handbook, the bible for each team during the course of the auction. The teams were given 20 minutes to go through the rules and regulations of the auction provided in the handbook and were asked to approach the iGEM team members for any clarifications.  In order to engage the audience, we came up with an impromptu solution. The teams could garner extra money (Rs.100) by virtue of a trivia question correctly answered by anyone from the audience. In addition, the audience was given the option to choose to which team they would be providing the money. Each of the phases gave way to intense bidding for each of the components. The auction went on for nearly four hours. The final stage of the activity involved the teams to consolidate their strategies in 15 minutes from the components purchased in the course of the auction.  The teams were asked to send a member from their team to the centre stage to present their solution to the judges in under five minutes.  We were proud to see that the students did an excellent job in pulling off a formidable presentation of their solution and were confident enough to rebut questions from the iGEM team members and the audience. This proved to us that the message of synthetic biology got through to the students.</div>
+
+            <div class="name spectralb">Shri Natesan Vidyasala Matriculation School, Chennai – 20th June 2019</div>
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/5/59/T--SASTRA_Thanjavur--NatesanS3.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/f/fa/T--SASTRA_Thanjavur--NatesanS2.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/d/d3/T--SASTRA_Thanjavur--NatesanS1.jpeg" alt="Third slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">The iGEM SASTRA team in their second outing, conducted the human practices session for the students of class XI and XII at Shri Natesan Vidyasala, Mannivakkam on 20th June 2019. The activity developed for the school students was a grand Synthetic Biology auction, colloquially called the SynBio Auction. The session witnessed the participation of over 200 enthusiastic school students pursuing education in Science streams. An introductory presentation on Synthetic Biology and our current project had the audience engaged. Then, the grand SynBio auction began. The students were divided into 5 teams, led by a teacher for participation in the auction. The phases saw heated bidding for each of the components. The auction went on for nearly an hour and we were surprised to see the participating students maintain a fervent atmosphere throughout. The final stage of the activity involved the teams to consolidate their strategies and justify their choice of components purchased in the course of the auction. Subsequently, the teams were asked to send a member from their team to the center stage to present their solution to the judges within a minute. The curtains finally fell on the second human practice session of our iGEM team with a group photo of the staff, students and our team.</div>
+
+            <div class="name spectralb">Chettinad Vidyashram, Chennai – 21st June 2019.</div>
+            <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/1/1f/T--SASTRA_Thanjavur--CVS1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/7/78/T--SASTRA_Thanjavur--CVS2.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/e/ee/T--SASTRA_Thanjavur--CVS3.jpeg" alt="Third slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">Our third human practices session was held at Chettinad Vidyashram, Chennai on 21st June 2019. The session was conducted in collaboration with IIT (Indian Institute of Technology) Madras iGEM team. The session witnessed the participation of 250 enthusiastic class XI and XII students from the biology and biotechnology streams, lasting just over 2 hours. We had three separate sessions addressing the different aspects of Synthetic Biology and also made sure that the content was put across in a simplified way for the students to understand. A few cool iGEM project examples were also discussed and these included projects about mimicking the smell of rain in the lab and playing minesweeper with E.coli. This was followed by the members of the IIT Madras team talking about their iGEM project, Phyte Club and a small card game called Micropolis. The curtains finally fell on the third human practices session of our team with a group photo along with the IIT Madras iGEM team members.</div>
+          </div>
+          <a id="ngo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="ngowshg">
+            <div class="title">Sessions for NGOs and Women SHGs</div>
+            <div class="name spectralb">International foundation for crime prevention and victim care (PCVC), Chennai – 22nd and 23rd June 2019</div>
+            <div id="carouselExampleIndicators4" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators4" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators4" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/3/34/T--SASTRA_Thanjavur--PCVCS1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/6/63/T--SASTRA_Thanjavur--PCVCS2.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/5/58/T--SASTRA_Thanjavur--PCVCS3.jpeg" alt="Third slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">We got an opportunity to interact with victims of domestic violence and burns under the PCVC Organization. The meet was aimed to create awareness about cervical cancer and the Pap smear test. PCVC is an NGO that provides help to women who have been victims of domestic violence and burn accidents. There were about 45 women present for the sessions held at both branches of the NGO, Anna Nagar and Choolaimedu, Chennai. We informed them about the consent form and also about their right to stop participating in this procedure at any point of time without any consequences. We elaborated on cervical cancer, its symptoms and causes, available diagnosis methods, available treatments and preventive measures. We explained to them about the Pap smear test, its uses, the way it is performed through a video, its significance and briefed them extensively on why it is considered to be a social taboo in India. Many women in the group showed keen interest to the talk and some even clarified their doubts about it. We had a questionnaire prepared to evaluate the awareness that women have about cervical cancer and the Pap smear test, predominantly. The questions that followed were about their opinions on them. From the data we collected from the questionnaire, we came to a conclusion that most of them did not know about cervical cancer and the invasive Pap smear test, prior to our session. With the outcome of our session, they promised us that they would take care of themselves and their close ones by informing them about it.</div>
+            <div class="name spectralb">Repco Micro Finance- Women’s Self help group, Tiruchirapalli – 15th July 2019</div>
+            <div id="carouselExampleIndicators9" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators9" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators9" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators9" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/0/0e/T--SASTRA_Thanjavur--RepcoS1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/b/b3/T--SASTRA_Thanjavur--RepcoS2.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/a/a6/T--SASTRA_Thanjavur--RepcoS3.jpeg" alt="Third slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">All of us were happy to see eager faces waiting to listen to us. We addressed a total of 23 women in two sessions. We introduced ourselves and started the session with the question ‘What is cervical cancer?’. The session was addressed in Tamil as the women were from rural areas surrounding Tiruchirapalli, a southern district in Tamil Nadu, about 45 kms from our University. Few women asserted that they had heard of cervical cancer in news channels but were not sure what it was. We tried to explain a few technical terms in colloquial terms for a better understanding of the topic. We then elucidated the need for diagnosis of cervical cancer, the symptoms and then about the Pap smear test. We also briefed them about the way the test is performed and how it might be uncomfortable and invasive. At this point, all of them were aware of the topic and had a few questions that were answered by us. After which we told them about our project - an alternative and minimally invasive procedure instead of the Pap smear test. Many of the women present there had a few tales to tell about their encounters with cancer, in general. This enabled us to look at cervical cancer from a different perspective. Lastly, we helped them to fill out our survey. All of them were very responsive and gave us a lot of suggestions. Through this session, we managed to educate women about cervical cancer, its symptoms and make a comparison on the available diagnostic methods to find the appropriate one for early diagnosis. Moreover, we also realised that the target audience opined that an alternative paper based diagnostic tool would be preferred to the existing Pap smear test.</div>
+          </div>
+          <a id="synbio">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="sc">
+            <div class="title">Synbio Club @ SASTRA</div>
+            <div id="carouselExampleIndicators5" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators5" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators5" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/6/62/T--SASTRA_Thanjavur--SynBioS1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/4/43/T--SASTRA_Thanjavur--SynBioS2.jpeg" alt="Second slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">On the 4th of October, 2019, our team launched the Synthetic Biology Club in SASTRA Deemed University to galvanize the students about the upcoming areas of research in synthetic biology (SynBio) and the ability to incorporate synthetic biology into solving crucial conundrums that we face every day. The club was proposed to include a technical head and a non-technical head. The former would be incharge of the Wet Lab and software niches, while the latter would overlook the Public Engagements and Human Practices. We began our session with trying to understand the students’ prior knowledge in the field of SynBio and asked them intriguing questions and awarded the right answers. We then went on to explain the technical aspects of SynBio, allowing them to grasp the subject and understand its features. We spoke about the applications of SynBio in the current world and associated it to everyday situations to help the students relate to the field to a greater extent. To meet the enthusiasm in the crowd, we proposed games such as Do It Yourself (DIY) experimental designs, Protocol Pictionary and debates. On creating a firm basement on the subject, we then introduced the students to iGEM and spoke to them about our project and our aim in creating a non-invasive detection mechanism for cervical cancer. We explained the integral aspects of our project and our determination to create a positive impact in our society. We concluded the session by encouraging these young minds to come up with extraordinary project ideas to participate in future iGEM sessions and help come up with solutions to challenges that scientists face on a daily basis.</div>
+          </div>
+          <a id="video">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="vid">
+            <div class="title">Project Video</div>
+            <div class="desc spectral">
+              <video width="80%" height="80%" controls="controls">
+                <source src="https://2019.igem.org/wiki/images/e/e8/T--SASTRA_Thanjavur--ProjectVideo.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <a id="act">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="activities">
+            <div class="title">Activities</div>
+            <p>To know more about our activites as part of Public Engagements, Visit our Activities page: </p><a href="https://2019.igem.org/Team:SASTRA_Thanjavur/Activities">Activities</a>
+          </div>
+        </div>
+      </div>
     </div>
+   <footer>
+     <span style="font-family: GOT;">Our Sponsors</span>
+     <div class="icons">
+     <div class="sponsors">
+       <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+     </div>
+     <div class="social">
+       <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+       <a href="mailto:igemsastra.2019@gmail.com"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+     </div>
+     </div>
+   </footer>
   </body>
 </html>

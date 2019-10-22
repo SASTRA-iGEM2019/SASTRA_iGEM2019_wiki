@@ -1,18 +1,14 @@
-<!-- {{SASTRA_Thanjavur/Bootstrap}} -->
+{{SASTRA_Thanjavur/Bootstrap}}
 <html>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <style>
     nav a{
-      font-size: 20px;
+      font-size: 15px;
     }
     div#content {
       transform: translate(0px, -20px);
     }
     .nav-item{
-      padding-left: 50px !important;
+      padding-left: 40px !important;
     }
     nav{
       padding-left: 80px !important;
@@ -40,6 +36,22 @@
       url('https://2019.igem.org/wiki/images/5/5b/T--SASTRA_Thanjavur--SpectralTtf.ttf') format('truetype'),
       url('https://2019.igem.org/wiki/images/2/2d/T--SASTRA_Thanjavur--SpectralSvg.svg') format('svg');
     }
+    @font-face {
+      font-family: 'SpectralBold';
+      font-style: normal;
+      font-weight: 700;
+      src: url('https://2019.igem.org/wiki/images/1/1a/T--SASTRA_Thanjavur--SpectralBold.eot');
+      src: local('Spectral Bold'), local('Spectral-Bold'),
+      url('https://2019.igem.org/wiki/images/1/1a/T--SASTRA_Thanjavur--SpectralBold.eot') format('embedded-opentype'),
+    }
+    @font-face {
+      font-family: 'SpectralBoldItalic';
+      font-style: italic;
+      font-weight: 700;
+      src: url('https://2019.igem.org/wiki/images/0/01/T--SASTRA_Thanjavur--SpectralBoldItalic.eot');
+      src: local('Spectral Bold'), local('Spectral-Bold'),
+      url('https://2019.igem.org/wiki/images/0/01/T--SASTRA_Thanjavur--SpectralBoldItalic.eot') format('embedded-opentype'),
+    }
     @media (min-width: 992px){
       .dropdown:hover .dropdown-menu {
         display: block;
@@ -52,10 +64,11 @@
       background-color: #030303 !important;
     }
     .dropdown-menu{
-      background-color: #343a40 !important;
+      background-color: #000000 !important;
     }
     .dropdown-item{
       color: #ffffff !important;
+      font-size: 14px;
     }
     .logosm{
       width: 50px;
@@ -71,8 +84,8 @@
     }
     a{font-family: GOT;}
   </style>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="https://2019.igem.org/Team:SASTRA_Thanjavur/">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
+    <a class="navbar-brand" href="https://2019.igem.org/Team:SASTRA_Thanjavur">
       <img src="https://2019.igem.org/wiki/images/4/43/T--SASTRA_Thanjavur--LogoInverted.png" width="60" height="40" class="d-inline-block align-top">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +94,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Description';" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Project
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,11 +102,10 @@
               <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Design">Design</a>
               <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Parts">Parts</a>
               <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Judging">Judging</a>
-              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Contribution">Contribution</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Notebook';" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Lab Work
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -104,7 +116,27 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link " href="https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link " onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Model';" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Modelling
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Model#omics">Biomarker Panel Development</a>
+              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Model#toehold">Toehold Design</a>
+              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Model#mak">Reaction Modelling</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link " onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Software';" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Software
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Software#ml">ML Problem</a>
+              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Software#fe">Feature Engineering</a>
+              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Software#pfs">Predictive Modelling</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices';" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Human Practices
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -115,26 +147,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link " href="https://2019.igem.org/Team:SASTRA_Thanjavur/Modelling" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Modelling
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Omics">Omics Analysis</a>
-              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Toehold_Design">Toehold Design</a>
-              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Mass_Action_Kinetics">Mass Action Kinetics</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link " href="https://2019.igem.org/Team:SASTRA_Thanjavur/Software" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Software
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/ML">Machine Learning</a>
-              <a class="dropdown-item" href="https://2019.igem.org/Team:SASTRA_Thanjavur/Feature_Engineering">Feature Engineering</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link " onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Team';" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               People
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">

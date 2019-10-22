@@ -1,74 +1,150 @@
-<!-- {{SASTRA_Thanjavur}}
+{{SASTRA_Thanjavur}}
 {{SASTRA_Thanjavur/Bootstrap}}
-{{SASTRA_Thanjavur/Fullpage}} -->
 <html>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <style>
-    .section{
-      text-align : center;
-    }
-    .first{
-      font-size : 72pt;
-      line-height: 72pt;
-    }
-    .smaller{
-      font-size : 16pt;
-      line-heightL 16pt;
-    }
-    div > img {
-      width : auto;
-      height : auto;
-      max-height: 100%;
-      max-width: 100%;
-    }
-    @media screen {
-      img{display: block;margin-left: auto;margin-right: auto;width: 100%;}
-    }
-  </style>
-  <script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-		      navigation: false,
-		      navigationPosition: 'right',
-		      slidesNavigation: true,
-		      slidesNavPosition: 'bottom',
-          controlArrows: true,
-          sectionsColor: ['#faebd7','#0e9aa7','#f6cd61','#fe8a71','#adcbe3','#e0a899','#faebd7','#feb2a8','#65c3ba'],
-        });
+  <script type="text/javascript">
+    $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
     });
+   });
   </script>
+  <style>
+    .container-fluid{
+    padding-left: 15%;
+    padding-right: 15%;
+    }
+    footer{
+        transform: translate(0px,35px);
+        color: black;
+        font-family: GOT;
+        height: 100px;
+        padding-left: 50px;
+    }
+    footer img{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .icons{
+        margin-top: 15px;
+    }
+    .sponsors{
+      float: left;
+    }
+    .social{
+      float: right;
+    }
+    .float{
+      position: sticky;
+      top: 18%;
+      list-style-type: none;
+    }
+    #index{
+      text-align: center;
+      font-size: 23px;
+      font-family: GOT;
+      margin-bottom: 10px;
+    }
+    .float a{
+      margin-bottom: 5px;
+      font-size: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .spectral{font-family: Spectral;}
+    .spectralb{font-family: SpectralBoldItalic;}
+    .title{font-family: GOT;font-size:20px;margin-bottom:15px;}
+    .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+    .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+    p{font-family: Spectral !important;font-size:14px !important;}
+    li{font-family: Spectral;font-size:14px;}
+    span{font-family: Spectral;font-size:14px;}
+    .dawd a{font-family: Spectral;font-size:14px;}
+  </style>
   <body>
-    <div id="fullpage">
-      <div class="section first">
-        Integrated Human Practices
-      </div>
-      <div class="section container-fluid smaller">
-        <div class="row">
-          <div class="col align-self-center">
-            <span><strong>Apollo Cancer Institute, Chennai</strong></span><br>
-            <span style="font-size: 14pt;color:#404040;">17th August 2019</span><br><br><br>
-            We met Dr. M.A. Raja, Medical Oncologist to get resourceful information about cervical cancer, which was essential to define the motivation of our project cogently. We briefed him about iGEM and our project. Dr. Raja opined that, clinically it is difficult to entirely change the high success rate associated with already existing diagnostic methods with disruptive technologies. He then told us about the existing methods of diagnosis for cervical cancer which included Pap smear test and liquid based test. The doctor reckoned that the only difficulty which cervical cancer patients would face is to visit a male doctor. Otherwise, he felt that patients are not experiencing much discomfort. Also, he mentioned that cervical cancer is the only cancer type in which precancerous studies are possible using which the cancer could be prevented even before it progresses. He added that most of the women are unaware of cervical cancer which makes it a “poor women disease” making it mostly prevalent in rural areas. He also informed us about the progression of cervical cancer, the treatment methods. He spoke about the possibility of extending this form of early stage cancer detection to other forms of cancer like breast cancer where people feel that the existing mammogram method is a bit uncomfortable. Also, he mentioned that the numbers of cases of cervical cancer are much less compared to other cancer types like breast cancer in Apollo. He also added that in government hospitals, Pap smear tests are done for free and it is part of a master health check-up in many private hospitals. When questioned about the difficulties faced by a lab technician while screening for cervical cancer, Dr. Raja mentioned that the only problem would be the inadequacy of sample. Dr. Raja finally concluded saying that our sensor must be applicable more than feasible and he appreciated our concept and asked us to look into its applications in other forms of cancer also.
-          </div>
-          <div class="col align-self-center">
-            <img src="https://2019.igem.org/wiki/images/1/1c/T--SASTRA_Thanjavur--Apollo.jpeg">
+   <div class="container-fluid">
+     <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:25px;">Integrated Human Practices</div><br><br>
+      <div class="row">
+        <div class="col-3">
+          <div class="float">
+            <div id="index">Index</div>
+            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;padding-top: 10px;padding-bottom: 10px;">
+              <a href="#school">PHFI India</a><hr>
+              <a href="#ngo">Doctor Visits</a><hr>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="section container-fluid smaller">
-        <div class="row">
-          <div class="col align-self-center">
-            <span><strong>Cancer Institute (WIA), Chennai</strong></span><br>
-            <span style="font-size: 14pt;color:#404040;">17th August 2019</span><br><br><br>
-            We had an appointment with Dr. J. S. Malliga, the head-in charge of Preventive Oncology department of Cancer Institute (WIA) Adyar. The discussion started off with the burden of cervical cancer in the population and how it was highly prevalent and morbid in the population till the last decade until it was taken over by breast cancer in India, especially Tamil Nadu. Cervical cancer, in her words, remains as a prevalent disease in 18/32 districts of Tamil Nadu. Tamil Nadu has an extensive and exhaustive population-based statistical database on cervical cancer, which is one of the largest in the world. She also gave us possible reasons for getting affected with cervical cancer. Post the discussion on the burden of cervical cancer, Dr. Malliga shifted gears to discuss how HPV was the sole cause for the same, followed by discussions on conventional preventive techniques and screening techniques for cervical cancer. She also briefed us about the different screening techniques and their sensitivity. She then went on to explain the disease pathophysiology. She also updated us on the molecular studies that have been developed in the recent past which are localized to the cervix in accordance with the pathophysiology of cervical cancer involving the study of methylation patterns. She then went on to tell us about breast cancer, the current problems faced in the early detection of breast cancer and suggested us to use our strategy involving serum-based detection for the detection of breast cancer biomarkers. When asked about the commonality among her patients, she said her patients were of low socioeconomic status, have poor/no education and have poor standards of living. These women, in her opinion, seems to have apprehensions about participating in a Pap smear test since it is not a pleasant experience even though it is a precancerous screening technique. She also highlighted the social stigma around the test and consequently when patients come to her for diagnosis, they often end up in stage two as a result of their neglect of preventive screening. Finally, she furnished inputs to our project and informed us that districts such as Perambalur and Ariyalur own the highest incidence of cervical cancer. These districts are very near Thanjavur.  She insisted that we obtain stage-specific statistics of cervical cancer from Thanjavur Medical College so that the motivation of our project is bolstered. Overall, it was a very informative and much-needed session for the team. To be able to talk to a clinician about current diagnostic and treatment methods and also about the disease itself and about our iGEM project was extremely insightful.
+        <div class="col-9">
+          <a id="school">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="sv">
+            <div class="title">Mr.S.Ramadorai; Chairman, PHFI</div>
+            <div id="carouselExampleIndicators7" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators7" data-slide-to="0" class="active"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/1/18/T--SASTRA_Thanjavur--DAVS1.jpeg" alt="First slide">
+              </div>
+            </div>
+            <div class="desc spectral">We met Mr. S. Ramadorai, Chairman, TCS. First, We briefed Mr. Ramadorai about iGEM and our biosensor to detect cervical cancer. He was very supportive of our idea, encouraged our awareness and outreach campaigns, and gave us valuable suggestions on the socio-economic aspects of the project. He was curious about various prospects about the project. His suggestion on the computational end was to construct a model to predict the presence of cervical cancer in a given geographical area from generational demographic data for the disease. He suggested obtaining data from PHFI (Public Health Foundation of India). Incidentally, Mr. Ramadorai is the Chairman of that same organization. Mr. Ramadorai congratulated our bold effort and wished us well after an engaging 20 minute session.
+            </div>
           </div>
-          <div class="col align-self-center">
-            <img src="https://2019.igem.org/wiki/images/6/61/T--SASTRA_Thanjavur--WIAS1.jpeg">
+          <a id="ngo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="ngowshg">
+            <div class="title">Doctor's Visits</div>
+            <div class="name spectralb">Apollo Cancer Institute, Chennai – 17th August 2019</div>
+            <div id="carouselExampleIndicators0" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/1/1c/T--SASTRA_Thanjavur--Apollo.jpeg" alt="First slide">
+                </div>
+                </div>
+            </div>
+            <div class="desc spectral">We met Dr. M.A. Raja, Medical Oncologist, Apollo Cancer Institute, Chennai to get resourceful information about cervical cancer, which was essential to define the motivation of our project cogently. We briefed him about iGEM and our project. Dr. Raja opined that, clinically it is difficult to entirely change the high success rate associated with already existing diagnostic methods with disruptive technologies. He then told us about the existing methods of diagnosis for cervical cancer which included the Pap smear test and liquid based test. The doctor reckoned that the only difficulty which cervical cancer patients would face is to visit a male doctor. Otherwise, he felt that patients are not experiencing much discomfort. Also, he mentioned that cervical cancer is the only cancer type in which precancerous studies are possible using which the cancer could be prevented even before it progresses. He added that most of the women are unaware of cervical cancer which makes it a “poor women disease” making it mostly prevalent in rural areas. He also informed us about the progression of cervical cancer, the treatment methods. He spoke about the possibility of extending this form of early stage cancer detection to other forms of cancer like breast cancer where people feel that the existing mammogram method is a bit uncomfortable. Also, he mentioned that the numbers of cases of cervical cancer are much less compared to other cancer types like breast cancer in Apollo Cancer Institute, Chennai. He also added that in the state-run government hospitals, Pap smear tests are done for free and it is part of a master health check-up in many private hospitals. When questioned about the difficulties faced by a lab technician while screening for cervical cancer, Dr. Raja mentioned that the only problem would be the inadequacy of sample. Dr. Raja finally concluded by saying that our biosensor must be more applicable than feasible and he appreciated our concept and asked us to look into its applications in other forms of cancer also.</div>
+
+            <div class="name spectralb">Cancer Institute (WIA), Chennai – 17th August 2019</div>
+            <div id="carouselExampleIndicators9" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators9" data-slide-to="0" class="active"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://2019.igem.org/wiki/images/6/61/T--SASTRA_Thanjavur--WIAS1.jpeg" alt="First slide">
+                </div>
+              </div>
+            </div>
+            <div class="desc spectral">We had an appointment with Dr. J. S. Malliga, the head-in charge of Preventive Oncology Department of Cancer Institute (WIA) Adyar, Chennai. The discussion started off with the burden of cervical cancer in the population and how it was highly prevalent and morbid in the population till the last decade until it was taken over by breast cancer in India, especially Tamil Nadu. Cervical cancer, in her words, remains as a prevalent disease in 18/32 districts of Tamil Nadu, most importantly Perambalur and Ariyalur, the districts closer to our University remaining as the hotspots for cervical cancer cases. However, she highlighted that Tamil Nadu has an extensive and exhaustive population-based statistical database on cervical cancer, which is one of the largest in the world. Furthermore, she suggested to us the possible reasons for getting affected with cervical cancer. Post the discussion on the burden of cervical cancer, Dr. Malliga shifted gears to discuss how HPV was the sole cause for the same, followed by discussions on conventional preventive techniques and screening techniques for cervical cancer. She also briefed us about the different screening techniques and their sensitivity. She then went on to explain the disease pathophysiology. She also updated us on the molecular studies that have been developed in the recent past which are localized to the cervix in accordance with the pathophysiology of cervical cancer involving the study of methylation patterns, one of the research works of her lab. She then went on to tell us about breast cancer, the current problems faced in the early detection of breast cancer and suggested us to use our strategy involving serum-based detection for the detection of breast cancer biomarkers. When asked about the commonality among her patients, she said her patients were of low socioeconomic status, have poor/no education and have poor standards of living. These women, in her opinion, seems to have apprehensions about participating in a Pap smear test since it is not a pleasant experience even though it is a precancerous screening technique. She also highlighted the social stigma around the test and consequently when patients come to her for diagnosis, they often end up in stage two as a result of their neglect of preventive screening. Finally, she furnished inputs to our project and insisted that we obtain stage-specific statistics of cervical cancer from Thanjavur Medical College so that the motivation of our project is bolstered. Overall, it was a very informative and much-needed session for the team. To be able to talk to a clinician about current diagnostic and treatment methods and also about the disease itself and about our iGEM project was extremely insightful.
+            </div>
           </div>
         </div>
       </div>
     </div>
+   <footer>
+     <span style="font-family: GOT;">Our Sponsors</span>
+     <div class="icons">
+     <div class="sponsors">
+       <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+       <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+     </div>
+     <div class="social">
+       <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+       <a href="mailto:igemsastra.2019@gmail.com"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+     </div>
+     </div>
+   </footer>
   </body>
 </html>

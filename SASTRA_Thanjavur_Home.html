@@ -1,5 +1,5 @@
-<!-- {{SASTRA_Thanjavur}}
-{{SASTRA_Thanjavur/Bootstrap}} -->
+{{SASTRA_Thanjavur}}
+{{SASTRA_Thanjavur/Bootstrap}}
 <html>
   <style>
   footer{
@@ -30,10 +30,10 @@
     body{ -ms-overflow-style: none; }
     h1{
       font-family: 'GOT' !important;
-      font-size: 70px;
+      font-size: 50px;
       font-weight:700;
       color:#ffffff;
-      margin-top: 0;
+      margin-top: 0 !important;
       margin-bottom: 0 !important;
     }
     #throne{
@@ -78,14 +78,30 @@
       transform: translateY(-100%) translateY(2px) scale(1,1);
       transform-origin: top;
     }
+    .contain{padding-left: 15%; padding-right: 15%;}
     .red{background-color:#d24d57;}
     .green{background-color:#03a678;}
     .black{background-color:#000000;}
     #tagline{color: #ffffff;}
+    .contain p{font-style: GOT !important;font-size: 18px !important;color: white;}
+    .card-container{
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: row;
+    }
+    .card{
+        width: 15vw;
+        border: 5px solid #ccc;
+      }
+    .card-title{
+          text-align: center;
+          font-family: GOT;
+     }
   </style>
   <body>
     <div class="roww black">
-      <h1>HOUSE OF TOEHOLDS</h1>
+      <h1 style="padding-top: 0px;">HOUSE OF TOEHOLDS</h1>
       <img id="throne" src="https://2019.igem.org/wiki/images/a/a4/T--SASTRA_Thanjavur--IronThroneInvert.png">
       <span id="tagline"><strong>You Know Nothing, miRNA</strong><span>
     </div>
@@ -124,7 +140,8 @@
           s60.2,40,120,40s59.8,0,59.8,0l0.2,143H-60V96L-40,95.6z"></path>
         </svg>
       </div>
-      <h1>Description</h1>
+      <h1>Description</h1><br>
+      <div class="contain"><p>Cervical cancer is the second most common cancer among Indian women with 500 million people at risk, and an unforgiving 50% mortality rate. Poor awareness and access to effective screening have caused enormous disease burden. We are developing a biosensor comprising nucleic-acid toehold switches designed to bind to certain identified differentially expressed circulating miRNA biomarkers of early-stage cervical cancer, namely miRNA-20a, miRNA-21, miRNA-29a and miRNA-200a. Each toehold switch is a second-generation design, requiring a biomarker-antimiR complex to release the expression of GFP, whose fluorescence intensity is measured. We are modelling and calibrating the performance of our toehold switches, and offering a web-server for the integrated design of these switches that uses multi-layer neural networks. Our parts characterization is performed cell-free. The developed switches may be embedded in a composite biosensor to yield a paper-based device for detecting cervical cancer.</p></div>
     </div>
     <div class="roww">
       <div>
@@ -195,7 +212,34 @@
         c0.4,3.3,0.8,7.6,1.3,10.9c0,13.3,1608,13.3,1608,0c0.4-3.3,0.8-7.6,1.3-10.9C1562,185.6,1518.8,181.6,1475.4,177z"></path>
         </svg>
       </div>
-      <h1 style="color:#000000;">Design</h1>
+      <div class="card-container">
+        <div class="card" style="cursor: pointer;" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Design';">
+          <img class="card-img-top" src="https://2019.igem.org/wiki/images/c/c5/T--SASTRA_Thanjavur--HomeDesign.png" alt="₹P">
+          <h5 class="card-title">Design</h5>
+        </div>
+        <div class="card" style="cursor: pointer;" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Software';">
+          <img class="card-img-top" src="https://2019.igem.org/wiki/images/8/83/T--SASTRA_Thanjavur--HomeSoft.png" alt="₹P">
+          <h5 class="card-title">Software</h5>
+        </div>
+        <div class="card" style="cursor: pointer;" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Results';">
+          <img class="card-img-top" src="https://2019.igem.org/wiki/images/f/f4/T--SASTRA_Thanjavur--ResultsThumb.png" alt="₹P">
+          <h5 class="card-title">Results</h5>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card" style="cursor: pointer;" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Model';">
+          <img class="card-img-top" src="https://2019.igem.org/wiki/images/1/16/T--SASTRA_Thanjavur--HomeModel.png" alt="₹P">
+          <h5 class="card-title">Modelling</h5>
+        </div>
+        <div class="card" style="cursor: pointer;" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Human_Practices';">
+          <img class="card-img-top" src="https://2019.igem.org/wiki/images/f/f9/T--SASTRA_Thanjavur--HomeHuman.png" alt="₹P">
+          <h5 class="card-title">Human Practices</h5>
+        </div>
+        <div class="card" style="cursor: pointer;" onclick="window.location='https://2019.igem.org/Team:SASTRA_Thanjavur/Team';">
+          <img class="card-img-top" src="https://2019.igem.org/wiki/images/3/33/T--SASTRA_Thanjavur--HomeTeam.png" alt="₹P">
+          <h5 class="card-title">Team</h5>
+        </div>
+      </div>
     </div>
     <footer>
        <span>Our Sponsors</span>

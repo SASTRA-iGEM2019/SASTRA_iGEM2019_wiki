@@ -1,0 +1,344 @@
+{{SASTRA_Thanjavur}}
+{{SASTRA_Thanjavur/Bootstrap}}
+<html>
+  <style>
+  .container-fluid{
+      padding-left: 15%;
+      padding-right: 15%;
+  }
+  footer{
+      transform: translate(0px,35px);
+      color: black;
+      font-family: GOT;
+      height: 100px;
+      padding-left: 50px;
+  }
+  footer img{
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .icons{
+      margin-top: 15px;
+  }
+  .sponsors{
+    float: left;
+  }
+  .social{
+    float: right;
+  }
+  .section{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+  .spectral{font-family: Spectral;}
+  .spectralb{font-family: SpectralBoldItalic;}
+  .title{font-family: GOT;font-size:20px;line-height: 25px;margin-bottom:15px;}
+  .name{font-weight: bold;margin-bottom:10px;font-size:17px;}
+  .desc{font-size:14px;margin-bottom:13px;text-align:justify;}
+  strong{font-family: SpectralBold !important; font-size: 16px !important;}
+  p{font-family: Spectral !important;font-size:14px !important;}
+  li{font-family: Spectral;font-size:14px;}
+  span{font-family: Spectral;font-size:14px;}
+  .section a{font-family: Spectral;font-size:14px;}
+  .table-container{display:flex;flex-direction:column;justify-content:center;align-content:center;}
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Software</div>
+      <p><span style="font-weight: 400;">In this aspect of our project, we worked on the predictive modelling of the efficacy of toehold switches according to their dynamic range.</span></p>
+      <p><span style="font-weight: 400;">Our software consists of the following facets.</span></p>
+      <ol>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">The machine learning problem</span></li>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Domain parsing</span></li>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Feature Engineering</span></li>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Predictive modelling</span></li>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Tools</span></li>
+      </ol>
+      <a id="ml">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">The Machine Learning Problem</div>
+        <p>Toehold switches are de novo designed, high- performance, mRNA based riboregulators for translational regulation in prokaryotic systems.  Three properties of toehold switches buttress their integration in the genome and in synthetic genetic circuits for diagnostic applications in the upcoming field of synthetic biology:
+        <ol><li>Dynamic range</li><li>Low crosstalk</li><li>High Orthogonality</li></ol>
+		    <p>Each of the above properties of toehold switches could be characterized by well-established protocols. In the software aspect of House of Toeholds, we aimed to predictively model toehold switches as a sensory element for the detection of short RNA oligonucleotides called microRNAs that are indicative of cervical cancer.  We came up with an in silico predictive modelling technique of toehold switches for candidate mRNA sequences through machine learning techniques. The machine learning problem at hand is as follows: for a given toehold construct as input, we would like to predict the efficacy of the toehold measured by its dynamic range (ON/OFF ratio).  The features of interest to solve this problem could stem from sequence properties as well as structural considerations.To determine the optimal toehold switches for the problem at hand, we made use of regression analysis. The design workflow for the machine learning problem was the following:</p>
+		     <ol>
+          <li>Collect toehold switch data from scientific literature and build an exhaustive dataset of toehold switch sequences with their respective properties.</li>
+		       <li>Generate a feature matrix for the sequences that includes sequence based and free energy features.</li>
+		       <li>After feature selection through a correlation analysis, we develop a model for the efficacy of a toehold switch.</li>
+		       <li>Extend the scope of the toehold switch design to the detection of microRNA biomarkers for cervical cancer.</li>
+         </ol>
+        <p>The primary step of the project was to obtain all the sequences from the scientific literature and the Registry of Standard Biological Parts that contained a toehold switch structure.  A thorough literature review was performed and the toehold switch sequences with the variable that indicates their performance, the dynamic range, were obtained from various sources.  The majority of the toehold switches with the dynamic range measured and experimentally validated by their ON/OFF ratios were available from Green et al. (2014) and Pardee et al (2014, 2016). It was crucial to choose this particular subset because the remaining hundred odd sequences are not characterized by any defined metric.   A total of 230 toehold switch sequences with ON/OFF ratios were obtained from the scientific literature on toehold switches, a vast majority of the total number existing toehold switches.</p>
+        <p>The dot-bracket notation is a simplistic grammar for representing the secondary structure of RNA without actually visualizing a diagram.  The only rules of secondary structure notation are represented in the following manner: unpaired bases by dots  ‘.’ and paired bases by parentheses ‘(’ and ‘)’.
+        Toehold switches have multiple unique domains that can be extracted by pattern matching of their dot-bracket structure.  We realised that each toehold switch possesses a generic pattern of dots and brackets by virtue of their secondary structure.
+        We wrote regular expression (REGEX) pattern matching scripts in Python and passed them to a program called RNAfold.  RNAfold outputs the dot-bracket structure for an inputted sequence.  It is part of the ViennaRNA suite of RNA analysis programs.  We have used a number of programs from this software package to engineer most of our toehold switch features.
+        The general grammar of the toehold switch structure is shown in the figure below.  We used this as a template for our domain parsing REGEX.</p>
+        <div class="table-container">
+          <p><strong>General toehold switch grammar</strong></p>
+          <table style="width:auto;" class="table table-hover table-bordered table-dark">
+          <tbody>
+          <thead>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">Area</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">Description</span></p>
+          </td>
+          </tr>
+          </thead>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">d1 dots</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">The toehold domain that is unbound in its inactive state</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">b1 open brackets</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">The toehold domain based paired with the linker, forming the stem bottom</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">3 dots</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">Sequestered nucleotides opposite to AUG (part of the secondary loop)</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">b2 open brackets</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">Mini linker domain base-paired with a linker between the primary and secondary loop</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">d2 dots</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">The primary loop containing the RBS</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">b2 closed brackets</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">The mini linker between the RBS and start codon</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">3 dots</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">The start codon AUG (the secondary loop)</span></p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <p><span style="font-weight: 400;">b1 closed brackets</span></p>
+          </td>
+          <td>
+          <p><span style="font-weight: 400;">Linker base-paired with the toehold domain.&nbsp; This linker connects the toehold switch to a gene of interest</span></p>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+        <p>However, our initial REGEX script did not parse out the exact domains of the toehold switches for all the instances in our dataset, so we analysed the dot-bracket more carefully and discovered that most of the engineered toehold switches did not adhere to this grammar. Some switches included a wobble base pair between G-U in the secondary loop containing the start codon, others had base-paired toehold domains, some even had base-paired linker regions.  Wobble base pairs offered better stability in the OFF state and these forward engineered designed were, as a result, less leaky in comparison to older designs of the toehold switch.  We also found that a couple of unpaired bases in the top stem of the toehold switch also resulted in an erroneous match.  The unpaired bases were found near the primary loop sequence and we learned that they could easily allow the unfolding of the switch in the ON state while maintaining stability in the OFF state. As a result of our observations, we rewrote our domain parser in order to account for thoughtful new designs of toehold switches.  We were able to match 228 out of 230 switches.  We eliminated the exceptions because: We had written an optimal domain parsing program. The dynamic ranges of the eliminated switches were quite low and we realized that they would serve as outliers in our machine learning models and skew our linear fit.</p>
+      </div>
+      <a id="fe">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Feature Engineering</div>
+        <p>We categorized out predicting variables, or features into sequence features involving the length and composition of domains, structural features and engineered structural features.
+        We linked our domain parsing program to match the obtained dot-bracket sequence to the nucleotide sequence so that we could slice a full toehold switch sequence into its composite domains both by secondary structure and primary composition.  This way, we did not lose any information in the secondary structure while retaining the base composition. We came up with the following sequence features:</p>
+        <ol>
+          <li>toehold domain length</li>
+          <li>number of GC base pairs in the top stem</li>
+          <li>number of GC base pairs in the bottom stem</li>
+          <li>length of the top stem</li>
+          <li>length of the bottom stem</li>
+          <li>length of the primary loop</li>
+          <li>number of A/U rich regions before RBS</li>
+        </ol>
+        <p>The ViennaRNA Package is a set of standalone programs as well as a comprehensive web suite available for the prediction and analysis of RNA secondary structures.  The following structural features were calculated from the ViennaRNA suite:</p>
+        <ol>
+          <li>overall minimum free energy (MFE) of the toehold switch construct using RNAfold</li>
+          <li>minimum free energy of the bottom region of the toehold switch using RNAcofold</li>
+          <li>the ensemble diversity of the switch and the frequency of the MFE structure in an ensemble using an option in RNAfold</li>
+          <li>the solvent accessibility of the entire construct</li>
+          <li>the net MFE of the complex</li>
+          <li>MFE of the top stem</li>
+          <li>MFE of the bottom stem</li>
+          <li>MFE of the RBS-linker domain</li>
+        </ol>
+      </div>
+      <a id="pfs">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Preliminary Feature Selection</div>
+        <p>After engineering the above features, we did a correlation analysis amongst the features to determine if any feature is correlated to another one.  This helps in the dimensionality reduction of the dataset and retains only the best of the predictor variables.  After the correlation analysis, we set the correlation at R=0.85 to indicate redundancy these are the features that we retained:</p>
+        <ol>
+          <li>Overall MFE of the toehold switch construct</li>
+          <li>Frequency of the MFE structure in the ensemble</li>
+          <li>Net MFE (difference in energy between the MFE of the switch-trigger complex and the sum of individual MFE values  of the switch and trigger)</li>
+          <li>MFE of the bottom region containing the toehold domain, bottom stem and the horizontal linker</li>
+          <li>MFE of the RBS-linker domain, starting from the primary loop till the end of the construct</li>
+          <li>Specific heat of the toehold switch construct at 37 degrees Celsius</li>
+        </ol>
+        <p>We eliminated our sequence features from our feature set, but took insights from them in our toehold switch design.</p>
+      </div>
+      <div class="section">
+          <p>With the above feature set, different models based on different subsets of features were constructed. Based on the adjusted R2, the goodness of fit of the models was evaluated, and the model with the best metric was chosen. The feature matrix was generated with the dynamic range as the response variable for all 228 instances.  The volume of this work deals with regressing the dynamic range measured by the ON/OFF ratio with the individual attributes present in the feature matrix.  The multivariate regression model was constructed using Scikit learn, a Python library for machine learning.  We used an 80-20 train-test split and cross-validated our model by 10-fold cross validation.  The cross validated model metrics output an R2 value = 0.59, implying an R value = 0.77. We also applied a log10 transform on our response variable to validate if the features better predict the log transformed ON/OFF ratio value.  However, we obtained an optimal model without the log transformation of the ON/OFF ratio.Our model outperforms the only other existing multivariate model proposed by CUHK’s iGEM 2017, whose reported R2 value was 0.22.</p>
+          <div class="table-container">
+            <p><strong>Predictor variables and their coeffients of linear regression</strong></p>
+            <table style="width:auto;" class="table table-hover table-bordered table-dark">
+              <tbody>
+              <thead>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">S.No</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Feature Name</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Coefficient Value</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">P value</span></p>
+              </td>
+              </tr>
+              </thead>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">1</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Overall_MFE</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">16.38</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.002</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">2</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Bottom_region_MFE</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">-32.80</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.000</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">3</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">RBS_linker_MFE</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">19.20</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.000</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">4</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Net_MFE</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">5.24</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.003</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">5</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Freq_MFE_struct</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">-327.32</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.024</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">6</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">OVerall_SH_37</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">-68.21</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.000</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <p><span style="font-weight: 400;">7</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">Constant</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">-160.74</span></p>
+              </td>
+              <td>
+              <p><span style="font-weight: 400;">0.067</span></p>
+              </td>
+              </tr>
+              </tbody>
+              </table>
+          </div>
+          <p>Since the coefficient estimates are large, we thought more conservative estimates might be useful. In this regard, we performed ridge and lasso regression to detect moderation in the estimates. We also applied a ridge regression, a regularization technique to improve the final model.  We found that the ridge regression did not improve the coefficients to fit the model. However, the lasso regularization technique improved the coefficient of the frequency of the MFE structure (from -327.32 to -294.23) (S.No. 5).The P values of our features are consistently less than 0.004, implying that our features are statistically significant.</p>
+      </div>
+      <div class="section">
+        <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">Toehold switch web tool</div>
+        <p>We used our regression model to validate our toehold switch design tool hosted on our university’s website.  Our toehold switch design tool improves on iGEM CUHK’s (2017) and iGEM CLSB’s (2017) tool by offering second generation toehold switch design parameters and validating a switch’s dynamic range on our multivariate regression model.</p>
+        <p>Visit our toehold switch designer:<a href="https://sas.sastra.edu/rnatoedesign/">https://sas.sastra.edu/rnatoedesign/</a></p>
+        <p>Visit our GitHub repo:<a href="https://github.com/igemsoftware2019/SASTRA_Thanjavur">https://github.com/igemsoftware2019/SASTRA_Thanjavur</a></p>
+      </div>
+    </div>
+    <footer>
+       <span style="font-family:GOT;">Our Sponsors</span>
+       <div class="icons">
+         <div class="sponsors">
+           <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+           <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+           <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+           <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+           <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+           <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+         </div>
+         <div class="social">
+           <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+           <a href="mailto:igemsastra.2019@gmail.com	"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+         </div>
+       </div>
+     </footer>
+  </body>
+</html>

@@ -2,340 +2,462 @@
 {{SASTRA_Thanjavur/Bootstrap}} -->
 <html>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <style>
-    .float{
-      position: fixed;
-      top: 25%;
-      list-style-type: none;
-      font-size: 18px;
-    }
-    #index{
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-    .float a{
-      margin-bottom: 5px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .smalls{
-      margin-left: 20% !important;
-    }
+  .container-fluid{
+  padding-left: 15%;
+  padding-right: 15%;
+  }
+  footer{
+      transform: translate(0px,35px);
+      color: black;
+      font-family: GOT;
+      height: 100px;
+      padding-left: 50px;
+  }
+  footer img{
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .icons{
+      margin-top: 15px;
+  }
+  .sponsors{
+    float: left;
+  }
+  .social{
+    float: right;
+  }
+  .float{
+    position: sticky;
+    top: 20%;
+    list-style-type: none;
+  }
+  #index{
+    text-align: center;
+    font-size: 23px;
+    font-family: GOT;
+    margin-bottom: 10px;
+  }
+  .float a{
+    margin-bottom: 5px;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .spectral{font-family: Spectral;}
+  .spectralb{font-family: SpectralBoldItalic;}
+  .title{font-family: GOT;font-size:22px;margin-bottom:15px;}
+  .name{font-weight: bold;margin-bottom:10px;font-size:22px;}
+  .desc{font-size:16px;margin-bottom:13px;text-align:justify;}
+  p{font-family: Spectral !important;font-size:16px !important;}
+  li{font-family: Spectral !important;font-size:16px !important;}
+  span{font-family: Spectral !important;font-size:16px !important;}
+  strong{font-family: SpectralBold !important;font-size: 19px !important;}
   </style>
-  <script>
-    function show(value){
-      console.log(value);
-      var ids = ["preservation","plasmid","transform","resuspension","pcr","character"];
-      for (x of ids){
-        console.log(x);
-        if(x == value){
-          document.getElementById(value).style.display = "";
-        }
-        else{
-            document.getElementById(x).style.display = "none";
-        }
-      }
-    }
+  <script type="text/javascript">
+    $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+      });
+  });
   </script>
   <body>
-    <div class="container">
+    <div class="container-fluid">
+      <div style="font-family:GOT;font-size:35px;text-align:center;margin-top:35px;margin-bottom:15px;">PROTOCOLS</div>
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-3">
           <div class="float">
-            <div id="index"><strong>Index</strong></div>
-            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;">
-              <a onclick="show('preservation')">Preservation of Culture</a><hr>
-              <a onclick="show('plasmid')">Plasmid Isolation</a><hr>
-              <a onclick="show('transform')">High Efficiency Transformation</a><hr>
-              <a onclick="show('resuspension')">DNA Resuspension</a><hr>
-              <a onclick="show('pcr')">PCR Protocol</a><hr>
-              <a onclick="show('character')">Characterization of Biobrick</a><hr>
+            <div id="index">Index</div>
+            <div style="background-color: #f3f3f3;  border-radius: 20px; padding-left: 5%;padding-top: 10px;padding-bottom: 10px;">
+              <a href="#trans">High Efficiency Transformation</a><hr>
+              <a href="#dna">DNA Resuspension</a><hr>
+              <a href="#pcr">PCR Protocol</a><hr>
+              <a href="#cob">Characterization of BBa_K608011</a><hr>
+              <a href="#twogen">Characterization of BBa_K3154001</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-9">
-          <div id="preservation" class="smalls">
-            <span><strong>Preservation of Culture (E.Coli MG1655 Cells, for transformation)</strong></span>
-            <p>Materials</p>
-            <ol>
-              <li>LB Broth</li>
-              <li>E.Coli Cells (MG1655)</li>
-              <li>Tarson Tubes</li>
-              <li>Orbital Shaker</li>
-              <li>Cryovials</li>
-              <li>50% Glycerol</li>
-              <li>Pippetes and Tips</li>
-            </ol>
-            <p>Procedure</p>
-            <ol>
-              <li>Prepare 20 ml of LB Broth in two 50 mL tarson tubes. Autoclave the LB Broth and allow it to return to room temperature.</li>
-              <li>Leave the LB Broth undisturbed overnight to check for contamination.</li>
-              <li>Separate the LB Broth into two 50 mL tarson tubes- 10mL in each.</li>
-              <li>Inoculate the E.coli cells into both tubes and incubate the tubes in an orbital shaker maintained at 37 &deg;C for 24 hours. Ensure that the lids of the tarson tubes are left slightly open to allow optimal growth of the cells.</li>
-              <li>Spin the cell suspension to obtain a pellet containing the cells. Discard the supernatant and resuspend the pellet in two mL LB Broth.</li>
-              <li>To four cryovials, add 500uL of the cell suspension and 500 uL of 50% glycerol.</li>
-              <li>Gradually decrease the storage temperature of the cryovials from 4&deg;C to -20&deg;C and then finally to -80&deg;C.</li>
-            </ol>
-            <p>NOTE: The cells stored were subcultured 24 hours prior to the preservation for best results.</p>
-          </div>
-          <div id="plasmid" class="smalls" style="display:none;">
-            <span><strong>Plasmid Isolation</strong></span>
-            <p>Materials:</p>
+        <div class="col-9">
+          <a id="trans">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="trans">
+            <div class="name spectralb">High Efficiency Transformation Protocol by NEB - modified (NEB#29871)</div>
+            <div class="desc spectral">
+              <p><strong>Materials:</strong></p>
               <ol>
-          <li>Transformants containing the plasmid- E.coli MG1655 with plasmid pfpv 25.1.</li>
-          <li>LB broth</li>
-          <li>Ampicillin</li>
-          <li>TEG (25 mM Tris HCl (pH 8.0), 10mM EDTA (pH 8.0), 50mM glucose)</li>
-          <li>Lysis buffer ( 0.2 N NaOH, 1% SDS in equal volumes)</li>
-          <li>Neutralization buffer (29.44 g potassium acetate, 11.5 mL glacial acetic acid, DNase free water- 100mL)</li>
-          <li>TE (10mM Tris HCl (pH 8.0), 1mM EDTA (pH 8.0))</li>
-          <li>RNase TE (50mL TE, 100uL RNase (5mg/mL), ampicillin (100mg/mL))</li>
-          <li>80% ethanol</li>
-          <li>Tarson tubes, eppendorf vials</li>
-          <li>Pipettes and tips</li>
-              </ol>
-            <p>Procedure:</p>
+                <li>NEB#C2987I</li>
+                <li>LB medium</li>
+                <li>Crushed Ice</li>
+                <li>Eppendorf tubes</li>
+                <li>Pipettes and tips</li>
+              </ol><br><br>
+              <p><strong>Procedure:</strong></p>
               <ol>
-          <li>Prepare 20 mL of LB Broth in a tarson tube and sterilize it in an autoclave.</li>
-          <li>Aliquot 1.5 mL of the broth into a 2 mL eppendorf. Leave the broth undisturbed overnight to check for contamination.</li>
-          <li>Inoculate a single colony of the strain into the LB Broth containing ampicillin.</li>
-          <li>Spin the cell suspension in the centrifuge at 6000 rpm for 5 minutes. Remove the supernatant.</li>
-          <li>Resuspend the cell pellet in 100uL of ice cold TEG and vortex the eppendorf tubes.</li>
-          <li>Add 200uL of the lysis buffer and thoroughly shake the tube by inverting it 4-6 times until a viscous solution is obtained.</li>
-          <li>Add 150uL of ice cold neutralization buffer and mix the contents by inverting the tube 4-6 times.</li>
-          <li>Incubate the cell suspension on ice for ten minutes.</li>
-          <li>Spin the suspension at 12,000 rpm for 10 minutes at 4℃.</li>
-          <li>Transfer the supernatant to a new eppendorf tube and add equal volumes of ice cold isopropanol. Mix by gently inverting the tube.</li>
-          <li>Incubate the solution for 10</li>
-          <li>Spin the solution at 12,000 rpm for 10 minutes at 4℃.</li>
-          <li>Remove the supernatant and add 1mL of 80% ethanol. Spin the suspension at 12,000 rpm for 10 minutes at 4℃.</li>
-          <li>Remove the supernatant and air dry the pellet at room temperature.</li>
-          <li>Resuspend the pellet in 50uL of TE buffer.</li>
-              </ol>
-          </div>
-          <div id="transform" class="smalls" style="display:none;">
-            <span><strong>High Efficiency Transformation Protocol by NEB - modified (NEB#29871)</strong></span>
-            <p>Materials:</p>
-          <ol>
-          <li>NEB#C2987I</li>
-          <li>LB medium</li>
-          <li>Crushed Ice</li>
-          <li>Eppendorf tubes</li>
-          <li>Pipettes and tips</li>
-          </ol>
-          <p>Procedure:</p>
-          <ol>
-          <li>Thaw a tube of NEB 5-alpha competent E.coli cells on ice. Gently mix the tube.</li>
-          <li>Transfer 50uL of cells into an eppendorf on ice.</li>
-          <li>Add 3uL of Plasmid DNA to the cell mixture. Carefully flick the tube to mix the cells and the DNA. (DO NOT VORTEX)</li>
-          <li>Allow the solution to remain undisturbed on ice for 30 minutes.</li>
-          <li>Heat shock at exactly 42℃ for 30 seconds.Do not mix the tube.</li>
-          <li>Place the tube on ice for 5 minutes.</li>
-          <li>Pipette 950 uL of room temperature LB into the mixture.</li>
-          <li>Incubate the mixture for 60 minutes at 37℃. Shake the tube at 250 rpm.</li>
-          <li>Spin the cell suspension at a low rpm and remove the supernatant. Resuspend the cell pellet in LB medium and plate the cell suspension on LB agar with a concentration of 35ug/mL Chloramphenicol.</li>
-          </ol>
-          <p>Incubate the plates at 37℃ for 24 hours to obtain colonies of the transformed cells.</p>
-          </div>
-          <div id="resuspension" class="smalls" style="display:none;">
-            <span><strong>DNA Resuspension Protocol (For BioBrick Bba_K608011):</strong></span>
-            <p>Materials:</p>
-          <ol>
-          <li>DNA distribution plates</li>
-          <li>Distilled water</li>
-          <li>Chloramphenicol</li>
-          <li>Pipettes and tips</li>
-          </ol>
-          <p>Procedure:</p>
-          <ol>
-          <li>Punch a hole in the well containing the desired biobrick, through the foil cover.</li>
-          <li>Pipette 10uL of distilled water into the well.</li>
-          <li>Mix the contents in the well gently, with a pipette.</li>
-          <li>Leave the plate undisturbed for 5 minutes.</li>
-          <li>Resuspension of the DNA is indicated by the presence of a red color due to the crescent dye.</li>
-          </ol>
-          <p>Use the resuspended DNA to transform the competent cells using the high efficiency transformation protocol</p>
-          </div>
-          <div id="pcr" class="smalls" style="display:none;">
-            <span><strong>PCR Protocol</strong></span>
-            <p>To amplify the toehold construct for cell free reactions (miRNA 21and 20a)</p>
-            <ol>
-            <li>Add TE buffer to resuspend the gblock to your final desired concentration</li>
-            <li>Vortex it briefly to suspend it</li>
-            <li>It can be stored at -80℃ upto 2 years</li>
-            <li>Freeze thaw the master mix before usage</li>
-            <li>Dilute the gblocks to the required concentration using nuclease free TE buffer</li>
-            <li>Keep all reaction components on ice and add them to a PCR tube&nbsp; and transfer the reactions immediately to the thermocycler</li>
-            <li>The thermocycler should be preheated to the denaturation temperature and the components must be well mixed before transferring</li>
-            <li>Allow the thermocycler to run to the set cycle parameters.</li>
-            <li>Run the PCR product on a 1.5% agarose gel and check the amplicon size</li>
-            <li>The product can be purified by using a purification kit and sequenced to confirm the amplification of gblocks</li>
-            </ol>
-            <table style="width:auto;" class="table table-hover table-bordered">
-            <tbody>
-            <tr><thead>
-            <th>
-            <p><strong>COMPONENTS</strong></p>
-            </th>
-            <th>
-            <p><strong>25 uL reaction</strong></p>
-            </th>
-            <th>
-            <p><strong>15 uL reaction</strong></p>
-            </th>
-            </thead>
-            </tr>
-            <tr>
-            <td>
-            <p>Q5 High fidelity 2X master mix (NEB kit)</p>
-            </td>
-            <td>
-            <p>12.5 uL</p>
-            </td>
-            <td>
-            <p>7.5 uL</p>
-            </td>
-            </tr>
-            <tr>
-            <td>
-            <p>10 uM FP (VF2)</p>
-            </td>
-            <td >
-            <p>1.25 uL</p>
-            </td>
-            <td >
-            <p>0.75 uL</p>
-            </td>
-            </tr>
-            <tr>
-            <td >
-            <p>10 uM RP (VR)</p>
-            </td>
-            <td >
-            <p>1.25 uL</p>
-            </td>
-            <td >
-            <p>075 uL</p>
-            </td>
-            </tr>
-            <tr>
-            <td >
-            <p>Template DNA (1ng)</p>
-            </td>
-            <td >
-            <p>&nbsp;1 uL- 3uL</p>
-            </td>
-            <td >
-            <p>1-3uL</p>
-            </td>
-            </tr>
-            <tr>
-            <td >
-            <p>Nuclease free water</p>
-            </td>
-            <td >
-            <p>6-9 uL</p>
-            </td>
-            <td >
-            <p>6-9uL</p>
-            </td>
-            </tr>
-            </tbody>
-            </table>
-          <p><strong>GRADIENT PCR ( Temperature set up and no of cycles)</strong></p>
-          <table style="width:auto;" class="table table-hover table-bordered">
-          <tbody>
-          <tr>
-          <td >
-          <p><strong>98℃</strong>- denaturation (initial)</p>
-          </td>
-          <td >
-          <p><strong>30 seconds</strong></p>
-          </td>
-          </tr>
-          <tr>
-          <td >
-          <p><strong>98℃ </strong></p>
-          </td>
-          <td >
-          <p><strong>10 s</strong></p>
-          </td>
-          </tr>
-          <tr>
-          <td >
-          <p><strong>62/63℃ - </strong>annealing temperature</p>
-          </td>
-          <td >
-          <p><strong>20s</strong></p>
-          </td>
-          </tr>
-          <tr>
-          <td >
-          <p><strong>72℃- </strong>extension</p>
-          </td>
-          <td >
-          <p><strong>30s</strong></p>
-          </td>
-          </tr>
-          <tr>
-          <td >
-          <p><strong>72℃ -</strong>final extension</p>
-          </td>
-          <td >
-          <p><strong>3 minutes</strong></p>
-          </td>
-          </tr>
-          <tr>
-          <td >
-          <p><strong>4℃</strong></p>
-          </td>
-          <td >
-          <p><strong>&infin;</strong></p>
-          </td>
-          </tr>
-          </tbody>
-          </table>
+                <li>Thaw a tube of NEB 5-alpha competent E.coli cells on ice. Gently mix the tube.</li>
+                <li>Transfer 50 µL  of cells into an eppendorf on ice.</li>
+                <li>Add 3 µL of Plasmid DNA to the cell mixture. Carefully flick the tube to mix the cells and the DNA. (DO NOT VORTEX)</li>
+                <li>Allow the solution to remain undisturbed on ice for 30 minutes.</li>
+                <li>Heat shock at exactly 42 ℃ for 30 seconds. Do not mix the tube.</li>
+                <li>Place the tube on ice for 5 minutes.</li>
+                <li>Pipette 950 µL  of room temperature LB into the mixture.</li>
+                <li>Incubate the mixture for 60 minutes at 37 ℃. Shake the tube at 250 rpm.</li>
+                <li>Spin the cell suspension at a low rpm and remove the supernatant. Resuspend the cell pellet in LB medium and plate the cell suspension on LB agar with a concentration of 35 µg/mL Chloramphenicol.</li>
+                <li>Incubate the plates at 37 ℃ for 24 hours to obtain colonies of the transformed cells.</li>
+              </ol><br><br>
             </div>
-          <div id="character" class="smalls" style="display:none;">
-            <span><strong>Characterization of Biobrick Bba_K608011 pH experiment Protocol</strong></span>
-            <p>Materials</p>
-          <ol>
-          <li>LB Broth</li>
-          <li>Tarson Tubes</li>
-          <li>Chloramphenicol</li>
-          <li>1M NaOH</li>
-          <li>35% HCl</li>
-          <li>Transformed E.Coli, containing Biobrick Bba_K608011</li>
-          <li>pH meter, fluorescence spectrophotometer</li>
-          <li>Pipettes and tips</li>
-          </ol>
-          <p>Procedure</p>
-          <ol>
-          <li>Prepare 300 mL of LB broth in distilled water.</li>
-          <li>Separate the LB broth into 6 different 50 mL tarson tubes, each containing 40 mL of the prepared broth.</li>
-          <li>Prepare 1N NaOH and 35% HCl. Adjust the pH of the broth in 5 of the tubes to the desired values of 5,6,7.2 ( pH of standard LB broth), 8 and 9.</li>
-          <li>Keep a separate tube with 40 mL of the broth (with an unaltered pH) to use as a control.</li>
-          <li>Autoclave the Tarson tubes.</li>
-          <li>Add Chloramphenicol to all the Tarson tubes to obtain a final antibiotic concentration of 20ug/mL. This was done by initially creating a stock of 40mg/mL.</li>
-          <li>Leave the LB Broth undisturbed overnight to check for contamination.</li>
-          <li>Separate the 40 mL into 4 different Tarson tubes containing 10mL each- 3 of them to perform the experiment in triplicates and 1 tube, kept aside with LB for dilution to adjust Optical Density before fluorescence measurement.</li>
-          <li>Inoculate the triplicate tubes at pH 5,6,7.2,8 and 9 with the transformed E.Coli cells containing the biobrick</li>
-          <li>At this stage, each Tarson tube at pH values of 5,6,7.2,8 and 9 contain:
-          <ul>
-          <li>10 mL LB broth at the particular pH</li>
-          <li>Chloramphenicol- conc of 20ug/mL</li>
-          <li>Inoculated cells</li>
-          </ul>
-          </li>
-          <li>Place the tubes in the orbital shaker at 37&ordm; Celsius for 48 hours until turbidity is visible.&nbsp; Measure the OD (595nm) of the cultures grown under different pH values and normalize the OD to a constant value by diluting the samples with plain LB medium kept aside at that pH. (We used an OD value of 0.35, which was the OD obtained at pH 8).</li>
-          <li>Measure the fluorescence intensity of the cell solutions (triplicates), keeping uninoculated LB broth as the control. Excitation at 485 nm and Emission at 520nm.</li>
-          </ol>
+          </div>
+          <a id="dna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="dna">
+            <div class="name spectralb">DNA Resuspension Protocol (For BioBrick Bba_K608011)</div>
+            <div class="desc spectral">
+              <p><strong>Materials:</strong></p>
+              <ol>
+                <li>DNA distribution plates</li>
+                <li>Distilled water</li>
+                <li>Chloramphenicol</li>
+                <li>Pipettes and tips</li>
+              </ol><br><br>
+              <p><strong>Procedure:</strong></p>
+              <ol>
+                <li>Punch a hole in the well containing the desired biobrick, through the foil cover.</li>
+                <li>Pipette 10 µL of distilled water into the well.</li>
+                <li>Mix the contents in the well gently, with a pipette.</li>
+                <li>Leave the plate undisturbed for 5 minutes.</li>
+                <li>Resuspension of the DNA is indicated by the presence of a red color due to the crescent dye.</li>
+                <li>Use the resuspended DNA to transform the competent cells using the high efficiency transformation protocol</li>
+              </ol><br><br>
+            </div>
+          </div>
+          <a id="pcr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="pcr">
+            <div class="name spectralb">PCR Protocol</div>
+            <div class="desc spectral">
+              <p>To amplify the toehold construct for cell free reactions (miRNA 21 and 20a)</p>
+              <ol>
+                <li>Add TE buffer to resuspend the gblock to your final desired concentration</li>
+                <li>Vortex it briefly to suspend it</li>
+                <li>It can be stored at -80 ℃ upto 2 years</li>
+                <li>Freeze thaw the master mix before usage</li>
+                <li>Dilute the gblocks to the required concentration using nuclease free TE buffer</li>
+                <li>Keep all reaction components on ice and add them to a PCR tube&nbsp; and transfer the reactions immediately to the thermocycler</li>
+                <li>The thermocycler should be preheated to the denaturation temperature and the components must be well mixed before transferring</li>
+                <li>Allow the thermocycler to run to the set cycle parameters.</li>
+                <li>Run the PCR product on a 1.5% agarose gel and check the amplicon size</li>
+                <li>The product can be purified by using a purification kit and sequenced to confirm the amplification of gblocks</li>
+              </ol><br><br>
+              <table style="width:auto;" class="table table-hover table-bordered">
+                <tbody>
+                <tr><thead>
+                <th>
+                <p><strong>COMPONENTS</strong></p>
+                </th>
+                <th>
+                <p><strong>25 µL  reaction</strong></p>
+                </th>
+                <th>
+                <p><strong>15 µL  reaction</strong></p>
+                </th>
+                </thead>
+                </tr>
+                <tr>
+                <td>
+                <p>Q5 High fidelity 2X master mix (NEB kit)</p>
+                </td>
+                <td>
+                <p>12.5 µL </p>
+                </td>
+                <td>
+                <p>7.5 µL </p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p>10 uM FP (VF2)</p>
+                </td>
+                <td >
+                <p>1.25 µL </p>
+                </td>
+                <td >
+                <p>0.75 µL </p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p>10 uM RP (VR)</p>
+                </td>
+                <td >
+                <p>1.25 µL </p>
+                </td>
+                <td >
+                <p>0.75 µL </p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p>Template DNA (1ng)</p>
+                </td>
+                <td >
+                <p>1 µL - 3µL </p>
+                </td>
+                <td >
+                <p>1-3 µL </p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p>Nuclease free water</p>
+                </td>
+                <td >
+                <p>6-9 µL </p>
+                </td>
+                <td >
+                <p>6-9 µL </p>
+                </td>
+                </tr>
+                </tbody>
+              </table>
+              <p><strong>GRADIENT PCR (Temperature set up and no. of cycles)</strong></p>
+              <table style="width:auto;" class="table table-hover table-bordered">
+                <tbody>
+                <tr>
+                <td >
+                <p><strong>98℃</strong>- denaturation (initial)</p>
+                </td>
+                <td >
+                <p><strong>30 seconds</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p><strong>98℃ </strong></p>
+                </td>
+                <td >
+                <p><strong>10 s</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p><strong>62/63℃ - </strong>annealing temperature</p>
+                </td>
+                <td >
+                <p><strong>20s</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p><strong>72℃- </strong>extension</p>
+                </td>
+                <td >
+                <p><strong>30s</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p><strong>72℃ -</strong>final extension</p>
+                </td>
+                <td >
+                <p><strong>3 minutes</strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td >
+                <p><strong>4℃</strong></p>
+                </td>
+                <td >
+                <p><strong>&infin;</strong></p>
+                </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <a id="cob">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="cob">
+            <div class="name spectralb">Characterization of Biobrick Bba_K608011 pH experiment Protocol</div>
+            <div class="desc spectral">
+              <p><strong>Materials:</strong></p>
+              <ol>
+                <li>LB Broth</li>
+                <li>Tarson Tubes</li>
+                <li>Chloramphenicol</li>
+                <li>1M NaOH</li>
+                <li>35% HCl</li>
+                <li>Transformed E.Coli, containing Biobrick Bba_K608011</li>
+                <li>pH meter, fluorescence spectrophotometer</li>
+                <li>Pipettes and tips</li>
+              </ol><br><br>
+              <p><strong>Procedure:</strong></p>
+              <ol>
+                <li>Prepare 300 mL of LB broth in distilled water.</li>
+                <li>Separate the LB broth into 6 different 50 mL tarson tubes, each containing 40 mL of the prepared broth.</li>
+                <li>Prepare 1N NaOH and 35% HCl. Adjust the pH of the broth in 5 of the tubes to the desired values of 5,6,7.2 (pH of standard LB broth), 8 and 9.</li>
+                <li>Keep a separate tube with 40 mL of the broth (with an unaltered pH) to use as a control.</li>
+                <li>Autoclave the Tarson tubes.</li>
+                <li>Add Chloramphenicol to all the Tarson tubes to obtain a final antibiotic concentration of 20 µg/mL. This was done by initially creating a stock of 40 mg/mL.</li>
+                <li>Leave the LB Broth undisturbed overnight to check for contamination.</li>
+                <li>Separate the 40 mL into 4 different Tarson tubes containing 10mL each- 3 of them to perform the experiment in triplicates and 1 tube, kept aside with LB for dilution to adjust Optical Density before fluorescence measurement.</li>
+                <li>Inoculate the triplicate tubes at pH 5, 6, 7.2, 8 and 9 with the transformed E.Coli cells containing the biobrick</li>
+                <li>At this stage, each Tarson tube at pH values of 5, 6, 7.2, 8 and 9 contain:
+                  <ul>
+                    <li>10 mL LB broth at the particular pH</li>
+                    <li>Chloramphenicol- conc of 20 µg/mL</li>
+                    <li>Inoculated cells</li>
+                  </ul>
+                </li>
+                <li>Place the tubes in the orbital shaker at 37&ordm; Celsius for 48 hours until turbidity is visible.&nbsp; Measure the OD (595nm) of the cultures grown under different pH values and normalize the OD to a constant value by diluting the samples with plain LB medium kept aside at that pH. (We used an OD value of 0.35, which was the OD obtained at pH 8).</li>
+                <li>Measure the fluorescence intensity of the cell solutions (triplicates), keeping uninoculated LB broth as the control. Excitation at 485 nm and Emission at 520 nm.</li>
+              </ol><br><br>
+            </div>
+          </div>
+          <a id="twogen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <div class="twogen">
+            <div class="name spectralb">Characterization of Biobrick Bba_K3154001 miR-21 2nd generation toehold switch</div>
+            <div class="desc spectral">
+              <p><span style="font-weight: 400;"><strong>Materials:</strong></span></p>
+              <ol>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">96 - U bottom fluorescent well plate</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Toehold DNA</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">miR &amp; anti-miR</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">NEB (#E6800 Pure Synthesis Kit)</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Micropipette&nbsp;</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Fluorescent plate reader</span></li>
+              </ol><br><br>
+              <p><span style="font-weight: 400;"><strong>Concentration study:</strong></span></p>
+              <ol>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Freeze thaw miR, anti-miR in ice for 5 mins.</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Quick spin miR and anti-miR @1000rpm (&lt;1min)</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Resuspend the miR &amp; anti-miR with T10E0.1 to obtain 100 &micro;M stock solution</span>
+              <table style="width:auto;" class="table table-hover table-bordered">
+                <tbody>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">miR type</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">Volume of TE buffer added (mL)</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">Anti-miR type</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">Volume of TE buffer added (mL)</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">21</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">3.144</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">21</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">2.569</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">20a</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">2.896</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">20a</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">3.116</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">200a</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">2.401</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">200a</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">2.863</span></p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p><span style="font-weight: 400;">29a</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">2.532</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">29a</span></p>
+                </td>
+                <td>
+                <p><span style="font-weight: 400;">2.592</span></p>
+                </td>
+                </tr>
+                </tbody>
+              </table>
+              </li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Dilute the respective miR and anti-miR to prepare the working stock of 100 nM</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Mix 100nM of miR &amp; anti-miR solution of required volume (50 &micro;L each)</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Incubate for 2hrs at room temperature to facilitate hybridization of miR and anti-miR&nbsp;</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Freeze thaw:</span></li>
+              <ol>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Solution A &amp; Solution B from NEB #E6800 cell free protein expression kit</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Toehold DNA obtained after PCR &amp; purification with required DNA concentration (125 ng/&micro;L)</span></li>
+              </ol><br>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Prepare the master mix containing solution A (10 &micro;L) and solution B (7.5 &micro;L)</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Prepare the varying concentrations (100pM, 1nM, 10nM, 100nM) of the miR &ndash; anti-miR (MA) complex</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Mix the following contents:</span></li>
+              <ol>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Master Mix = 17.5 &micro;L</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Toehold DNA = 1 &micro;L </span><strong>(21)</strong><span style="font-weight: 400;">; 3 &micro;L (33ng/&micro;L)-4 &micro;L (26ng/&micro;L) </span><strong>(20a)</strong></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">MA = 2 &micro;L</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Nuclease free water = X &micro;L</span></li>
+              Total = 30 &micro;L
+              </ol><br>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">For specificity study, perform the same steps but add MA at a fixed concentration (100 nM in our case) that does not correspond to the respective toehold DNA. Example &ndash; add MA of 29a to Toehold DNA for miR 21.&nbsp;</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Incubate the reaction systems at 37 &deg;C and perform fluorescence intensity measurements at 2</span><span style="font-weight: 400;">nd</span><span style="font-weight: 400;"> and 4</span><span style="font-weight: 400;">th</span><span style="font-weight: 400;"> hr with the following settings:</span></li>
+              <ol>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Excitation Wavelength = 395 nm&nbsp;</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">Emission Wavelength = 520 nm</span></li>
+              <li style="font-weight: 400;"><span style="font-weight: 400;">System Manual Gain = 100</span></li>
+              </ol><br><br>
+              </ol><br><br>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <footer>
+     <span>Our Sponsors</span>
+     <div class="icons">
+       <div class="sponsors">
+         <img src="https://2019.igem.org/wiki/images/archive/0/07/20191020092618%21T--SASTRA_Thanjavur--SASTRALogo.png" height="50px">
+         <img src="https://2019.igem.org/wiki/images/archive/5/51/20191020092243%21T--SASTRA_Thanjavur--SERBLogo.png" height="50px">
+         <img src="https://2019.igem.org/wiki/images/0/0d/T--SASTRA_Thanjavur--TwistLogo.jpeg" height="50px">
+         <img src="https://2019.igem.org/wiki/images/archive/c/c2/20191020093306%21T--SASTRA_Thanjavur--IDTLogo.jpeg" height="50px">
+         <img src="https://2019.igem.org/wiki/images/d/d7/T--SASTRA_Thanjavur--NewEngLogo.png" height="50px">
+         <img src="https://2019.igem.org/wiki/images/d/d5/T--SASTRA_Thanjavur--GenuremLogo.png" height="50px">
+       </div>
+       <div class="social">
+         <a href="https://www.instagram.com/igem_sastra"><img src="https://2019.igem.org/wiki/images/0/0c/T--SASTRA_Thanjavur--InstaLogo.png" height="50px"></a>
+         <a href="mailto:igemsastra.2019@gmail.com"><img src="https://2019.igem.org/wiki/images/f/f8/T--SASTRA_Thanjavur--GmailLogo.png" height="50px"></a>
+       </div>
+     </div>
+   </footer>
 </html>
